@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sass Test</title>
+	<link rel="stylesheet" href="./css/main.scss">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/96ef2855d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="" class="mainContainer"></div>	
+	<header id="mainHeader" class="container">
+		<div class="backDrop"></div>
+		<div class="backStage"></div>
+		<h3 class="logo"><a href="/">MTA</a></h3>
+		<nav class="nav">
+			<ul>
+				<li class="mainMenu"><a href="/detail">서비스소개</a>
+					<ul class="subMenu">
+						<li><a href="/">실시간테스트</a></li>
+						<li><a href="/">클라우드 디버깅</a></li>
+						<li><a href="/">모니터링</a></li>
+						<li><a href="/">구축형 MTA</a></li>
+					</ul>
+				</li>
+				<li class="mainMenu"><a href="/price">지원단말기</a>
+					<ul class="subMenu">
+						<li><a href="/">안드로이드</a></li>
+						<li><a href="/">IOS</a></li>
+					</ul>
+				</li>
+				<li class="mainMenu"><a href="/bbs">가격안내</a>
+					<ul class="subMenu">
+						<li><a href="/">포인트 충전</a></li>
+						<li><a href="/">정기구독</a></li>
+					</ul>
+				</li>
+				<li class="mainMenu"><a href="/guide">이용안내</a>
+					<ul class="subMenu">
+						<li><a href="/">고객사례</a></li>
+						<li><a href="/">사용방법</a></li>
+					</ul>
+				</li>
+				<li class="mainMenu"><a href="/detail">고객센터</a>
+					<ul class="subMenu">
+						<li><a href="/">공지사항</a></li>
+						<li><a href="/">1:1 문의</a></li>
+						<li><a href="/">FAQ</a></li>
+					</ul>
+				</li>
+				<li class="mainMenu"><a href="/surport">협력사지원</a>
+					<ul class="subMenu">
+						<li><a href="/">공지사항</a></li>
+						<li><a href="/">고객사 현황</a></li>
+						<li><a href="/">솔루션 다운로드</a></li>
+						<li><a href="/">파트너사 정보수정</a></li>
+						<li><a href="/">Q&A</a></li>
+					</ul>
+				</li>
+			</ul>
+			<script>
+				$(document).ready(function(){
+					let navContainer = $('#mainHeader');
+					let hoverTarget = $('#mainHeader').find('nav.nav , div.backDrop');
+					let mainMenus = navContainer.find('li.mainMenu');
+					hoverTarget.hover(function(e , v){
+						console.log( e, v );
+						navContainer.addClass('active');
+					},function(){
+						navContainer.removeClass('active');
+					});
+				});
+			</script>
+		</nav>
+		<div class="buttonSet">
+			<div class="login">
+				<ul>
+					<li><a href="">로그인</a></li>
+					<li><a href="">회원가입</a></li>
+					<li><a href="">문의하기</a></li>
+				</ul>
+			</div>
+			<p class="language">
+				<button class="language on">KR</button>
+				<button class="language">EN</button>
+			</p>
+		</div>
+	</header>
+	<div id="mainContainer" class="main">
+		<section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
+		<section class="subNav">
+			<nav><ul>
+					<li><a href="/">공지사항</a></li>
+					<li><a href="/">고객사 현황</a></li>
+					<li><a href="/">솔루션 다운로드</a></li>
+					<li><a href="/">파트너사 정보 수정</a></li>
+					<li><a href="/">Q&A</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="subContainer">
+			<div class="contents">
+				<h3 class="conTitle">Input Style Guide Title</h3>
+				<h5 class="conSubTitle">Contents Input Style Guide.</h5>
+				<div class="innerCon">
+					<p class="box">
+						<button class="btn lg">test button!</button>
+						<button class="btn lg blue">저장하기</button>
+						<button class="btn lg gray">저장하기</button>
+					</p>
+					<p class="box">
+						<button class="btn md">test button!</button>
+						<button class="btn md blue">저장하기</button>
+						<button class="btn md gray">저장하기</button>
+					</p>
+					<p class="box">
+						<button class="btn sm">test button!</button>
+						<button class="btn sm blue">저장하기</button>
+						<button class="btn sm gray">저장하기</button>
+					</p>
+					<p class="box">
+						<input type="text" placeholder="입력해주세요."/>
+						<input type="text" class="invalid" placeholder="입력해주세요."/>
+					</p>
+				</div>
+			</div>
+			<div class="contents">
+				<h3 class="conTitle">BBS Style Guide Title</h3>
+				<h5 class="conSubTitle">BBS Style Guide.</h5>
+				<div class="bbsCon">
+					<table>
+						<thead><tr><th>번호</th><th>제목</th><th>날짜</th><th>작성자</th><th>조회</th></tr></thead>
+						<tbody>
+							<tr class="notice"><td>공지</td><td>공지사항 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+						</tbody>
+					</table>
+					<p class="pagingCon">
+						<span class="inner">
+							<span class="prevCon">
+								<button type="button"> << </button>
+								<button type="button"> < </button>
+							</span>
+							<span class="numCon">
+								<button type="button" class="on"> 1 </button>
+								<button type="button"> 2 </button>
+								<button type="button"> 3 </button>
+								<button type="button"> 4 </button>
+								<button type="button"> 5 </button>
+								<button type="button"> 6 </button>
+								<button type="button"> 7 </button>
+								<button type="button"> 9 </button>
+								<button type="button"> 10 </button>
+							</span>
+							<span class="nextCon">
+								<button type="button"> > </button>
+								<button type="button"> >> </button>
+							</span>
+						</span>
+					</p>
+					<p class="serchCon">
+						<span class="inner">
+							<select name="serchCD">
+								<option>제목</option>
+								<option>내용</option>
+								<option>제목 + 내용</option>
+							</select>
+							<input name="serchVal" type="text" placeholder="검색어를 입력해 주세요."/>
+							<button class="btn sm blue" type="button">검색</button>
+						</span>
+					</p>
+				</div>
+			</div>
+		</section>
+		
+	<footer id="mainFooter" class="container">
+		<div class="inner">
+			<div class="top">
+				<div class="logo">
+					<h3><a href="/">MTA</a></h3>
+				</div>
+				<div class="linkBox">
+					<button class="link"><i class="youtube"></i></button>
+					<button class="link"><i class="google"></i></button>
+					<button class="link"><i class="insta"></i></button>
+					<button class="link"><i class="facebook"></i></button>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="customerCenter">
+					<p><span>고객센터 02-6296-6000</span> <span class="ml10">09:00 ~ 18:00(주말,공휴일 휴무)</span></p>
+					<p><address>서울시 강남구 테헤란로 510 루첸타워</address></p>
+				</div>
+				<div class="copyright">
+					<div class="con">
+						<span>by HYUNDAI-AUTOEVER MTA</span>
+					</div>
+				</div>
+				<div class="compInfos">
+					<p>
+						<a href="/introduce">회사 소개</a>
+						<a href="/introduce">이용 약관</a>
+						<a href="/introduce">서비스 수준 약정</a>
+						<a href="/introduce">개인 정보 처리 방침</a>
+					</p>
+				</div>
+			</div>
+		</div>	
+	</footer>
+
+</body>
+</html>
