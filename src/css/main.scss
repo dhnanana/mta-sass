@@ -130,7 +130,7 @@ html , body {
 				padding: 0 15px;
 				&:nth-child(2){ border-left: 1px solid #d3d3d3; border-right: 1px solid #d3d3d3; }
 				a {
-					@include fontDefault( 13px , 500 );
+					@include fontDefault( 13px , 400 );
 					color : #999;
 				}
 			}
@@ -141,7 +141,7 @@ html , body {
 				border: none; background: none transparent;
 				&.login { border-radius: 30px; background-color: #13385e; color:#fff; padding: 8px 32px; font-size: 14px; margin-left: 45px; }
 				&.language { 
-					@include fontDefault( 14px , bold );
+					@include fontDefault( 14px , 400 );
 					color : #d3d3d3;
 					&.on { color: #181c1f; }
 				}
