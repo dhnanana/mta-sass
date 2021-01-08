@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
-const browsersync = require('browser-sync').create();
+//const browsersync = require('browser-sync').create();
 const del = require('del');
 
 function clean(){
