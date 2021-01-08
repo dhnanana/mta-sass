@@ -172,6 +172,7 @@ html, body {
 
 #mainContainer {
   width: 100%;
+  min-width: 1400px;
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 105px; }
