@@ -97,7 +97,7 @@ html , body {
 			width: 125px;
 			&:first-child { margin-left: 0; }
 			&:last-child::after { clear: both; content:""; }
-			@include fontDefault( 17px , 500 );
+			@include fontDefault( 17px , 400 );
 			border-bottom : 5px solid #fff;
 			transition: border-bottom .5s ease;
 			a { text-decoration: none; color: #333; margin-top:5px; }
