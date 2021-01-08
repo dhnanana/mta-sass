@@ -484,6 +484,7 @@ html, body {
   text-align: center;
   position: relative;
   width: 100%;
+  min-width: 1400px;
   height: 241px; }
   #mainFooter span {
     letter-spacing: 0px !important; }
