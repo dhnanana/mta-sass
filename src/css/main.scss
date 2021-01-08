@@ -315,6 +315,7 @@ html , body {
 	text-align : center;
 	position: relative;
 	width: $w100;
+	min-width: $min_w;
 	height: 241px;
 	span { letter-spacing: 0px !important; } 
 	div.inner {
