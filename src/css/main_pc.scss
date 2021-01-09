@@ -1,0 +1,379 @@
+$max-w : 1900px;
+$min_w : 1400px;
+$header_h : 105px;
+$dp_inBlcok : inline-blcok;
+
+$w100 : 100%;
+$color_black : #000;
+
+$col_bule : #1766ff;
+$col_green : #4ecb8f;
+$col_sBule : #2daae1;
+$col_pink : #ff1766;
+$col_gray : #cdcdcd;
+$col_purple : #6b54f0;
+
+$btn_color_white : #fff;
+$btn_color_blue : #023e7c;
+$btn_color_gray : #bbb;
+
+$text_color_1 : #303030;
+$text_color_2 : #666666;
+$text_color_3 : #b1b1b1;
+
+$table_color_1 : #eee;
+$table_color_2 : #cdcdcd;
+
+$circle_sizes : 20px , 25px , 30px , 35px , 15px;
+
+@mixin transformCenter() {
+	position: absolute;
+	left: 50%; top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@mixin fontDefault( $s : 1em , $b : normal ) {
+	font : {
+		size : $s;
+		weight : $b;
+		vertical-align: middle;
+		height: $s + 2px;
+		line-height: $s + 2px;
+	}
+	text-decoration: none;
+	color : #181c1f;
+}
+
+@mixin radiusRect( $w : 50px , $h : 100px , $r : $w * 0.15) {
+	display: block;
+	width : $w;
+	height: $h;
+	border-radius : $r;
+}
+
+@mixin circleCon( $w : 20px , $r : 50% ) {
+	display: block;
+	width: $w;
+	height: $w;
+	border-radius: $r;
+	background : #e6b7b7;
+	text-align: center;
+	i.fas {
+		width : $w;
+		height: $w;
+		font-size: $w * .45;
+		color : #fff;
+		line-height: $w;
+		vertical-align: middle;
+	}
+}
+
+html , body { 
+	margin : 0; height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	* { font-family: 'Spoqa Han Sans Neo'; letter-spacing: -0.7px; }
+}
+
+#mainHeader{ width : $w100; height: $header_h; min-width: $min_w; position: fixed; top:0; background : #fff; text-align: center; z-index: 400;
+	h3.logo{ 
+		position: absolute; bottom: 34px; left: 6vw;
+		a { 
+			display: block; width: 174px; height:36px; text-indent: -9999px; font-weight: bold; width: 174px; height:36px; background: url("../images/logo_header.jpg") no-repeat; 
+		 }
+	}
+	nav.nav { width: 750px; display: inline-block; @include transformCenter(); /* margin-top: 47px; margin-bottom: 30px; */
+		button.gnb_hamburger { display: none; }
+		button.gnb_util { display: none; }
+		li.mainMenu { width: auto; float: left; cursor: pointer; position: relative;
+			height: calc(#{$header_h} - 5px);
+			line-height: calc(#{$header_h} + 2px);
+			text-align: center;
+			width: 125px;
+			&:first-child { margin-left: 0; }
+			&:last-child::after { clear: both; content:""; }
+			@include fontDefault( 17px , 400 );
+			border-bottom : 5px solid #fff;
+			transition: border-bottom .5s ease;
+			a { text-decoration: none; color: #333; margin-top:5px; }
+			ul.subMenu {
+				position: absolute; display: none; width: 100%;
+				top: 100px; transition: display 1s ease;
+				li { @include fontDefault( 13px , 400 ); text-align: center; width: 100%; height:40px; line-height: 40px; }
+				li:hover a , li.on a { color : $col_bule; text-decoration: underline; }
+				li:first-child { margin-top: 20px; }
+			}
+		}
+		li.mainMenu:hover , li.mainMenu.on {
+			border-bottom : 5px solid #023e7c;
+		}
+	}
+	div.backStage{ width: 100%; height: $header_h; position: absolute; top: 0px; left:0; right: 0; background: #fff; }
+	div.backDrop { width: 100%; height: 250px; position: absolute; top: -170px; left:0; right: 0; background: #fff; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; }
+	div.backDrop { transition : top .35s ease; }
+
+	div.buttonSet {
+		position: absolute;
+		right: 4%;
+		top: 42px;
+		div.login {
+			float: left;
+			margin-top: 2px;
+			margin-right: 1vw;
+			li {
+				float: left;
+				padding: 0 15px;
+				&:nth-child(2){ border-left: 1px solid #d3d3d3; border-right: 1px solid #d3d3d3; }
+				a {
+					@include fontDefault( 13px , 400 );
+					color : #999;
+				}
+			}
+		}
+		p.language { 
+			float: left;
+			button { 
+				border: none; background: none transparent;
+				&.login { border-radius: 30px; background-color: #13385e; color:#fff; padding: 8px 32px; font-size: 14px; margin-left: 45px; }
+				&.language { 
+					@include fontDefault( 14px , 400 );
+					color : #d3d3d3;
+					&.on { color: #181c1f; }
+				}
+			}
+		}
+	}
+}
+
+#mainHeader.active {
+	nav.nav { 
+		li.mainMenu { 
+			ul.subMenu { display: block; }
+		}
+	}
+	div.backStage{ border-bottom: 1px solid #ddd; }
+	div.backDrop { top: 105px; }
+}
+
+#mainContainer {
+	
+	width: $w100;
+	min-width: $min_w;
+	box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: $header_h;
+    
+	.sectionCon {
+		width: 100%;
+		height : calc(100vh - #{$header_h});
+		position: relative;
+		overflow: hidden;
+		.textContainer {
+			position: absolute; top: 15%; left: 10%; z-index: 100;
+			h3 { color: #2a3043; margin-bottom: 32px;
+				font : {
+					size : 90px;
+					weight : bold;
+				}
+			}
+			h5 { color : #4e4e4e;
+				font : {
+					size : 20px;
+					weight: bold
+				}
+			}
+			#mainStartButton {
+				@include radiusRect( 334px , 104px ); margin-top: 90px;
+				background: #13385e; text-align: center; text-decoration: none; color : #fff; line-height: 105px; vertical-align: middle;
+				font : {
+					size : 23px;
+					weight : bold;
+				}
+			}
+		}
+		.aniCon {
+			position: absolute; top: 0%; right: 5%;
+		}
+	}// sectionCon
+	.sectionCon:nth-child(even) { background-color: #ddd; }
+
+	div.aniCon{
+		$conW : 900px;
+		$conW_half : $conW / 2;
+
+		$innerCircleW : $conW_half + 150;
+		
+		$phoneW : 326px; $phoneH : 633px;
+		$PhoneGap : 12px;
+
+		display: block;
+		position: absolute;
+		width: $conW; height: inherit;
+		text-align: center;
+		div.innerCon {
+			display: $dp_inBlcok;
+			text-align: center;
+			div.phoneCon{
+				position: absolute;
+				top: $conW_half - ($phoneH / 2); left : $conW_half - ($phoneW / 2);
+			}
+			div.phone {
+				@include radiusRect( $phoneW , $phoneH );
+				position: relative;
+				background: #000;
+				div.innerBegel {
+					@include radiusRect( $phoneW - ( $PhoneGap * 2 ) , $phoneH - ( $PhoneGap * 2 ) );
+					position: absolute;
+					background: #fff;
+					left: 12px; top: 12px;
+				}
+				div.noch{
+					@include radiusRect( 161px , 35px , 15px );
+					position: absolute;
+					background: #000;
+					left: 85px; top: 0px;
+				}
+				video {
+					@include radiusRect( $phoneW - ( $PhoneGap * 2 ) , $phoneH - ( $PhoneGap * 2 ) );
+					overflow: hidden;
+					position: absolute;
+					background: #fff;
+					left: 12px; top: 12px;
+				}
+			}
+			div.circleBG1{
+				@include circleCon( $innerCircleW ); position: absolute;
+				background: #daedff; top: $conW_half - ($innerCircleW / 2); left: $conW_half - ($innerCircleW / 2);
+			}
+			div.circleBG2{
+				@include circleCon( $conW ); position: absolute; top: 0;
+				background: none transparent; border: 1px solid #ccc;
+			}
+			span.circle {
+				//@include circleCon( $circle_sizes[ random(5) ] );
+			}
+		}//inner
+	}//aniCon
+
+
+	section.subVisual {
+		width: $w100; height: 170px; display: inline-block; background: #013872; text-align: center;
+		h3 { margin-top : 74px; @include fontDefault( 20px , 300 ); color: #fff; letter-spacing: 0px; }
+	}
+	section.subNav {
+		width: $w100; height: 64px; border-bottom: 1px solid #ddd;
+		nav { display: block; width: 1100px; margin: 0 auto; text-align: center;
+			li { display: inline-block; width: auto; height: 64px; line-height: 64px; vertical-align: middle; padding : 0 15px; cursor: pointer;
+				a { text-decoration: none; @include fontDefault( 15px ); color: $text_color_3;  }
+			}
+			li:hover a , li.on a { text-decoration: underline; color: #333; }
+		}
+	}
+	section.subContainer{ width: $w100; min-height: 100vh;
+		div.contents {
+			display: block; width: 1100px; margin: 0 auto; padding-bottom: 100px;
+			h3.conTitle { @include fontDefault( 34px , 600 ); color: $text_color_1; margin-top: 90px; line-height: 35px; height: 35px; }
+			h5.conSubTitle { @include fontDefault( 20px , 400 ); color: $text_color_2; line-height: 21px; height: 21px; padding: 10px 0; letter-spacing: -.3px; }
+			div.innerCon { margin-top: 60px;
+				p.box { width: 100%; display: block; padding: 10px; }
+			}
+		}
+		div.bbsCon { margin-top: 60px;
+			table { width: 100%; border-top: 1px solid $text_color_1; border-bottom: 1px solid $table_color_2;
+				thead tr , tbody tr { border-bottom: 1px solid $table_color_1 }
+				thead th { height: 61px; line-height: 61px; vertical-align: middle; text-align: center; }
+				tbody td { height: 55px; line-height: 55px; vertical-align: middle; text-align: center; @include fontDefault( 14px , 300 ); }
+			}
+			p.pagingCon { display: inline-block;text-align: center; width: 100%; height: 38px; line-height: 38px; margin-top: 41px; margin-bottom: 57px;
+				span.inner { display: inline-block; }
+				span.prevCon { float: left; button { float: left; } }
+				span.nextCon { float: left; button { float: left; } }
+				span.numCon { margin: 0 50px; float: left; button { float: left; } }
+				button { width: 36px; height: 36px; border: 1px solid $table_color_2; color: $text_color_2; background: #fff; outline: none; margin: 0 3px; cursor: pointer; }
+				button:hover , button.on { background: $btn_color_blue; border: none; color: #fff; }
+			}
+			p.serchCon { display: inline-block; text-align: center; width: 100%; height: 64px; line-height: 64px; background: #f8f8f8;
+				span.inner { display: inline-block; margin-top: 13px; }
+				input[type=text] { height: 39px; line-height: 39px; padding: 0 15px; float:left; margin: 0 5px; }
+				select { float:left; height: 40px; line-height: 39px; padding: 0 15px; border: 1px solid $table_color_2; }
+				button { float:left; }
+			}
+		}
+	}
+
+}//mainContainer
+
+#mainFooter {
+	background: #313131;
+	@include fontDefault( 13px );
+	color : #777; 
+	text-align : center;
+	position: relative;
+	width: $w100;
+	min-width: $min_w;
+	height: 241px;
+	span { letter-spacing: 0px !important; } 
+	div.inner {
+		display: inline-block;
+		width: 1400px;
+		height: 100%;
+		margin: 0 auto;
+		div.top {
+			margin-top: 50px; display: block; width: $w100; height: 36px; margin-bottom: 10px;
+			div.logo { float: left;
+				h3 a { text-indent: -9999px; display: block; background: url("../images/logo_bottom.jpg") no-repeat; width: 175px; height:36px; }
+			}
+			div.linkBox { float: right; margin-right: 10px;;
+				button { background:none; border: none; outline: none; width: 20px; height:21px; display: block; float:left;  margin-left: 20px; cursor: pointer;
+					i  { display: block; width: 20px; height: 100%; }
+					i.youtube { background: url("../images/ico_youtube.jpg") no-repeat; }
+					i.google { background: url("../images/ico_google.jpg") no-repeat; }
+					i.insta { background: url("../images/ico_insta.jpg") no-repeat; }
+					i.facebook { background: url("../images/ico_facebook.jpg") no-repeat; }
+				}
+			}
+		}
+		div.bottom {
+			display: block; width: $w100;
+			div.customerCenter { float: left; text-align: left; margin-left: 12px;
+				p { padding: 5px 0; span.ml10 { margin-left: 15px; } }
+			}
+			div.copyright { display: inline-block; }
+			div.compInfos { float: right; 
+				a { text-decoration: none; color: #777; display: block; float: left } 
+				a:not(:first-Child){ margin-left: 20px; }
+			}
+		}
+	}
+	h3 {
+		a { 
+			@include fontDefault( 17px, bold );
+			color : #6a6a6a;
+		 }
+	}
+	div.info {
+		text-align: left;
+		position: absolute;
+		top: 54px;
+		left: 150px;
+	}
+	div.copyright {
+		display: $dp_inBlcok;
+	}
+}
+
+button.btn { background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer; outline: none; }
+button.btn { vertical-align:middle; text-align: center; background-color: $btn_color_white; border: solid 1px #c3c4c6; }
+button.btn:focus {  }
+button.btn.lg { width: 275px; height:62px; line-height:62px; font-size: 1.1rem; }
+button.btn.md { width: 151px; height:50px; line-height:50px; }
+button.btn.sm { width: 100px; height:40px; }
+button.btn.blue { background-color: $btn_color_blue; color: $btn_color_white; border:none; }
+button.btn.gray { background-color: $btn_color_gray; color: $btn_color_white; border:none; }
+
+input[type=text] { width: 185px; height:20px; border:1px solid #e6e6e6; padding: 10px 13px; color: #bfbfbf; }
+input[type=text]:focus { border: solid 1px #333; color: #333333; outline: none; }
+input.invalid  { border: solid 1px #f33; }

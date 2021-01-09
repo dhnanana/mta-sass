@@ -1,9 +1,6 @@
-@import "./defaultCss.css";
-@import "./font/SpoqaHanSansNeo.css";
-
-$max-w : 1900px;
-$min_w : 1400px;
-$header_h : 105px;
+$max-w : 1399px;
+$min_w : 350px;
+$header_h : 60px;
 $dp_inBlcok : inline-blcok;
 
 $w100 : 100%;
@@ -75,89 +72,93 @@ $circle_sizes : 20px , 25px , 30px , 35px , 15px;
 	}
 }
 
-html , body { 
-	margin : 0; height: 100%;
+html , body { width: 100%; 
+	margin : 0; height: 100%; overflow-x: hidden;
 	font-family: Arial, Helvetica, sans-serif;
 	* { font-family: 'Spoqa Han Sans Neo'; letter-spacing: -0.7px; }
 }
 
 #mainHeader{ width : $w100; height: $header_h; min-width: $min_w; position: fixed; top:0; background : #fff; text-align: center; z-index: 400;
 	h3.logo{ 
-		position: absolute; bottom: 34px; left: 6vw;
+		position: relative; height: $header_h; line-height: $header_h;
 		a { 
-			display: block; width: 174px; height:36px; text-indent: -9999px; font-weight: bold; width: 174px; height:36px; background: url("../images/logo_header.jpg") no-repeat; 
-		 }
+			display: inline-block; width: 174px; height:36px; text-indent: -9999px; margin-top: 15px; background: url("../images/logo_header.jpg") no-repeat; 
+		}
 	}
-	nav.nav { 
-		width: 750px; display: inline-block; @include transformCenter(); /* margin-top: 47px; margin-bottom: 30px; */
-		li.mainMenu { width: auto; float: left; cursor: pointer; position: relative;
-			height: calc(#{$header_h} - 5px);
+	nav.nav { width: $w100; display: inline-block;
+
+		button.gnb_hamburger { display: block; position: absolute; top: 0; left: 0; width: $header_h; height: $header_h; }
+		button.gnb_util { display: block; position: absolute; top:0; right:0; width: $header_h; height: $header_h; }
+
+		div.menuList { display: none; width: 100%; height: calc(100vh - 60px); background: #fff; overflow-y: auto; }
+
+		li.mainMenu { 
+			display: inline-block; width: auto; cursor: pointer; position: relative;
+			//height: calc(#{$header_h} - 5px);
 			line-height: calc(#{$header_h} + 2px);
-			text-align: center;
-			width: 125px;
+			text-align: left; border-bottom: 1px solid $text_color_3;
+			width: 100%;
 			&:first-child { margin-left: 0; }
 			&:last-child::after { clear: both; content:""; }
-			@include fontDefault( 17px , 400 );
-			border-bottom : 5px solid #fff;
-			transition: border-bottom .5s ease;
-			a { text-decoration: none; color: #333; margin-top:5px; }
+			@include fontDefault( 20px , 400 );
+			/* border-right : 5px solid #fff;
+			transition: border-bottom .5s ease; */
+			> a { text-decoration: none; display: block; color: $text_color_1; margin-top:5px; width: 40%; max-width: 150px; float: left; padding-left: 20px; }
 			ul.subMenu {
-				position: absolute; display: none; width: 100%;
-				top: 100px; transition: display 1s ease;
-				li { @include fontDefault( 13px , 400 ); text-align: center; width: 100%; height:40px; line-height: 40px; }
+				display: block; width: 52%; max-width: 180px; padding: 20px 0 20px 20px; float: left;
+				li { @include fontDefault( 15px , 400 ); display: block; text-align: left; width: auto; height:25px; line-height: 25px; margin-top: 5px; }
+				li a { text-decoration: none; color: $text_color_1; }
 				li:hover a , li.on a { color : $col_bule; text-decoration: underline; }
-				li:first-child { margin-top: 20px; }
+				li:first-child { margin-top: 0px; }
 			}
 		}
-		li.mainMenu:hover , li.mainMenu.on {
+		li.mainMenu::after { content : ''; clear: both; }
+		li.mainMenu:hover > a, li.mainMenu.on > a{
 			border-bottom : 5px solid #023e7c;
 		}
 	}
 	div.backStage{ width: 100%; height: $header_h; position: absolute; top: 0px; left:0; right: 0; background: #fff; }
-	div.backDrop { width: 100%; height: 250px; position: absolute; top: -170px; left:0; right: 0; background: #fff; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; }
+	div.backDrop { width: 100%; height: 100vh; position: absolute; top: -100vh; left:0; right: 0; bottom:0; background: #fff; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; }
 	div.backDrop { transition : top .35s ease; }
 
 	div.buttonSet {
-		position: absolute;
-		right: 4%;
-		top: 42px;
+		position: absolute; right: -250px; top: $header_h; padding: 15px 30px 30px 0; background: #fff; width: 150px; border-left: 1px solid $text_color_3; border-bottom: 1px solid $text_color_3;
 		div.login {
 			float: left;
 			margin-top: 2px;
 			margin-right: 1vw;
 			li {
-				float: left;
-				padding: 0 15px;
-				&:nth-child(2){ border-left: 1px solid #d3d3d3; border-right: 1px solid #d3d3d3; }
+				float: left; width: 90%; text-align: right;
+				padding: 20px 15px;
 				a {
-					@include fontDefault( 13px , 400 );
+					@include fontDefault( 20px , 400 );
 					color : #999;
 				}
 			}
 		}
 		p.language { 
-			float: left;
+			float: right; margin-top: 20px;
 			button { 
 				border: none; background: none transparent;
 				&.login { border-radius: 30px; background-color: #13385e; color:#fff; padding: 8px 32px; font-size: 14px; margin-left: 45px; }
 				&.language { 
-					@include fontDefault( 14px , 400 );
+					@include fontDefault( 20px , 400 );
 					color : #d3d3d3;
 					&.on { color: #181c1f; }
 				}
 			}
 		}
 	}
+	div.buttonSet { transition: right .3s  ease; }
+	div.buttonSet.active { right: 0 }
 }
 
 #mainHeader.active {
 	nav.nav { 
-		li.mainMenu { 
-			ul.subMenu { display: block; }
-		}
+		div.menuList { display: block; }
 	}
 	div.backStage{ border-bottom: 1px solid #ddd; }
-	div.backDrop { top: 105px; }
+	div.backDrop { top: $header_h; }
 }
 
 #mainContainer {
