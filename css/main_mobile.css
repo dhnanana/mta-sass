@@ -10,8 +10,8 @@ html, body {
 
 #mainHeader {
   width: 100%;
-  height: 60px;
-  min-width: 350px;
+  height: 55px;
+  min-width: 320px;
   position: fixed;
   top: 0;
   background: #fff;
@@ -19,8 +19,8 @@ html, body {
   z-index: 400; }
   #mainHeader h3.logo {
     position: relative;
-    height: 60px;
-    line-height: 60px; }
+    height: 55px;
+    line-height: 55px; }
     #mainHeader h3.logo a {
       display: inline-block;
       width: 174px;
@@ -31,20 +31,25 @@ html, body {
   #mainHeader nav.nav {
     width: 100%;
     display: inline-block; }
-    #mainHeader nav.nav button.gnb_hamburger {
+    #mainHeader nav.nav button.gnb_hamburger, #mainHeader nav.nav button.gnb_util {
       display: block;
       position: absolute;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 15px; }
+    #mainHeader nav.nav button.gnb_hamburger {
       top: 0;
       left: 0;
-      width: 60px;
-      height: 60px; }
+      width: 55px;
+      height: 55px;
+      /* border-right: 1px solid $text_color_3; */ }
     #mainHeader nav.nav button.gnb_util {
-      display: block;
-      position: absolute;
       top: 0;
       right: 0;
-      width: 60px;
-      height: 60px; }
+      width: 55px;
+      height: 55px;
+      /* border-left: 1px solid $text_color_3; */ }
     #mainHeader nav.nav div.menuList {
       display: none;
       width: 100%;
@@ -56,7 +61,7 @@ html, body {
       width: auto;
       cursor: pointer;
       position: relative;
-      line-height: calc(60px + 2px);
+      line-height: calc(55px + 2px);
       text-align: left;
       border-bottom: 1px solid #b1b1b1;
       width: 100%;
@@ -79,15 +84,15 @@ html, body {
         display: block;
         color: #303030;
         margin-top: 5px;
-        width: 40%;
+        width: calc(40% - 20px);
         max-width: 150px;
         float: left;
         padding-left: 20px; }
       #mainHeader nav.nav li.mainMenu ul.subMenu {
         display: block;
-        width: 52%;
+        width: calc(59% - 20px);
         max-width: 180px;
-        padding: 20px 0 20px 20px;
+        padding: 18px 0 20px 20px;
         float: left; }
         #mainHeader nav.nav li.mainMenu ul.subMenu li {
           font-size: 15px;
@@ -118,12 +123,13 @@ html, body {
       border-bottom: 5px solid #023e7c; }
   #mainHeader div.backStage {
     width: 100%;
-    height: 60px;
+    height: 55px;
     position: absolute;
     top: 0px;
     left: 0;
     right: 0;
-    background: #fff; }
+    background: #fff;
+    border-bottom: 1px solid #ccc; }
   #mainHeader div.backDrop {
     width: 100%;
     height: 100vh;
@@ -140,10 +146,10 @@ html, body {
   #mainHeader div.buttonSet {
     position: absolute;
     right: -250px;
-    top: 60px;
-    padding: 15px 30px 30px 0;
+    top: calc(55px + 1px);
+    padding: 15px 20px 20px 0;
     background: #fff;
-    width: 150px;
+    width: 100px;
     border-left: 1px solid #b1b1b1;
     border-bottom: 1px solid #b1b1b1; }
     #mainHeader div.buttonSet div.login {
@@ -156,11 +162,11 @@ html, body {
         text-align: right;
         padding: 20px 15px; }
         #mainHeader div.buttonSet div.login li a {
-          font-size: 20px;
+          font-size: 15px;
           font-weight: 400;
           font-vertical-align: middle;
-          font-height: 22px;
-          font-line-height: 22px;
+          font-height: 17px;
+          font-line-height: 17px;
           text-decoration: none;
           color: #181c1f;
           color: #999; }
@@ -200,17 +206,17 @@ html, body {
   border-bottom: 1px solid #ddd; }
 
 #mainHeader.active div.backDrop {
-  top: 60px; }
+  top: 55px; }
 
 #mainContainer {
   width: 100%;
-  min-width: 350px;
+  min-width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
-  margin-top: 60px; }
+  margin-top: 55px; }
   #mainContainer .sectionCon {
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 55px);
     position: relative;
     overflow: hidden; }
     #mainContainer .sectionCon .textContainer {
@@ -350,28 +356,30 @@ html, body {
       letter-spacing: 0px; }
   #mainContainer section.subNav {
     width: 100%;
-    height: 64px;
-    border-bottom: 1px solid #ddd; }
+    height: 55px;
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto;
+    overflow-y: hidden; }
     #mainContainer section.subNav nav {
       display: block;
-      width: 1100px;
+      width: max-content;
       margin: 0 auto;
       text-align: center; }
       #mainContainer section.subNav nav li {
-        display: inline-block;
+        display: block;
         width: auto;
-        height: 64px;
-        line-height: 64px;
-        vertical-align: middle;
+        height: 55px;
+        line-height: 55px;
         padding: 0 15px;
-        cursor: pointer; }
+        cursor: pointer;
+        float: left; }
         #mainContainer section.subNav nav li a {
           text-decoration: none;
-          font-size: 15px;
+          font-size: 13px;
           font-weight: normal;
           font-vertical-align: middle;
-          font-height: 17px;
-          font-line-height: 17px;
+          font-height: 15px;
+          font-line-height: 15px;
           text-decoration: none;
           color: #181c1f;
           color: #b1b1b1; }
@@ -383,27 +391,28 @@ html, body {
     min-height: 100vh; }
     #mainContainer section.subContainer div.contents {
       display: block;
-      width: 1100px;
+      width: auto;
       margin: 0 auto;
-      padding-bottom: 100px; }
+      padding-bottom: 100px;
+      padding: 0 10px; }
       #mainContainer section.subContainer div.contents h3.conTitle {
-        font-size: 34px;
+        font-size: 25px;
         font-weight: 600;
         font-vertical-align: middle;
-        font-height: 36px;
-        font-line-height: 36px;
+        font-height: 27px;
+        font-line-height: 27px;
         text-decoration: none;
         color: #181c1f;
         color: #303030;
-        margin-top: 90px;
-        line-height: 35px;
-        height: 35px; }
+        margin-top: 30px;
+        line-height: 25px;
+        height: 25px; }
       #mainContainer section.subContainer div.contents h5.conSubTitle {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 400;
         font-vertical-align: middle;
-        font-height: 22px;
-        font-line-height: 22px;
+        font-height: 19px;
+        font-line-height: 19px;
         text-decoration: none;
         color: #181c1f;
         color: #666666;
@@ -412,17 +421,18 @@ html, body {
         padding: 10px 0;
         letter-spacing: -.3px; }
       #mainContainer section.subContainer div.contents div.innerCon {
-        margin-top: 60px; }
+        margin-top: 20px; }
         #mainContainer section.subContainer div.contents div.innerCon p.box {
           width: 100%;
           display: block;
           padding: 10px; }
     #mainContainer section.subContainer div.bbsCon {
-      margin-top: 60px; }
+      margin-top: 20px; }
       #mainContainer section.subContainer div.bbsCon table {
         width: 100%;
         border-top: 1px solid #303030;
-        border-bottom: 1px solid #cdcdcd; }
+        border-bottom: 1px solid #cdcdcd;
+        table-layout: fixed; }
         #mainContainer section.subContainer div.bbsCon table thead tr, #mainContainer section.subContainer div.bbsCon table tbody tr {
           border-bottom: 1px solid #eee; }
         #mainContainer section.subContainer div.bbsCon table thead th {
@@ -435,21 +445,35 @@ html, body {
           line-height: 55px;
           vertical-align: middle;
           text-align: center;
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 300;
           font-vertical-align: middle;
-          font-height: 16px;
-          font-line-height: 16px;
+          font-height: 15px;
+          font-line-height: 15px;
           text-decoration: none;
           color: #181c1f; }
+        #mainContainer section.subContainer div.bbsCon table tbody td {
+          max-width: 0;
+          width: auto;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        #mainContainer section.subContainer div.bbsCon table thead th:nth-child(n+4), #mainContainer section.subContainer div.bbsCon table tbody td:nth-child(n+4) {
+          display: none; }
+        #mainContainer section.subContainer div.bbsCon table thead th:nth-child(1), #mainContainer section.subContainer div.bbsCon table tbody td:nth-child(1) {
+          width: 50px; }
+        #mainContainer section.subContainer div.bbsCon table thead th:nth-child(3), #mainContainer section.subContainer div.bbsCon table tbody td:nth-child(3) {
+          width: 80px; }
+        #mainContainer section.subContainer div.bbsCon table tbody td:nth-child(2) {
+          text-align: left !important; }
       #mainContainer section.subContainer div.bbsCon p.pagingCon {
         display: inline-block;
         text-align: center;
         width: 100%;
         height: 38px;
         line-height: 38px;
-        margin-top: 41px;
-        margin-bottom: 57px; }
+        margin-top: 40px;
+        margin-bottom: 20px; }
         #mainContainer section.subContainer div.bbsCon p.pagingCon span.inner {
           display: inline-block; }
         #mainContainer section.subContainer div.bbsCon p.pagingCon span.prevCon {
@@ -461,18 +485,18 @@ html, body {
           #mainContainer section.subContainer div.bbsCon p.pagingCon span.nextCon button {
             float: left; }
         #mainContainer section.subContainer div.bbsCon p.pagingCon span.numCon {
-          margin: 0 50px;
+          margin: 0 3px;
           float: left; }
           #mainContainer section.subContainer div.bbsCon p.pagingCon span.numCon button {
             float: left; }
         #mainContainer section.subContainer div.bbsCon p.pagingCon button {
-          width: 36px;
-          height: 36px;
+          width: 30px;
+          height: 30px;
           border: 1px solid #cdcdcd;
           color: #666666;
           background: #fff;
           outline: none;
-          margin: 0 3px;
+          margin: 0 1px;
           cursor: pointer; }
         #mainContainer section.subContainer div.bbsCon p.pagingCon button:hover, #mainContainer section.subContainer div.bbsCon p.pagingCon button.on {
           background: #023e7c;
@@ -481,27 +505,35 @@ html, body {
       #mainContainer section.subContainer div.bbsCon p.serchCon {
         display: inline-block;
         text-align: center;
-        width: 100%;
-        height: 64px;
-        line-height: 64px;
-        background: #f8f8f8; }
+        width: 100%; }
         #mainContainer section.subContainer div.bbsCon p.serchCon span.inner {
           display: inline-block;
-          margin-top: 13px; }
-        #mainContainer section.subContainer div.bbsCon p.serchCon input[type=text] {
-          height: 39px;
-          line-height: 39px;
-          padding: 0 15px;
-          float: left;
-          margin: 0 5px; }
+          width: calc(100% - 10px);
+          max-width: 320px;
+          padding: 5px;
+          background: #f8f8f8; }
         #mainContainer section.subContainer div.bbsCon p.serchCon select {
           float: left;
-          height: 40px;
-          line-height: 39px;
-          padding: 0 15px;
+          width: 70px;
+          max-width: 70px;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 8px;
           border: 1px solid #cdcdcd; }
         #mainContainer section.subContainer div.bbsCon p.serchCon button {
-          float: left; }
+          float: left;
+          width: 70px;
+          max-width: 70px;
+          height: 30px;
+          line-height: 30px; }
+        #mainContainer section.subContainer div.bbsCon p.serchCon input[type=text] {
+          float: left;
+          width: calc(100% - 158px);
+          height: calc( 30px - 1px);
+          line-height: calc( 30px - 1px);
+          padding: 0 5px;
+          margin: 0 3px;
+          font-size: 13px; }
 
 #mainFooter {
   background: #313131;
@@ -516,13 +548,14 @@ html, body {
   text-align: center;
   position: relative;
   width: 100%;
-  min-width: 350px;
-  height: 241px; }
+  min-width: 320px;
+  height: 90px; }
   #mainFooter span {
     letter-spacing: 0px !important; }
   #mainFooter div.inner {
-    display: inline-block;
-    width: 1400px;
+    position: relative;
+    display: block;
+    width: 320px;
     height: 100%;
     margin: 0 auto; }
     #mainFooter div.inner div.top {
@@ -532,7 +565,8 @@ html, body {
       height: 36px;
       margin-bottom: 10px; }
       #mainFooter div.inner div.top div.logo {
-        float: left; }
+        float: left;
+        display: none; }
         #mainFooter div.inner div.top div.logo h3 a {
           text-indent: -9999px;
           display: block;
@@ -541,7 +575,8 @@ html, body {
           height: 36px; }
       #mainFooter div.inner div.top div.linkBox {
         float: right;
-        margin-right: 10px; }
+        margin-right: 10px;
+        display: none; }
         #mainFooter div.inner div.top div.linkBox button {
           background: none;
           border: none;
@@ -570,22 +605,37 @@ html, body {
       #mainFooter div.inner div.bottom div.customerCenter {
         float: left;
         text-align: left;
-        margin-left: 12px; }
+        margin-left: 12px;
+        display: none; }
         #mainFooter div.inner div.bottom div.customerCenter p {
           padding: 5px 0; }
           #mainFooter div.inner div.bottom div.customerCenter p span.ml10 {
-            margin-left: 15px; }
+            margin-left: 5px; }
       #mainFooter div.inner div.bottom div.copyright {
-        display: inline-block; }
+        width: 100%;
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 20px; }
       #mainFooter div.inner div.bottom div.compInfos {
-        float: right; }
+        width: 100%;
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 50px;
+        font-size: 12px;
+        font-weight: normal;
+        font-vertical-align: middle;
+        font-height: 14px;
+        font-line-height: 14px;
+        text-decoration: none;
+        color: #181c1f; }
         #mainFooter div.inner div.bottom div.compInfos a {
           text-decoration: none;
           color: #777;
-          display: block;
-          float: left; }
-        #mainFooter div.inner div.bottom div.compInfos a:not(:first-Child) {
-          margin-left: 20px; }
+          display: inline-block; }
+        #mainFooter div.inner div.bottom div.compInfos a:not(:first-child) {
+          margin-left: 5px; }
   #mainFooter h3 a {
     font-size: 17px;
     font-weight: bold;
