@@ -1,6 +1,8 @@
 $max-w : 1399px;
-$min_w : 350px;
-$header_h : 60px;
+$min_w : 320px;
+$header_h : 55px;
+$sub_margin_top : 20px;
+$search_h : 30px;
 $dp_inBlcok : inline-blcok;
 
 $w100 : 100%;
@@ -87,8 +89,9 @@ html , body { width: 100%;
 	}
 	nav.nav { width: $w100; display: inline-block;
 
-		button.gnb_hamburger { display: block; position: absolute; top: 0; left: 0; width: $header_h; height: $header_h; }
-		button.gnb_util { display: block; position: absolute; top:0; right:0; width: $header_h; height: $header_h; }
+		button.gnb_hamburger, button.gnb_util{ display: block; position: absolute; border: none; background: transparent; outline: none; font-size: 15px; }
+		button.gnb_hamburger 	{ top: 0; left: 0; width: $header_h; height: $header_h;/* border-right: 1px solid $text_color_3; */ }
+		button.gnb_util 		{ top:0; right:0; width: $header_h; height: $header_h; /* border-left: 1px solid $text_color_3; */ }
 
 		div.menuList { display: none; width: 100%; height: calc(100vh - 60px); background: #fff; overflow-y: auto; }
 
@@ -103,9 +106,9 @@ html , body { width: 100%;
 			@include fontDefault( 20px , 400 );
 			/* border-right : 5px solid #fff;
 			transition: border-bottom .5s ease; */
-			> a { text-decoration: none; display: block; color: $text_color_1; margin-top:5px; width: 40%; max-width: 150px; float: left; padding-left: 20px; }
+			> a { text-decoration: none; display: block; color: $text_color_1; margin-top:5px; width: calc(40% - 20px); max-width: 150px; float: left; padding-left: 20px; }
 			ul.subMenu {
-				display: block; width: 52%; max-width: 180px; padding: 20px 0 20px 20px; float: left;
+				display: block; width: calc(59% - 20px); max-width: 180px; padding: 18px 0 20px 20px; float: left;
 				li { @include fontDefault( 15px , 400 ); display: block; text-align: left; width: auto; height:25px; line-height: 25px; margin-top: 5px; }
 				li a { text-decoration: none; color: $text_color_1; }
 				li:hover a , li.on a { color : $col_bule; text-decoration: underline; }
@@ -117,12 +120,12 @@ html , body { width: 100%;
 			border-bottom : 5px solid #023e7c;
 		}
 	}
-	div.backStage{ width: 100%; height: $header_h; position: absolute; top: 0px; left:0; right: 0; background: #fff; }
+	div.backStage{ width: 100%; height: $header_h; position: absolute; top: 0px; left:0; right: 0; background: #fff; border-bottom: 1px solid #ccc; }
 	div.backDrop { width: 100%; height: 100vh; position: absolute; top: -100vh; left:0; right: 0; bottom:0; background: #fff; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; }
 	div.backDrop { transition : top .35s ease; }
 
 	div.buttonSet {
-		position: absolute; right: -250px; top: $header_h; padding: 15px 30px 30px 0; background: #fff; width: 150px; border-left: 1px solid $text_color_3; border-bottom: 1px solid $text_color_3;
+		position: absolute; right: -250px; top: calc(#{$header_h} + 1px); padding: 15px 20px 20px 0; background: #fff; width: 100px; border-left: 1px solid $text_color_3; border-bottom: 1px solid $text_color_3;
 		div.login {
 			float: left;
 			margin-top: 2px;
@@ -131,7 +134,7 @@ html , body { width: 100%;
 				float: left; width: 90%; text-align: right;
 				padding: 20px 15px;
 				a {
-					@include fontDefault( 20px , 400 );
+					@include fontDefault( 15px , 400 );
 					color : #999;
 				}
 			}
@@ -267,42 +270,47 @@ html , body { width: 100%;
 		h3 { margin-top : 74px; @include fontDefault( 20px , 300 ); color: #fff; letter-spacing: 0px; }
 	}
 	section.subNav {
-		width: $w100; height: 64px; border-bottom: 1px solid #ddd;
-		nav { display: block; width: 1100px; margin: 0 auto; text-align: center;
-			li { display: inline-block; width: auto; height: 64px; line-height: 64px; vertical-align: middle; padding : 0 15px; cursor: pointer;
-				a { text-decoration: none; @include fontDefault( 15px ); color: $text_color_3;  }
+		width: $w100; height: $header_h; border-bottom: 1px solid #ddd; overflow-x: auto; overflow-y: hidden;
+		nav { display: block; width: max-content; margin: 0 auto; text-align: center; 
+			li { display: block; width: auto; height: $header_h; line-height: $header_h; padding : 0 15px; cursor: pointer; float:left;
+				a { text-decoration: none; @include fontDefault( 13px ); color: $text_color_3;  }
 			}
 			li:hover a , li.on a { text-decoration: underline; color: #333; }
 		}
 	}
 	section.subContainer{ width: $w100; min-height: 100vh;
 		div.contents {
-			display: block; width: 1100px; margin: 0 auto; padding-bottom: 100px;
-			h3.conTitle { @include fontDefault( 34px , 600 ); color: $text_color_1; margin-top: 90px; line-height: 35px; height: 35px; }
-			h5.conSubTitle { @include fontDefault( 20px , 400 ); color: $text_color_2; line-height: 21px; height: 21px; padding: 10px 0; letter-spacing: -.3px; }
-			div.innerCon { margin-top: 60px;
+			display: block; width: auto; margin: 0 auto; padding-bottom: 100px; padding: 0 10px;
+			h3.conTitle { @include fontDefault( 25px , 600 ); color: $text_color_1; margin-top: 30px;; line-height: 25px; height: 25px; }
+			h5.conSubTitle { @include fontDefault( 17px , 400 ); color: $text_color_2; line-height: 21px; height: 21px; padding: 10px 0; letter-spacing: -.3px; }
+			div.innerCon { margin-top: $sub_margin_top;
 				p.box { width: 100%; display: block; padding: 10px; }
 			}
 		}
-		div.bbsCon { margin-top: 60px;
-			table { width: 100%; border-top: 1px solid $text_color_1; border-bottom: 1px solid $table_color_2;
+		div.bbsCon { margin-top: $sub_margin_top;
+			table { width: 100%; border-top: 1px solid $text_color_1; border-bottom: 1px solid $table_color_2; table-layout: fixed;
 				thead tr , tbody tr { border-bottom: 1px solid $table_color_1 }
 				thead th { height: 61px; line-height: 61px; vertical-align: middle; text-align: center; }
-				tbody td { height: 55px; line-height: 55px; vertical-align: middle; text-align: center; @include fontDefault( 14px , 300 ); }
+				tbody td { height: 55px; line-height: 55px; vertical-align: middle; text-align: center; @include fontDefault( 13px , 300 ); }
+				tbody td { max-width: 0; width: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+				thead th:nth-child(n+4) , tbody td:nth-child(n+4) { display: none; }
+				thead th:nth-child(1) , tbody td:nth-child(1) { width: 50px; }
+				thead th:nth-child(3) , tbody td:nth-child(3) { width: 80px; }
+				tbody td:nth-child(2) { text-align: left !important; }
 			}
-			p.pagingCon { display: inline-block;text-align: center; width: 100%; height: 38px; line-height: 38px; margin-top: 41px; margin-bottom: 57px;
+			p.pagingCon { display: inline-block;text-align: center; width: 100%; height: 38px; line-height: 38px; margin-top: 40px; margin-bottom: 20px;
 				span.inner { display: inline-block; }
 				span.prevCon { float: left; button { float: left; } }
 				span.nextCon { float: left; button { float: left; } }
-				span.numCon { margin: 0 50px; float: left; button { float: left; } }
-				button { width: 36px; height: 36px; border: 1px solid $table_color_2; color: $text_color_2; background: #fff; outline: none; margin: 0 3px; cursor: pointer; }
+				span.numCon { margin: 0 3px; float: left; button { float: left; } }
+				button { width: 30px; height: 30px; border: 1px solid $table_color_2; color: $text_color_2; background: #fff; outline: none; margin: 0 1px; cursor: pointer; }
 				button:hover , button.on { background: $btn_color_blue; border: none; color: #fff; }
 			}
-			p.serchCon { display: inline-block; text-align: center; width: 100%; height: 64px; line-height: 64px; background: #f8f8f8;
-				span.inner { display: inline-block; margin-top: 13px; }
-				input[type=text] { height: 39px; line-height: 39px; padding: 0 15px; float:left; margin: 0 5px; }
-				select { float:left; height: 40px; line-height: 39px; padding: 0 15px; border: 1px solid $table_color_2; }
-				button { float:left; }
+			p.serchCon { display: inline-block; text-align: center; width: 100%;
+				span.inner { display: inline-block; width: calc(100% - 10px); max-width: $min_w; padding: 5px; background: #f8f8f8; }
+				select 			 { float:left; width: 70px; max-width: 70px; height: $search_h; line-height: $search_h; padding: 0 8px; border: 1px solid $table_color_2; }
+				button 			 { float:left; width: 70px; max-width: 70px; height: $search_h; line-height: $search_h; }
+				input[type=text] { float:left; width: calc(100% - 158px); height: calc( #{$search_h} - 1px); line-height: calc( #{$search_h} - 1px); padding: 0 5px; margin: 0 3px; font-size: 13px; }
 			}
 		}
 	}
@@ -317,19 +325,20 @@ html , body { width: 100%;
 	position: relative;
 	width: $w100;
 	min-width: $min_w;
-	height: 241px;
+	height: 90px;
 	span { letter-spacing: 0px !important; } 
 	div.inner {
-		display: inline-block;
-		width: 1400px;
+		position: relative;
+		display: block;
+		width: $min_w;
 		height: 100%;
 		margin: 0 auto;
 		div.top {
 			margin-top: 50px; display: block; width: $w100; height: 36px; margin-bottom: 10px;
-			div.logo { float: left;
+			div.logo { float: left; display: none;
 				h3 a { text-indent: -9999px; display: block; background: url("../images/logo_bottom.jpg") no-repeat; width: 175px; height:36px; }
 			}
-			div.linkBox { float: right; margin-right: 10px;;
+			div.linkBox { float: right; margin-right: 10px; display: none;
 				button { background:none; border: none; outline: none; width: 20px; height:21px; display: block; float:left;  margin-left: 20px; cursor: pointer;
 					i  { display: block; width: 20px; height: 100%; }
 					i.youtube { background: url("../images/ico_youtube.jpg") no-repeat; }
@@ -341,13 +350,13 @@ html , body { width: 100%;
 		}
 		div.bottom {
 			display: block; width: $w100;
-			div.customerCenter { float: left; text-align: left; margin-left: 12px;
-				p { padding: 5px 0; span.ml10 { margin-left: 15px; } }
+			div.customerCenter { float: left; text-align: left; margin-left: 12px; display: none;
+				p { padding: 5px 0; span.ml10 { margin-left: 5px; } }
 			}
-			div.copyright { display: inline-block; }
-			div.compInfos { float: right; 
-				a { text-decoration: none; color: #777; display: block; float: left } 
-				a:not(:first-Child){ margin-left: 20px; }
+			div.copyright { width: $w100; display: block; text-align: center; position: absolute; bottom: 20px; }
+			div.compInfos { width: $w100; display: block; text-align: center; position: absolute; bottom: 50px; @include fontDefault( 12px );
+				a { text-decoration: none; color: #777; display: inline-block; } 
+				a:not(:first-child){ margin-left: 5px; }
 			}
 		}
 	}

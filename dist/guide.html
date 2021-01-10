@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sass Test</title>
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/main_pc.css" type="text/css" media="screen and (min-width:1400px)">
+	<link rel="stylesheet" href="./css/main_mobile.css" type="text/css" media="screen and (min-width:0px) and (max-width: 1399px)">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/96ef2855d9.js" crossorigin="anonymous"></script>
 </head>
@@ -14,64 +16,55 @@
 		<div class="backDrop"></div>
 		<div class="backStage"></div>
 		<h3 class="logo"><a href="/">MTA</a></h3>
-		<nav class="nav">
-			<ul>
-				<li class="mainMenu"><a href="/detail">서비스소개</a>
-					<ul class="subMenu">
-						<li><a href="/">실시간테스트</a></li>
-						<li><a href="/">클라우드 디버깅</a></li>
-						<li><a href="/">모니터링</a></li>
-						<li><a href="/">구축형 MTA</a></li>
-					</ul>
-				</li>
-				<li class="mainMenu"><a href="/price">지원단말기</a>
-					<ul class="subMenu">
-						<li><a href="/">안드로이드</a></li>
-						<li><a href="/">IOS</a></li>
-					</ul>
-				</li>
-				<li class="mainMenu"><a href="/bbs">가격안내</a>
-					<ul class="subMenu">
-						<li><a href="/">포인트 충전</a></li>
-						<li><a href="/">정기구독</a></li>
-					</ul>
-				</li>
-				<li class="mainMenu"><a href="/guide">이용안내</a>
-					<ul class="subMenu">
-						<li><a href="/">고객사례</a></li>
-						<li><a href="/">사용방법</a></li>
-					</ul>
-				</li>
-				<li class="mainMenu"><a href="/detail">고객센터</a>
-					<ul class="subMenu">
-						<li><a href="/">공지사항</a></li>
-						<li><a href="/">1:1 문의</a></li>
-						<li><a href="/">FAQ</a></li>
-					</ul>
-				</li>
-				<li class="mainMenu"><a href="/surport">협력사지원</a>
-					<ul class="subMenu">
-						<li><a href="/">공지사항</a></li>
-						<li><a href="/">고객사 현황</a></li>
-						<li><a href="/">솔루션 다운로드</a></li>
-						<li><a href="/">파트너사 정보수정</a></li>
-						<li><a href="/">Q&A</a></li>
-					</ul>
-				</li>
-			</ul>
-			<script>
-				$(document).ready(function(){
-					let navContainer = $('#mainHeader');
-					let hoverTarget = $('#mainHeader').find('nav.nav , div.backDrop');
-					let mainMenus = navContainer.find('li.mainMenu');
-					hoverTarget.hover(function(e , v){
-						console.log( e, v );
-						navContainer.addClass('active');
-					},function(){
-						navContainer.removeClass('active');
-					});
-				});
-			</script>
+		<nav class="nav" id="mainGnb">
+			<button class="gnb_hamburger"><i class="fa fa-bars"></i></button>
+			<button class="gnb_util"><i class="far fa-user"></i></button>
+			<div class="menuList">
+				<ul>
+					<li class="mainMenu"><a href="/detail">서비스소개</a>
+						<ul class="subMenu">
+							<li><a href="/">실시간테스트</a></li>
+							<li><a href="/">클라우드 디버깅</a></li>
+							<li><a href="/">모니터링</a></li>
+							<li><a href="/">구축형 MTA</a></li>
+						</ul>
+					</li>
+					<li class="mainMenu"><a href="/price">지원단말기</a>
+						<ul class="subMenu">
+							<li><a href="/">안드로이드</a></li>
+							<li><a href="/">IOS</a></li>
+						</ul>
+					</li>
+					<li class="mainMenu"><a href="/bbs">가격안내</a>
+						<ul class="subMenu">
+							<li><a href="/">포인트 충전</a></li>
+							<li><a href="/">정기구독</a></li>
+						</ul>
+					</li>
+					<li class="mainMenu"><a href="/guide">이용안내</a>
+						<ul class="subMenu">
+							<li><a href="/">고객사례</a></li>
+							<li><a href="/">사용방법</a></li>
+						</ul>
+					</li>
+					<li class="mainMenu"><a href="/detail">고객센터</a>
+						<ul class="subMenu">
+							<li><a href="/">공지사항</a></li>
+							<li><a href="/">1:1 문의</a></li>
+							<li><a href="/">FAQ</a></li>
+						</ul>
+					</li>
+					<li class="mainMenu"><a href="/surport">협력사지원</a>
+						<ul class="subMenu">
+							<li><a href="/">공지사항</a></li>
+							<li><a href="/">고객사 현황</a></li>
+							<li><a href="/">솔루션 다운로드</a></li>
+							<li><a href="/">파트너사 정보수정</a></li>
+							<li><a href="/">Q&A</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</nav>
 		<div class="buttonSet">
 			<div class="login">
@@ -86,6 +79,31 @@
 				<button class="language">EN</button>
 			</p>
 		</div>
+		<script>
+			$(document).ready(function(){
+				let navContainer = $('#mainHeader');
+				let hoverTarget = $('#mainHeader').find('nav.nav , div.backDrop');
+				let mainMenus = navContainer.find('li.mainMenu');
+				hoverTarget.hover(function(e , v){
+					console.log( e, v );
+					navContainer.addClass('active');
+				},function(){
+					navContainer.removeClass('active');
+				});
+
+				$('button.gnb_hamburger').click(function(){
+					let target = $('#mainHeader');
+					if( target.hasClass('active') ) target.removeClass('active');
+					else target.addClass('active');
+				});
+
+				$('button.gnb_util').click(function(){
+					let target = $('#mainHeader').find('.buttonSet');
+					if( target.hasClass('active') ) target.removeClass('active');
+					else target.addClass('active');
+				});
+			});
+		</script>
 	</header>
 	<div id="mainContainer" class="main">
 		<section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
@@ -136,7 +154,7 @@
 							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
 							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
 							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
-							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
+							<tr><td>09</td><td>게시글 영역 입니다.게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
 							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
 							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
 							<tr><td>09</td><td>게시글 영역 입니다.</td><td>2020.12.26</td><td>관리자</td><td>9999</td></tr>
@@ -156,10 +174,6 @@
 								<button type="button"> 3 </button>
 								<button type="button"> 4 </button>
 								<button type="button"> 5 </button>
-								<button type="button"> 6 </button>
-								<button type="button"> 7 </button>
-								<button type="button"> 9 </button>
-								<button type="button"> 10 </button>
 							</span>
 							<span class="nextCon">
 								<button type="button"> > </button>
