@@ -59,7 +59,7 @@ function browsersyncReload(cb){
 
 function watchTask(){
 	//watch('*.html' , browsersyncReload);
-	watch(['*.html' , 'src/css/**/*.scss' , 'src/js/**/*.js'], series(htmlTask , sassTask, jsTask));
+	watch(['*.html' , 'src/css/**/*.scss' , , 'src/css/**/*.css' , 'src/js/**/*.js'], series(htmlTask , sassTask, jsTask));
 }
 
 //default task

@@ -82,8 +82,7 @@
 		<script>
 			$(document).ready(function(){
 				let navContainer = $('#mainHeader');
-				let hoverTarget = $('#mainHeader').find('nav.nav , div.backDrop');
-				let mainMenus = navContainer.find('li.mainMenu');
+				let hoverTarget = $('#mainHeader').find('li.mainMenu , div.backDrop');
 				hoverTarget.hover(function(e , v){
 					console.log( e, v );
 					navContainer.addClass('active');
@@ -140,6 +139,20 @@
 					<p class="box">
 						<input type="text" placeholder="입력해주세요."/>
 						<input type="text" class="invalid" placeholder="입력해주세요."/>
+					</p>
+					<p class="box">
+						<input type="checkbox" id="checkbox_3"/>
+						<label for="checkbox_3"></label>
+						
+						<input type="checkbox" class="rect" id="checkbox_1"/>
+						<label for="checkbox_1">체크 해주세요</label>
+
+						<input type="checkbox" class="circle" id="checkbox_2"/>
+						<label for="checkbox_2">체크 해주세요</label>
+					</p>
+					<p class="box">
+						<input type="radio" id="radio_1" name="radio" value="1"/>
+						<input type="radio" id="radio_2" name="radio" value="2"/>
 					</p>
 				</div>
 			</div>
