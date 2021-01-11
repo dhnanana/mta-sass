@@ -369,11 +369,11 @@ html, body {
         line-height: 35px;
         height: 35px; }
       #mainContainer section.subContainer div.contents h5.conSubTitle {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 400;
         font-vertical-align: middle;
-        font-height: 22px;
-        font-line-height: 22px;
+        font-height: 18px;
+        font-line-height: 18px;
         text-decoration: none;
         color: #181c1f;
         color: #666666;
@@ -392,26 +392,53 @@ html, body {
       #mainContainer section.subContainer div.bbsCon table {
         width: 100%;
         border-top: 1px solid #303030;
-        border-bottom: 1px solid #cdcdcd; }
+        border-bottom: 1px solid #cdcdcd;
+        letter-spacing: 0; }
         #mainContainer section.subContainer div.bbsCon table thead tr, #mainContainer section.subContainer div.bbsCon table tbody tr {
           border-bottom: 1px solid #eee; }
         #mainContainer section.subContainer div.bbsCon table thead th {
           height: 61px;
           line-height: 61px;
           vertical-align: middle;
-          text-align: center; }
+          text-align: center;
+          letter-spacing: 0; }
         #mainContainer section.subContainer div.bbsCon table tbody td {
           height: 55px;
           line-height: 55px;
           vertical-align: middle;
           text-align: center;
-          font-size: 14px;
+          font-size: 15px;
           font-weight: 300;
           font-vertical-align: middle;
-          font-height: 16px;
-          font-line-height: 16px;
+          font-height: 17px;
+          font-line-height: 17px;
           text-decoration: none;
-          color: #181c1f; }
+          color: #181c1f;
+          letter-spacing: 0; }
+        #mainContainer section.subContainer div.bbsCon table tbody td {
+          padding: 0 10px; }
+        #mainContainer section.subContainer div.bbsCon table .tx_l {
+          text-align: left; }
+        #mainContainer section.subContainer div.bbsCon table tbody td button {
+          width: 78px;
+          height: 38px;
+          line-height: 36px;
+          text-align: center;
+          appearance: none;
+          border: 1px solid #c3c4c6;
+          color: #666;
+          background: #fff;
+          outline: none;
+          cursor: pointer; }
+        #mainContainer section.subContainer div.bbsCon table tbody td button:hover {
+          background: #f8f8f8; }
+        #mainContainer section.subContainer div.bbsCon table tr.util td button {
+          display: inline-block; }
+        #mainContainer section.subContainer div.bbsCon table tr.util td {
+          background: #f8f8f8;
+          line-height: 72px; }
+        #mainContainer section.subContainer div.bbsCon table tbody.list tr:hover {
+          background: #f8f8f8; }
       #mainContainer section.subContainer div.bbsCon p.pagingCon {
         display: inline-block;
         text-align: center;
@@ -459,19 +486,22 @@ html, body {
           display: inline-block;
           margin-top: 13px; }
         #mainContainer section.subContainer div.bbsCon p.serchCon input[type=text] {
-          height: 39px;
-          line-height: 39px;
+          width: 333px;
+          height: 36px;
+          line-height: 38px;
           padding: 0 15px;
           float: left;
-          margin: 0 5px; }
+          margin: 0 10px; }
         #mainContainer section.subContainer div.bbsCon p.serchCon select {
           float: left;
-          height: 40px;
-          line-height: 39px;
-          padding: 0 15px;
-          border: 1px solid #cdcdcd; }
+          width: 139px;
+          margin-right: 0;
+          height: 38px; }
         #mainContainer section.subContainer div.bbsCon p.serchCon button {
-          float: left; }
+          float: left;
+          background: #333;
+          width: 139px;
+          height: 38px; }
 
 #mainFooter {
   background: #313131;
@@ -593,7 +623,13 @@ button.btn.lg {
   width: 275px;
   height: 62px;
   line-height: 62px;
-  font-size: 1.1rem; }
+  font-size: 17px;
+  font-weight: normal;
+  font-vertical-align: middle;
+  font-height: 19px;
+  font-line-height: 19px;
+  text-decoration: none;
+  color: #181c1f; }
 
 button.btn.md {
   width: 151px;
@@ -616,7 +652,7 @@ button.btn.gray {
 
 input[type=text] {
   width: 185px;
-  height: 20px;
+  height: calc(20px - 2px);
   border: 1px solid #e6e6e6;
   padding: 10px 13px;
   color: #bfbfbf; }
