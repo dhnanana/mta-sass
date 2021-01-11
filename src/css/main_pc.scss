@@ -276,16 +276,23 @@ html , body {
 		div.contents {
 			display: block; width: 1100px; margin: 0 auto; padding-bottom: 100px;
 			h3.conTitle { @include fontDefault( 34px , 600 ); color: $text_color_1; margin-top: 90px; line-height: 35px; height: 35px; }
-			h5.conSubTitle { @include fontDefault( 20px , 400 ); color: $text_color_2; line-height: 21px; height: 21px; padding: 10px 0; letter-spacing: -.3px; }
+			h5.conSubTitle { @include fontDefault( 16px , 400 ); color: $text_color_2; line-height: 21px; height: 21px; padding: 10px 0; letter-spacing: -.3px; }
 			div.innerCon { margin-top: 60px;
 				p.box { width: 100%; display: block; padding: 10px; }
 			}
 		}
 		div.bbsCon { margin-top: 60px;
-			table { width: 100%; border-top: 1px solid $text_color_1; border-bottom: 1px solid $table_color_2;
+			table { width: 100%; border-top: 1px solid $text_color_1; border-bottom: 1px solid $table_color_2; letter-spacing: 0;
 				thead tr , tbody tr { border-bottom: 1px solid $table_color_1 }
-				thead th { height: 61px; line-height: 61px; vertical-align: middle; text-align: center; }
-				tbody td { height: 55px; line-height: 55px; vertical-align: middle; text-align: center; @include fontDefault( 14px , 300 ); }
+				thead th { height: 61px; line-height: 61px; vertical-align: middle; text-align: center; letter-spacing: 0; }
+				tbody td { height: 55px; line-height: 55px; vertical-align: middle; text-align: center; @include fontDefault( 15px , 300 ); letter-spacing: 0; }
+				tbody td { padding: 0 10px; }
+				.tx_l { text-align: left; }
+				tbody td button { width: 78px; height: 38px; line-height: 36px; text-align: center; appearance: none; border: 1px solid #c3c4c6; color: #666; background: #fff; outline: none; cursor: pointer; }
+				tbody td button:hover { background: #f8f8f8; }
+				tr.util td button { display: inline-block; }
+				tr.util td { background: #f8f8f8; line-height: 72px; }
+				tbody.list tr:hover { background: #f8f8f8; }
 			}
 			p.pagingCon { display: inline-block;text-align: center; width: 100%; height: 38px; line-height: 38px; margin-top: 41px; margin-bottom: 57px;
 				span.inner { display: inline-block; }
@@ -297,9 +304,9 @@ html , body {
 			}
 			p.serchCon { display: inline-block; text-align: center; width: 100%; height: 64px; line-height: 64px; background: #f8f8f8;
 				span.inner { display: inline-block; margin-top: 13px; }
-				input[type=text] { height: 39px; line-height: 39px; padding: 0 15px; float:left; margin: 0 5px; }
-				select { float:left; height: 40px; line-height: 39px; padding: 0 15px; border: 1px solid $table_color_2; }
-				button { float:left; }
+				input[type=text] { width:333px; height: 36px; line-height: 38px; padding: 0 15px; float:left; margin: 0 10px; }
+				select { float:left; width: 139px; margin-right: 0; height: 38px; }
+				button { float:left; background: #333; width: 139px; height: 38px; }
 			}
 		}
 	}
@@ -368,12 +375,12 @@ html , body {
 button.btn { background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer; outline: none; }
 button.btn { vertical-align:middle; text-align: center; background-color: $btn_color_white; border: solid 1px #c3c4c6; }
 button.btn:focus {  }
-button.btn.lg { width: 275px; height:62px; line-height:62px; font-size: 1.1rem; }
+button.btn.lg { width: 275px; height:62px; line-height:62px; @include fontDefault( 17px ) }
 button.btn.md { width: 151px; height:50px; line-height:50px; }
 button.btn.sm { width: 100px; height:40px; }
 button.btn.blue { background-color: $btn_color_blue; color: $btn_color_white; border:none; }
 button.btn.gray { background-color: $btn_color_gray; color: $btn_color_white; border:none; }
 
-input[type=text] { width: 185px; height:20px; border:1px solid #e6e6e6; padding: 10px 13px; color: #bfbfbf; }
+input[type=text] { width: 185px; height: calc(20px - 2px); border:1px solid #e6e6e6; padding: 10px 13px; color: #bfbfbf; }
 input[type=text]:focus { border: solid 1px #333; color: #333333; outline: none; }
 input.invalid  { border: solid 1px #f33; }

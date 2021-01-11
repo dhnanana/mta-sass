@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
-//const browsersync = require('browser-sync').create();
+const browsersync = require('browser-sync').create();
 const del = require('del');
 
 function clean(){
@@ -39,29 +39,30 @@ function imagesTask(){
 
 //htmls
 function htmlTask(){
-	return src('*.html').pipe(dest('dist'))
+	return src('src/**/*.html').pipe(dest('dist'))
 }
 
 //browsersync task
 function browsersyncServe(cb){
-	/* browsersync.init({
+	browsersync.init({
 		server : {
-			baseDir : '.'
+			baseDir : './dist'
 		}
 	});
-	cb(); */
 	cb();
+	//cb();
 }
 
 function browsersyncReload(cb){
-	//browsersync.reload();
+	browsersync.reload();
+	cb();
 }
 
 function watchTask(){
 	//watch('*.html' , browsersyncReload);
-	watch(['*.html' , 'src/css/**/*.scss' , , 'src/css/**/*.css' , 'src/js/**/*.js'], series(htmlTask , sassTask, jsTask));
+	watch(['*.html' , 'src/css/**/*.scss' , , 'src/css/**/*.css' , 'src/js/**/*.js'], series(htmlTask , sassTask, jsTask , browsersyncReload));
 }
 
 //default task
 //exports.default = series( clean , parallel(sassTask , jsTask , browsersyncServe , watchTask) );
-exports.default = series( clean , parallel(sassTask , jsTask , imagesTask , fontsTask , htmlTask , watchTask) );
+exports.default = series( clean , parallel(sassTask , jsTask , imagesTask , fontsTask , htmlTask , browsersyncServe , watchTask) );

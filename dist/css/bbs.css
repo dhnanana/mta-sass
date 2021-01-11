@@ -1,0 +1,296 @@
+div.bbsCon {
+  position: relative; }
+  div.bbsCon p.numInfo {
+    float: right;
+    margin-bottom: 15px; }
+    div.bbsCon p.numInfo span {
+      font-size: 14px;
+      font-weight: 500;
+      font-vertical-align: middle;
+      height: 16px;
+      line-height: 16px;
+      text-decoration: none;
+      color: #181c1f; }
+    div.bbsCon p.numInfo span.split {
+      margin: 0 3px; }
+    div.bbsCon p.numInfo span b {
+      color: #ed2125;
+      margin-left: 3px; }
+  div.bbsCon p.titleMenu {
+    position: absolute;
+    top: -125px;
+    right: 0; }
+
+div.util.faq {
+  width: 100%;
+  display: inline-block;
+  background: #f8f8f8;
+  padding: 29px 0;
+  margin-top: 70px; }
+  div.util.faq div p.desc {
+    margin-bottom: 13px; }
+  div.util.faq div.leftCon {
+    float: left;
+    margin-left: 29px;
+    border-right: 1px solid #e8e8e8;
+    padding-right: 29px;
+    width: 70%; }
+    div.util.faq div.leftCon input[type=text] {
+      width: 77.5%; }
+    div.util.faq div.leftCon button {
+      width: 139px;
+      height: 38px;
+      border: none;
+      background: #999;
+      color: #fff; }
+  div.util.faq div.rightCon {
+    float: left;
+    margin-left: 29px; }
+    div.util.faq div.rightCon button {
+      width: 218px;
+      height: 38px;
+      border: none;
+      background: #999;
+      color: #fff; }
+
+div.faq {
+  margin-top: 39px !important; }
+  div.faq div.cateBox {
+    width: 100%;
+    margin-bottom: 40px;
+    display: inline-block; }
+    div.faq div.cateBox button {
+      float: left;
+      width: 20%;
+      background: #fff;
+      color: #333;
+      height: 48px;
+      border: 1px solid #e8e8e8;
+      outline: none;
+      cursor: pointer; }
+    div.faq div.cateBox button:not(:first-child) {
+      border-left: none; }
+    div.faq div.cateBox button.on {
+      background: #004181;
+      color: #fff;
+      border-color: #004181; }
+  div.faq col:nth-child(1) {
+    width: 70px; }
+  div.faq col:nth-child(2) {
+    width: 150px; }
+  div.faq tbody tr td:last-child {
+    text-align: left !important; }
+  div.faq tbody tr.typeA {
+    display: none; }
+  div.faq tbody tr.typeA span.answer {
+    display: block;
+    position: relative;
+    width: calc(100% - 138px);
+    line-height: 25px;
+    background-color: #f8f8f8;
+    padding: 40px 69px; }
+  div.faq tbody tr.typeA.on {
+    display: table-row; }
+  div.faq tbody tr.typeQ td:last-child {
+    background: url(../images/download/up-i.png) no-repeat calc(100% - 9px) center; }
+  div.faq tbody tr.typeQ td:last-child::before {
+    content: 'Q';
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 50%;
+    background: #ccc;
+    color: #fff;
+    text-align: center;
+    margin-right: 13px;
+    font-size: 13px; }
+  div.faq tbody tr.typeQ.on td:last-child {
+    background: url(../images/download/dropdown.png) no-repeat calc(100% - 9px) center; }
+  div.faq tbody tr.typeQ.on td:last-child::before {
+    background: #666; }
+  div.faq tbody tr button {
+    display: none; }
+  div.faq tbody tr.on button {
+    display: block; }
+  div.faq tbody tr.typeA td:last-child span.answer::before {
+    content: 'A';
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    background: #004181;
+    color: #fff;
+    text-align: center;
+    top: 28px;
+    left: 14px; }
+
+div.faq.modi {
+  width: 100%;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #ccc;
+  padding: 0; }
+  div.faq.modi p.line {
+    display: block;
+    height: 72px;
+    line-height: 72px;
+    width: 100%;
+    margin: 0; }
+  div.faq.modi p.line:not(:first-child) {
+    border-top: 1px solid #e8e8e8; }
+  div.faq.modi span.label, div.faq.modi span.input {
+    height: 72px;
+    line-height: 72px;
+    float: left; }
+  div.faq.modi span.label {
+    font-size: 16px;
+    font-weight: 500;
+    font-vertical-align: middle;
+    height: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #181c1f;
+    height: 72px;
+    line-height: 72px;
+    width: 18%;
+    padding-left: 38px; }
+  div.faq.modi span.input {
+    background: #fff;
+    width: calc(82% - 38px); }
+  div.faq.modi span.input select {
+    width: 254px; }
+  div.faq.modi span.input input[type=text] {
+    width: 40%; }
+  div.faq.modi span.input button {
+    width: 15%;
+    background: #bbb;
+    color: #fff;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+    outline: none;
+    cursor: pointer; }
+
+div.bbsCon div.detail {
+  width: 100%;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  color: #333; }
+  div.bbsCon div.detail p.t_title {
+    font-size: 18px;
+    font-weight: 500;
+    font-vertical-align: middle;
+    height: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #181c1f;
+    height: 82px;
+    line-height: 82px;
+    padding: 0 20px;
+    border-bottom: 1px solid #eee;
+    padding: 0 20px;
+    background: #f8f8f8; }
+  div.bbsCon div.detail p.t_info {
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid #eee;
+    padding: 0 20px;
+    background: #f8f8f8; }
+  div.bbsCon div.detail p.t_info span {
+    font-weight: 300; }
+  div.bbsCon div.detail p.t_info span b {
+    font-weight: 500; }
+  div.bbsCon div.detail p.t_info span b::after {
+    content: ":";
+    margin: 0 10px;
+    margin-right: 17px; }
+  div.bbsCon div.detail p.t_info span.view_cnt, div.bbsCon div.detail p.t_info span.date {
+    float: right;
+    margin-left: 57px; }
+  div.bbsCon div.detail div.t_content {
+    padding: 29px;
+    line-height: 25px;
+    border-bottom: 1px solid #eee; }
+  div.bbsCon div.detail div.t_answer::before {
+    content: 'A';
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    background: #004181;
+    color: #fff;
+    text-align: center;
+    top: 21px;
+    left: 50px; }
+  div.bbsCon div.detail div.t_answer {
+    padding: 29px 0;
+    position: relative; }
+    div.bbsCon div.detail div.t_answer p.titleCon {
+      padding-left: 105px; }
+      div.bbsCon div.detail div.t_answer p.titleCon span.title {
+        font-size: 17px;
+        font-weight: 400;
+        font-vertical-align: middle;
+        height: 19px;
+        line-height: 19px;
+        text-decoration: none;
+        color: #181c1f;
+        display: block;
+        margin-bottom: 2px; }
+      div.bbsCon div.detail div.t_answer p.titleCon span.a_date {
+        font-size: 13px;
+        font-weight: 300;
+        font-vertical-align: middle;
+        height: 15px;
+        line-height: 15px;
+        text-decoration: none;
+        color: #181c1f;
+        display: block; }
+    div.bbsCon div.detail div.t_answer div.a_content {
+      padding: 29px 0 83px 105px;
+      line-height: 25px; }
+  div.bbsCon div.detail tbody th {
+    font-size: 16px;
+    font-weight: 400;
+    font-vertical-align: middle;
+    height: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #181c1f;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    background: #f8f8f8;
+    width: 18%;
+    padding-left: 2.5%; }
+  div.bbsCon div.detail table.write tbody td {
+    text-align: left !important; }
+
+div.bbsCon div.util {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 200px;
+  margin-top: 49px; }
+
+div.bbsCon div.util button {
+  float: right;
+  width: 150px; }
+
+div.bbsCon div.util button:nth-child(2) {
+  margin: 0 13px; }
+
+div.bbsCon div.util:after {
+  content: " ";
+  clear: both; }
+
+div.bbsCon div.util.center {
+  display: inline-block;
+  text-align: center;
+  width: 100%; }
+
+div.bbsCon div.util.center button {
+  float: none; }
