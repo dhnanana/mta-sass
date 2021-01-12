@@ -1,7 +1,7 @@
 $max-w : 1399px;
 $min_w : 320px;
 $header_h : 55px;
-$sub_margin_top : 20px;
+$sub_margin_top : 15px;
 $search_h : 30px;
 $dp_inBlcok : inline-blcok;
 
@@ -281,8 +281,8 @@ html , body { width: 100%;
 	section.subContainer{ width: $w100; min-height: 100vh;
 		div.contents {
 			display: block; width: auto; margin: 0 auto; padding-bottom: 100px; padding: 0 10px;
-			h3.conTitle { @include fontDefault( 25px , 600 ); color: $text_color_1; margin-top: 30px;; line-height: 25px; height: 25px; }
-			h5.conSubTitle { @include fontDefault( 17px , 400 ); color: $text_color_2; line-height: 21px; height: 21px; padding: 10px 0; letter-spacing: -.3px; }
+			h3.conTitle { @include fontDefault( 20px , 500 ); color: $text_color_1; margin-top: 30px;; line-height: 25px; height: 25px; }
+			h5.conSubTitle { @include fontDefault( 14px , 400 ); color: $text_color_2; line-height: 21px; height: 21px; padding: 10px 0; letter-spacing: -.3px; }
 			div.innerCon { margin-top: $sub_margin_top;
 				p.box { width: 100%; display: block; padding: 10px; }
 			}
@@ -290,10 +290,11 @@ html , body { width: 100%;
 		div.bbsCon { margin-top: $sub_margin_top;
 			table { width: 100%; border-top: 1px solid $text_color_1; border-bottom: 1px solid $table_color_2; table-layout: fixed;
 				thead tr , tbody tr { border-bottom: 1px solid $table_color_1 }
-				thead th { height: 61px; line-height: 61px; vertical-align: middle; text-align: center; }
-				tbody td { height: 55px; line-height: 55px; vertical-align: middle; text-align: center; @include fontDefault( 13px , 300 ); }
+				thead th { height: 61px; line-height: 61px; vertical-align: middle; text-align: center; @include fontDefault( 12px , 400 ); }
+				tbody td { height: 55px; line-height: 55px; vertical-align: middle; text-align: center; @include fontDefault( 12px , 300 ); }
 				tbody td { max-width: 0; width: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-				thead th:nth-child(n+4) , tbody td:nth-child(n+4) { display: none; }
+				thead th , tbody td { min-width: 70px; }
+				//thead th:nth-child(n+4) , tbody td:nth-child(n+4) { display: none; }
 				thead th:nth-child(1) , tbody td:nth-child(1) { width: 50px; }
 				thead th:nth-child(3) , tbody td:nth-child(3) { width: 80px; }
 				tbody td:nth-child(2) { text-align: left !important; }
@@ -308,7 +309,7 @@ html , body { width: 100%;
 			}
 			p.serchCon { display: inline-block; text-align: center; width: 100%;
 				span.inner { display: inline-block; width: calc(100% - 10px); max-width: $min_w; padding: 5px; background: #f8f8f8; }
-				select 			 { float:left; width: 70px; max-width: 70px; height: $search_h; line-height: $search_h; padding: 0 8px; border: 1px solid $table_color_2; }
+				select 			 { float:left; width: 70px; max-width: 70px; height: $search_h; line-height: $search_h; padding: 0 8px; border: 1px solid $table_color_2; margin:0 !important; }
 				button 			 { float:left; width: 70px; max-width: 70px; height: $search_h; line-height: $search_h; }
 				input[type=text] { float:left; width: calc(100% - 158px); height: calc( #{$search_h} - 1px); line-height: calc( #{$search_h} - 1px); padding: 0 5px; margin: 0 3px; font-size: 13px; }
 			}
@@ -385,3 +386,47 @@ button.btn.md { width: 151px; height:50px; line-height:50px; }
 button.btn.sm { width: 100px; height:40px; }
 button.btn.blue { background-color: $btn_color_blue; color: $btn_color_white; border:none; }
 button.btn.gray { background-color: $btn_color_gray; color: $btn_color_white; border:none; }
+
+.bbsCon div.detail {
+	tbody th { width: 25% !important; }
+	tbody td { width: 75%; }
+	.write { 
+		select { width: 100%; }
+		input , textarea  { width: calc(100% - 30px); }
+	}
+}
+
+.bbsCon * { letter-spacing: -.3px; }
+.bbsCon div.util {
+	span.label { width: 25% !important; padding-left: 3%; }
+	.btn.lg { width: 33%; margin:0; }
+}
+
+div.faq { margin: 20px 0 !important; }
+div.util.faq { padding: 0;
+	div.serchBox { display: inline-block; padding: 20px 7%; }
+	div.leftCon , div.rightCon { width: 100% !important; margin: 0; }
+	div.leftCon { margin-bottom: 15px; border: none;
+		.inner{
+			input { width: 58%; }
+			button { width: 30%; }
+		}
+	}
+	div.rightCon {
+		button { width: 100%; }
+	}
+}
+
+div.faq.modi p.line {
+	height: 40px; line-height: 40px; 
+	span.label , span.input { height: 40px; line-height: 40px; padding:0; }
+	span.label { width: 25%; max-width: 120px; padding-left: 10px; }
+	span.input { width: 75%; }
+	span.input select { width: 100%; max-width: 245px; margin-left: 5px; }
+}
+
+div.bbsCon div.detail p.t_info { height: fit-content; }
+div.bbsCon div.detail div.t_answer {
+	.titleCon , .a_content { padding-left: 65px !important; }
+}
+div.bbsCon div.detail div.t_answer::before  { left: 10px; }

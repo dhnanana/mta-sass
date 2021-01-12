@@ -396,11 +396,11 @@ html, body {
       padding-bottom: 100px;
       padding: 0 10px; }
       #mainContainer section.subContainer div.contents h3.conTitle {
-        font-size: 25px;
-        font-weight: 600;
+        font-size: 20px;
+        font-weight: 500;
         font-vertical-align: middle;
-        font-height: 27px;
-        font-line-height: 27px;
+        font-height: 22px;
+        font-line-height: 22px;
         text-decoration: none;
         color: #181c1f;
         color: #303030;
@@ -408,11 +408,11 @@ html, body {
         line-height: 25px;
         height: 25px; }
       #mainContainer section.subContainer div.contents h5.conSubTitle {
-        font-size: 17px;
+        font-size: 14px;
         font-weight: 400;
         font-vertical-align: middle;
-        font-height: 19px;
-        font-line-height: 19px;
+        font-height: 16px;
+        font-line-height: 16px;
         text-decoration: none;
         color: #181c1f;
         color: #666666;
@@ -421,13 +421,13 @@ html, body {
         padding: 10px 0;
         letter-spacing: -.3px; }
       #mainContainer section.subContainer div.contents div.innerCon {
-        margin-top: 20px; }
+        margin-top: 15px; }
         #mainContainer section.subContainer div.contents div.innerCon p.box {
           width: 100%;
           display: block;
           padding: 10px; }
     #mainContainer section.subContainer div.bbsCon {
-      margin-top: 20px; }
+      margin-top: 15px; }
       #mainContainer section.subContainer div.bbsCon table {
         width: 100%;
         border-top: 1px solid #303030;
@@ -439,17 +439,24 @@ html, body {
           height: 61px;
           line-height: 61px;
           vertical-align: middle;
-          text-align: center; }
+          text-align: center;
+          font-size: 12px;
+          font-weight: 400;
+          font-vertical-align: middle;
+          font-height: 14px;
+          font-line-height: 14px;
+          text-decoration: none;
+          color: #181c1f; }
         #mainContainer section.subContainer div.bbsCon table tbody td {
           height: 55px;
           line-height: 55px;
           vertical-align: middle;
           text-align: center;
-          font-size: 13px;
+          font-size: 12px;
           font-weight: 300;
           font-vertical-align: middle;
-          font-height: 15px;
-          font-line-height: 15px;
+          font-height: 14px;
+          font-line-height: 14px;
           text-decoration: none;
           color: #181c1f; }
         #mainContainer section.subContainer div.bbsCon table tbody td {
@@ -458,8 +465,8 @@ html, body {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap; }
-        #mainContainer section.subContainer div.bbsCon table thead th:nth-child(n+4), #mainContainer section.subContainer div.bbsCon table tbody td:nth-child(n+4) {
-          display: none; }
+        #mainContainer section.subContainer div.bbsCon table thead th, #mainContainer section.subContainer div.bbsCon table tbody td {
+          min-width: 70px; }
         #mainContainer section.subContainer div.bbsCon table thead th:nth-child(1), #mainContainer section.subContainer div.bbsCon table tbody td:nth-child(1) {
           width: 50px; }
         #mainContainer section.subContainer div.bbsCon table thead th:nth-child(3), #mainContainer section.subContainer div.bbsCon table tbody td:nth-child(3) {
@@ -519,7 +526,8 @@ html, body {
           height: 30px;
           line-height: 30px;
           padding: 0 8px;
-          border: 1px solid #cdcdcd; }
+          border: 1px solid #cdcdcd;
+          margin: 0 !important; }
         #mainContainer section.subContainer div.bbsCon p.serchCon button {
           float: left;
           width: 70px;
@@ -693,3 +701,74 @@ button.btn.gray {
   background-color: #bbb;
   color: #fff;
   border: none; }
+
+.bbsCon div.detail tbody th {
+  width: 25% !important; }
+
+.bbsCon div.detail tbody td {
+  width: 75%; }
+
+.bbsCon div.detail .write select {
+  width: 100%; }
+
+.bbsCon div.detail .write input, .bbsCon div.detail .write textarea {
+  width: calc(100% - 30px); }
+
+.bbsCon * {
+  letter-spacing: -.3px; }
+
+.bbsCon div.util span.label {
+  width: 25% !important;
+  padding-left: 3%; }
+
+.bbsCon div.util .btn.lg {
+  width: 33%;
+  margin: 0; }
+
+div.faq {
+  margin: 20px 0 !important; }
+
+div.util.faq {
+  padding: 0; }
+  div.util.faq div.serchBox {
+    display: inline-block;
+    padding: 20px 7%; }
+  div.util.faq div.leftCon, div.util.faq div.rightCon {
+    width: 100% !important;
+    margin: 0; }
+  div.util.faq div.leftCon {
+    margin-bottom: 15px;
+    border: none; }
+    div.util.faq div.leftCon .inner input {
+      width: 58%; }
+    div.util.faq div.leftCon .inner button {
+      width: 30%; }
+  div.util.faq div.rightCon button {
+    width: 100%; }
+
+div.faq.modi p.line {
+  height: 40px;
+  line-height: 40px; }
+  div.faq.modi p.line span.label, div.faq.modi p.line span.input {
+    height: 40px;
+    line-height: 40px;
+    padding: 0; }
+  div.faq.modi p.line span.label {
+    width: 25%;
+    max-width: 120px;
+    padding-left: 10px; }
+  div.faq.modi p.line span.input {
+    width: 75%; }
+  div.faq.modi p.line span.input select {
+    width: 100%;
+    max-width: 245px;
+    margin-left: 5px; }
+
+div.bbsCon div.detail p.t_info {
+  height: fit-content; }
+
+div.bbsCon div.detail div.t_answer .titleCon, div.bbsCon div.detail div.t_answer .a_content {
+  padding-left: 65px !important; }
+
+div.bbsCon div.detail div.t_answer::before {
+  left: 10px; }

@@ -649,18 +649,3 @@ button.btn.gray {
   background-color: #bbb;
   color: #fff;
   border: none; }
-
-input[type=text] {
-  width: 185px;
-  height: calc(20px - 2px);
-  border: 1px solid #e6e6e6;
-  padding: 10px 13px;
-  color: #bfbfbf; }
-
-input[type=text]:focus {
-  border: solid 1px #333;
-  color: #333333;
-  outline: none; }
-
-input.invalid {
-  border: solid 1px #f33; }

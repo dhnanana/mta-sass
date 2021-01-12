@@ -380,7 +380,3 @@ button.btn.md { width: 151px; height:50px; line-height:50px; }
 button.btn.sm { width: 100px; height:40px; }
 button.btn.blue { background-color: $btn_color_blue; color: $btn_color_white; border:none; }
 button.btn.gray { background-color: $btn_color_gray; color: $btn_color_white; border:none; }
-
-input[type=text] { width: 185px; height: calc(20px - 2px); border:1px solid #e6e6e6; padding: 10px 13px; color: #bfbfbf; }
-input[type=text]:focus { border: solid 1px #333; color: #333333; outline: none; }
-input.invalid  { border: solid 1px #f33; }

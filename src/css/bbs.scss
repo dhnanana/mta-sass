@@ -39,14 +39,17 @@ div.faq { margin-top: 39px !important;
 		button.on { background: #004181; color: #fff; border-color: #004181; }
 	}
 
-	col:nth-child(1) { width: 70px; }
-	col:nth-child(2) { width: 150px; }
+	col:nth-child(1) { width: 10%; }
+	col:nth-child(2) { width: 20%; }
+	col:nth-child(3) { width: 70%; }
 	tbody tr td:last-child { text-align: left !important; }
 	tbody tr.typeA { display: none; }
-	tbody tr.typeA span.answer { display: block; position: relative; width: calc(100% - 138px); line-height: 25px; background-color: #f8f8f8; padding: 40px 69px;  }
+	tbody tr.typeA div.answer { display: block; position: relative; width: calc(100% - 94px); line-height: 25px; background-color: #f8f8f8; padding: 40px 25px 40px 69px; overflow-y: auto;
+		span.content { display: block; width: 100%; white-space: normal; }
+	}
 	tbody tr.typeA.on { display: table-row; }
 	
-	tbody tr.typeQ td:last-child { background: url(../images/download/up-i.png) no-repeat calc(100% - 9px) center; }
+	tbody tr.typeQ td:last-child { background: url(../images/download/up-i.png) no-repeat calc(100% - 9px) center; padding-right: 20px; }
 	tbody tr.typeQ td:last-child::before { content: 'Q'; display: inline-block; width: 26px; height:26px; line-height: 26px; border-radius: 50%; background: #ccc; color:#fff; text-align: center; margin-right: 13px; font-size: 13px; }
 	tbody tr.typeQ.on td:last-child { background: url(../images/download/dropdown.png) no-repeat calc(100% - 9px) center; }
 	tbody tr.typeQ.on td:last-child::before { background: #666; }
@@ -54,7 +57,7 @@ div.faq { margin-top: 39px !important;
 	tbody tr button { display: none; }
 	tbody tr.on button { display: block; }
 
-	tbody tr.typeA td:last-child span.answer::before { 
+	tbody tr.typeA td:last-child div.answer::before { 
 		content: 'A'; display: block; position: absolute; width: 42px; height:42px; line-height: 42px; border-radius: 50%; background: #004181; color:#fff; text-align: center; top: 28px; left: 14px; }
 }
 
@@ -95,6 +98,19 @@ div.bbsCon{
 		tbody th { @include fontDefault( 16px , 400 ); display: table-cell; text-align: left; vertical-align : middle; background: #f8f8f8; width: 18%; padding-left: 2.5%; }
 		table.write tbody td { text-align: left !important; }
 	}
+
+	table.write {
+		select { width: 474px; margin: 0;}
+		tbody td { padding: 0 15px 0 29px !important; }
+		span.desc { display: block; }
+		div.fileBox { display: inline-block; width: 100%; vertical-align: middle;
+			p.container { display: block; padding: 10px; height: 18px; line-height: 20px; width: 621px; border: 1px solid #e8e8e8; float: left; }
+			button { display: block; float: left; height: 40px !important; background: #bbb !important; color: #fff !important; width: 200px !important; margin-left: 13px; }
+		}
+
+
+	}
+
 	div.util {display: inline-block; width: 100%; margin-bottom: 200px; margin-top: 49px;}
 	div.util button { float: right; width: 150px; }
 	div.util button:nth-child(2) { margin: 0 13px; }
