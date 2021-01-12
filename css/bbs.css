@@ -75,24 +75,32 @@ div.faq {
       color: #fff;
       border-color: #004181; }
   div.faq col:nth-child(1) {
-    width: 70px; }
+    width: 10%; }
   div.faq col:nth-child(2) {
-    width: 150px; }
+    width: 20%; }
+  div.faq col:nth-child(3) {
+    width: 70%; }
   div.faq tbody tr td:last-child {
     text-align: left !important; }
   div.faq tbody tr.typeA {
     display: none; }
-  div.faq tbody tr.typeA span.answer {
+  div.faq tbody tr.typeA div.answer {
     display: block;
     position: relative;
-    width: calc(100% - 138px);
+    width: calc(100% - 94px);
     line-height: 25px;
     background-color: #f8f8f8;
-    padding: 40px 69px; }
+    padding: 40px 25px 40px 69px;
+    overflow-y: auto; }
+    div.faq tbody tr.typeA div.answer span.content {
+      display: block;
+      width: 100%;
+      white-space: normal; }
   div.faq tbody tr.typeA.on {
     display: table-row; }
   div.faq tbody tr.typeQ td:last-child {
-    background: url(../images/download/up-i.png) no-repeat calc(100% - 9px) center; }
+    background: url(../images/download/up-i.png) no-repeat calc(100% - 9px) center;
+    padding-right: 20px; }
   div.faq tbody tr.typeQ td:last-child::before {
     content: 'Q';
     display: inline-block;
@@ -113,7 +121,7 @@ div.faq {
     display: none; }
   div.faq tbody tr.on button {
     display: block; }
-  div.faq tbody tr.typeA td:last-child span.answer::before {
+  div.faq tbody tr.typeA td:last-child div.answer::before {
     content: 'A';
     display: block;
     position: absolute;
@@ -269,6 +277,37 @@ div.bbsCon div.detail {
     padding-left: 2.5%; }
   div.bbsCon div.detail table.write tbody td {
     text-align: left !important; }
+
+div.bbsCon table.write select {
+  width: 474px;
+  margin: 0; }
+
+div.bbsCon table.write tbody td {
+  padding: 0 15px 0 29px !important; }
+
+div.bbsCon table.write span.desc {
+  display: block; }
+
+div.bbsCon table.write div.fileBox {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle; }
+  div.bbsCon table.write div.fileBox p.container {
+    display: block;
+    padding: 10px;
+    height: 18px;
+    line-height: 20px;
+    width: 621px;
+    border: 1px solid #e8e8e8;
+    float: left; }
+  div.bbsCon table.write div.fileBox button {
+    display: block;
+    float: left;
+    height: 40px !important;
+    background: #bbb !important;
+    color: #fff !important;
+    width: 200px !important;
+    margin-left: 13px; }
 
 div.bbsCon div.util {
   display: inline-block;
