@@ -74,12 +74,6 @@ div.faq {
       background: #004181;
       color: #fff;
       border-color: #004181; }
-  div.faq col:nth-child(1) {
-    width: 10%; }
-  div.faq col:nth-child(2) {
-    width: 20%; }
-  div.faq col:nth-child(3) {
-    width: 70%; }
   div.faq tbody tr td:last-child {
     text-align: left !important; }
   div.faq tbody tr.typeA {
@@ -194,6 +188,9 @@ div.faq.modi {
   div.faq.modi span.calendarBtns {
     display: inline-flex;
     margin-left: 11px; }
+
+div.bbsCon tr.notice td:first-child {
+  color: rgba(237, 33, 37, 0.8) !important; }
 
 div.bbsCon div.detail {
   width: 100%;
@@ -329,7 +326,7 @@ div.bbsCon table.write div.fileBox {
 div.bbsCon div.util {
   display: inline-block;
   width: 100%;
-  margin-bottom: 200px;
+  margin-bottom: 67px;
   margin-top: 49px; }
 
 div.bbsCon div.util button {
@@ -398,3 +395,105 @@ div.bbsCon div.sectionPrevNext p.next span::after {
 
 div.bbsCon div.sectionPrevNext p.con:hover a {
   text-decoration: underline; }
+
+.btn_bottom {
+  display: inline-block;
+  width: 100%;
+  text-align: center; }
+
+.innerForm div.formField {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 53px;
+  border-bottom: 1px solid #ccc; }
+
+.innerForm h5.formHeader {
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  font-vertical-align: middle;
+  height: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #181c1f;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #666; }
+
+.innerForm span.inputCon {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  line-height: 64px;
+  border-bottom: 1px solid #eee; }
+  .innerForm span.inputCon label {
+    display: inline-block;
+    width: 170px;
+    font-size: 14px;
+    font-weight: 300;
+    font-vertical-align: middle;
+    height: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #181c1f;
+    margin-left: 15px; }
+
+.innerForm span.inputCon.full {
+  width: 100%; }
+
+colgroup.col_notice col:nth-child(1) {
+  width: 7%; }
+
+colgroup.col_notice col:nth-child(3) {
+  width: 10%; }
+
+colgroup.col_notice col:nth-child(4) {
+  width: 8%; }
+
+colgroup.col_notice col:nth-child(5) {
+  width: 7%; }
+
+colgroup.col_question col:nth-child(1) {
+  width: 7%; }
+
+colgroup.col_question col:nth-child(2) {
+  width: 10%; }
+
+colgroup.col_question col:nth-child(4) {
+  width: 8%; }
+
+colgroup.col_question col:nth-child(5) {
+  width: 8%; }
+
+colgroup.col_faq col:nth-child(1) {
+  width: 10%; }
+
+colgroup.col_faq col:nth-child(2) {
+  width: 20%; }
+
+colgroup.col_faq col:nth-child(3) {
+  width: 70%; }
+
+colgroup.col_partners_comstomer col:nth-child(1) {
+  width: 10%; }
+
+colgroup.col_partners_comstomer col:nth-child(2) {
+  width: 15%; }
+
+colgroup.col_partners_comstomer col:nth-child(3) {
+  width: 10%; }
+
+colgroup.col_partners_comstomer col:nth-child(4) {
+  width: 15%; }
+
+colgroup.col_partners_comstomer col:nth-child(5) {
+  width: 10%; }
+
+colgroup.col_partners_comstomer col:nth-child(6) {
+  width: 20%; }
+
+colgroup.col_partners_comstomer col:nth-child(7) {
+  width: 10%; }
+
+colgroup.col_partners_comstomer col:nth-child(8) {
+  width: 10%; }
