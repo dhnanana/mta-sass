@@ -1,0 +1,166 @@
+<section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
+<section class="subNav">
+	<nav><ul>
+		<li><a href="#">공지사항</a></li>
+		<li class="on"><a href="#">협력사 현황</a></li>
+		<li><a href="#">솔루션 다운로드</a></li>
+		<li><a href="#">파트너사 정보 수정</a></li>
+		<li><a href="#">Q&A</a></li>
+	</ul>
+</nav>
+</section>
+<section class="subContainer">
+	<div class="contents">
+		<h3 class="conTitle">고객사 현황</h3>
+		<h5 class="conSubTitle">고객사 시스템 적용 현황 정보를 확인하고 관리합니다.</h5>
+		<div class="bbsCon">
+			<table>
+				<colgroup class="col_partners_comstomer"><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>고객사</th>
+						<th>담당자</th>
+						<th>라이선스 수량</th>
+						<th>구분</th>
+						<th>기간</th>
+						<th>상태</th>
+						<th>신청</th>
+					</tr>
+				</thead>
+				<tbody class="list">
+					<tr>
+						<td>10</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>영구</td>
+						<td></td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>광주은행</td>
+						<td>홍길동</td>
+						<td>10</td>
+						<td>기간</td>
+						<td>2020-12-01-2021-12-31</td>
+						<td>운영</td>
+						<td>등록완료</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="pagingCon">
+				<span class="inner">
+					<span class="prevCon">
+						<button type="button"> << </button>
+						<button type="button"> < </button>
+					</span>
+					<span class="numCon">
+						<button type="button" class="on"> 1 </button>
+						<button type="button"> 2 </button>
+						<button type="button"> 3 </button>
+						<button type="button"> 4 </button>
+						<button type="button"> 5 </button>
+					</span>
+					<span class="nextCon">
+						<button type="button"> > </button>
+						<button type="button"> >> </button>
+					</span>
+				</span>
+			</p>
+		</div>
+		<div class="btn_bottom">
+			<button id="customerAdd" class="btn lg blue" type="button">신규 추가</button>
+		</div>
+	</div>
+	<script>
+		$('#customerAdd').on('click' , function(){ console.log( $(this) );
+			loadStateContent( { page : 191 , url : './pages/partners_customer_add.html' , history : 'q_detail' } );
+		});
+		$('.list tr').on('click' , function(e){ console.log( e );
+			loadStateContent( { page : 192 , url : './pages/partners_qna_detail.html' , history : 'q_detail' } );
+		});
+	</script>
+</section>

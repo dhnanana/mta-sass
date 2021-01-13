@@ -1,17 +1,22 @@
 <section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
 <section class="subNav">
 	<nav><ul>
-		<li class="on"><a href="#">공지사항</a></li>
-		<li><a href="#">1:1문의</a></li>
-		<li><a href="/">FAQ</a></li>
+		<li><a href="#">공지사항</a></li>
+		<li><a href="#">협력사 현황</a></li>
+		<li><a href="#">솔루션 다운로드</a></li>
+		<li><a href="#">파트너사 정보 수정</a></li>
+		<li class="on"><a href="#">Q&A</a></li>
 	</ul>
 </nav>
 </section>
 <section class="subContainer">
 	<div class="contents">
-		<h3 class="conTitle">공지사항</h3>
-		<h5 class="conSubTitle">다양한 MTA 서비스 소식을 전해 드립니다. </h5>
+		<h3 class="conTitle">Q&A</h3>
+		<h5 class="conSubTitle">협력사 기술문의 응답 게시판 입니다.</h5>
 		<div class="bbsCon">
+			<p class="titleMenu">
+				<button class="btn lg blue" id="writeQ">Q&A 등록</button>
+			</p>
 			<table>
 				<colgroup class="col_notice"><col/><col/><col/><col/><col/></colgroup>
 				<thead>
@@ -24,8 +29,8 @@
 					</tr>
 				</thead>
 				<tbody class="list">
-					<tr>
-						<td>10</td><td class="tx_l">공지사항 샘플 입니다.?</td>
+					<tr class="notice">
+						<td>공지</td><td class="tx_l">공지사항 샘플 입니다.?</td>
 						<td>2021.01.13</td><td>관리자</td><td>190</td>
 					</tr>
 					<tr>
@@ -99,22 +104,12 @@
 		</div>
 	</div>
 	<script>
-		var sebContract = $('div#subContrat');
-		if( sebContract.length === 0 ){
-			sebContract = $('<div id="subContrat"/>');
-			sebContract.html('<a href="#">작성</a> <a href="#">관리</a>');
-			sebContract.find('a').on('click' , function(e){
-				e.preventDefault();
-				let idx = $(this).index();
-				if( idx === 0 ) loadStateContent( { page : 333 , url : './pages/notice_write.html' , history : 'w_write' } );
-				if( idx === 1 ) loadStateContent( { page : 444 , url : './pages/notice_modify.html' , history : 'w_modify' } );
-			});
-			//sebContract.css({ 'position' : 'absolute' , 'top' : '0' , 'right' : '0'  })
-			$('section.subContainer div.contents').prepend( sebContract );
-		};
+		$('#writeQ').on('click' , function(){
+			loadStateContent( { page : 201 , url : './pages/partners_qna_write.html' , history : 'p_t_write' } );
+		});
 
 		$('.list tr').on('click' , function(e){ console.log( e );
-			loadStateContent( { page : 111 , url : './pages/notice_detail.html' , history : 'q_detail' } );
+			loadStateContent( { page : 202 , url : './pages/partners_qna_detail.html' , history : 'q_detail' } );
 		});
 	</script>
 </section>
