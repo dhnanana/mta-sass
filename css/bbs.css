@@ -179,6 +179,21 @@ div.faq.modi {
     border: 1px solid #e8e8e8;
     outline: none;
     cursor: pointer; }
+  div.faq.modi span.input button.white {
+    background: #fff;
+    color: #333; }
+  div.faq.modi span.input button.white.calendar {
+    width: 59px;
+    float: left; }
+  div.faq.modi span.input button.white.calendar.on, div.faq.modi span.input button.white.calendar:hover {
+    background: #004181;
+    color: #fff;
+    border-color: #004181; }
+  div.faq.modi span.input button.white.calendar:not(:first-child) {
+    border-left: none; }
+  div.faq.modi span.calendarBtns {
+    display: inline-flex;
+    margin-left: 11px; }
 
 div.bbsCon div.detail {
   width: 100%;
@@ -188,7 +203,7 @@ div.bbsCon div.detail {
   color: #333; }
   div.bbsCon div.detail p.t_title {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     font-vertical-align: middle;
     height: 20px;
     line-height: 20px;
@@ -218,9 +233,10 @@ div.bbsCon div.detail {
     float: right;
     margin-left: 57px; }
   div.bbsCon div.detail div.t_content {
-    padding: 29px;
+    padding: 66px 29px 72px 29px;
     line-height: 25px;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #eee;
+    letter-spacing: 0; }
   div.bbsCon div.detail div.t_answer::before {
     content: 'A';
     display: block;
@@ -260,7 +276,8 @@ div.bbsCon div.detail {
         display: block; }
     div.bbsCon div.detail div.t_answer div.a_content {
       padding: 29px 0 83px 105px;
-      line-height: 25px; }
+      line-height: 25px;
+      letter-spacing: 0; }
   div.bbsCon div.detail tbody th {
     font-size: 16px;
     font-weight: 400;
@@ -333,3 +350,51 @@ div.bbsCon div.util.center {
 
 div.bbsCon div.util.center button {
   float: none; }
+
+div.bbsCon div.util.type2 {
+  text-align: center; }
+
+div.bbsCon div.util.type2 button {
+  float: none;
+  width: 275px; }
+
+div.bbsCon div.sectionPrevNext p.con {
+  height: 56px;
+  line-height: 56px;
+  cursor: pointer; }
+
+div.bbsCon div.sectionPrevNext p.con:first-child {
+  border-bottom: 1px solid #e8e8e8; }
+
+div.bbsCon div.sectionPrevNext p.con span {
+  margin: 0 17px;
+  margin-right: 47px; }
+
+div.bbsCon div.sectionPrevNext p.con a {
+  text-decoration: none;
+  color: #333; }
+
+div.bbsCon div.sectionPrevNext p.prev span::after {
+  content: " ";
+  background: url(../images/download/dropdown.png) no-repeat center calc(50% - 3px);
+  display: inline-block;
+  width: 20px;
+  height: 56px;
+  line-height: 56px;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-left: 10px; }
+
+div.bbsCon div.sectionPrevNext p.next span::after {
+  content: " ";
+  background: url(../images/download/up-i.png) no-repeat center calc(50% - 3px);
+  display: inline-block;
+  width: 20px;
+  height: 56px;
+  line-height: 56px;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-left: 10px; }
+
+div.bbsCon div.sectionPrevNext p.con:hover a {
+  text-decoration: underline; }

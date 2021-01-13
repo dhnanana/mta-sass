@@ -711,7 +711,7 @@ button.btn.gray {
 .bbsCon div.detail .write select {
   width: 100%; }
 
-.bbsCon div.detail .write input, .bbsCon div.detail .write textarea {
+.bbsCon div.detail .write input[type=text], .bbsCon div.detail .write input[type=password], .bbsCon div.detail .write textarea {
   width: calc(100% - 30px); }
 
 .bbsCon * {
