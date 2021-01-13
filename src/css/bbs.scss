@@ -70,12 +70,17 @@ div.faq.modi { width: 100%; border-top: 1px solid #666; border-bottom: 1px solid
 	span.input select { width: 254px; }
 	span.input input[type=text] { width: 40%; }
 	span.input button { width: 15%; background: #bbb; color: #fff; height: 40px; border: 1px solid #e8e8e8; outline: none; cursor: pointer; }
+	span.input button.white { background: #fff; color: #333; }
+	span.input button.white.calendar { width: 59px; float:left; }
+	span.input button.white.calendar.on , span.input button.white.calendar:hover { background: #004181; color: #fff; border-color: #004181; }
+	span.input button.white.calendar:not(:first-child) { border-left: none; }
+	span.calendarBtns { display: inline-flex; margin-left: 11px; }
 }
 
 div.bbsCon{
 	div.detail{
 		width: 100%; border-top: 1px solid #666; border-bottom: 1px solid #ccc; padding: 0; color: #333;
-		p.t_title { @include fontDefault( 18px , 500 ); height: 82px; line-height: 82px; padding: 0 20px; border-bottom: 1px solid #eee; padding: 0 20px; background: #f8f8f8; }
+		p.t_title { @include fontDefault( 18px , 400 ); height: 82px; line-height: 82px; padding: 0 20px; border-bottom: 1px solid #eee; padding: 0 20px; background: #f8f8f8; }
 		p.t_info { height: 56px; line-height: 56px; border-bottom: 1px solid #eee; padding: 0 20px; background: #f8f8f8; }
 		p.t_info {
 			span { font-weight: 300; }
@@ -83,7 +88,7 @@ div.bbsCon{
 			span b::after { content : ":"; margin: 0 10px; margin-right: 17px; }
 			span.view_cnt , span.date { float: right; margin-left: 57px; }
 		}
-		div.t_content { padding: 29px; line-height: 25px; border-bottom: 1px solid #eee; }
+		div.t_content { padding: 66px 29px 72px 29px; line-height: 25px; border-bottom: 1px solid #eee; letter-spacing: 0; }
 
 		div.t_answer::before { content: 'A'; display: block; position: absolute; width: 42px; height:42px; line-height: 42px; border-radius: 50%; background: #004181; color:#fff; text-align: center; top: 21px; left: 50px; }
 		div.t_answer { padding: 29px 0; position: relative;
@@ -92,7 +97,7 @@ div.bbsCon{
 				span.title { @include fontDefault( 17px , 400 ); display: block; margin-bottom: 2px; }
 				span.a_date{ @include fontDefault( 13px , 300 ); display: block; }
 			}
-			div.a_content { padding: 29px 0 83px 105px; line-height: 25px;}
+			div.a_content { padding: 29px 0 83px 105px; line-height: 25px; letter-spacing: 0;}
 		}
 
 		tbody th { @include fontDefault( 16px , 400 ); display: table-cell; text-align: left; vertical-align : middle; background: #f8f8f8; width: 18%; padding-left: 2.5%; }
@@ -118,4 +123,19 @@ div.bbsCon{
 
 	div.util.center { display: inline-block; text-align: center; width: 100%; }
 	div.util.center button { float: none; }
+
+	div.util.type2 { text-align: center; }
+	div.util.type2 button { float: none; width: 275px; }
+
+	div.sectionPrevNext { 
+		p.con { height: 56px; line-height: 56px; cursor:pointer; }
+		p.con:first-child { border-bottom: 1px solid #e8e8e8; }
+		p.con {
+			span { margin : 0 17px; margin-right: 47px; }
+			a { text-decoration: none; color: #333; }
+		}
+		p.prev span::after { content: " "; background: url(../images/download/dropdown.png) no-repeat center calc(50% - 3px); display: inline-block; width: 20px; height:56px; line-height: 56px; vertical-align: middle; font-size: 20px; margin-left:10px; }
+		p.next span::after { content: " "; background: url(../images/download/up-i.png) no-repeat center calc(50% - 3px); display: inline-block; width: 20px; height:56px; line-height: 56px; vertical-align: middle; font-size: 20px; margin-left:10px; }
+		p.con:hover a { text-decoration: underline; }
+	}
 }

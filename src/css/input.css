@@ -7,25 +7,32 @@ input + label { cursor: pointer; }
 
 textarea { width: calc(100% - 30px); resize: none; border: solid 1px #e6e6e6; color: #333; font-size: 15px; line-height: 25px; padding: 15px; outline: none; }
 
-input[type=checkbox], input[type=checkbox]:checked, input[type=radio] , input[type=radio]:checked  { appearance: none; -moz-appearance: none; -webkit-appearance: none; border:none; outline: none; }
+input[type=checkbox], input[type=checkbox]:checked /* , input[type=radio] , input[type=radio]:checked */  { appearance: none; -moz-appearance: none; -webkit-appearance: none; border:none; outline: none; }
 input[type=checkbox] { display: inline-block; height: 25px; line-height: 25px; padding-left: 25px; vertical-align: middle; cursor:pointer; font-size: 15px; }
 input[type=checkbox] { background: url(../images/download/box-ch-off.png) no-repeat 0 0;  }
 input[type=checkbox]:checked { background: url(../images/download/box-ch-on.png) no-repeat 0 0; }
 input[type=checkbox].circle { background: url(../images/download/circle-ch-off.png) no-repeat 0 0;  }
 input[type=checkbox].circle:checked { background: url(../images/download/circle-ch-on.png) no-repeat 0 0;  }
 
-input[type=radio] { display: inline-block; width: 25px; height: 25px; background: url(../images/download/circle-ch-off.png) no-repeat 0 0; }
-input[type=radio]:checked { background: url(../images/download/circle-ch-on.png) no-repeat 0 0; }
+input[type=radio] { display: inline-block; width: 21px; height: 21px; line-height: 21px; vertical-align: middle; margin: 0 7px; /* background: url(../images/download/circle-ch-off.png) no-repeat 0 0; */ }
+input[type=radio]:checked { /* background: url(../images/download/circle-ch-on.png) no-repeat 0 0; */ }
+input[type=radio] + label { display: inline-block; font-size: 14px; height: 10px; line-height: 10px; vertical-align: middle;}
 
 select { 
-    appearance: none; -moz-appearance: none; -webkit-appearance: none;  
+    appearance: none; -moz-appearance: none; -webkit-appearance: none; color: #666; cursor: pointer;
     padding: 10px; height: 40px; display: inline-block; border: 1px solid #e6e6e6; margin-left: 29px; margin-right: 20px;
     background: url(../images/download/up-i.png) no-repeat #fff calc(100% - 10px) center; padding-right: 20px; outline: none;
 }
+select:focus { background-image: url(../images/download/dropdown.png); }
+
 input[type=checkbox]::-ms-expand , select::-ms-expand {
     display: none;
 }
 
+input[type=text].calendar { width: calc(150px - 57px) !important; padding: 10px 17px; }
+input[type=text].calendar + img { margin-left: -25px; margin-right: 8px; }
+span.calendar_split { margin: 0 8px; }
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    input[type=checkbox], input[type=checkbox]:checked, input[type=radio] , input[type=radio]:checked { background : none; width: 25px; height: 25px; }
+    input[type=checkbox], input[type=checkbox]:checked, input[type=radio] , input[type=radio]:checked { background : none; width: 21px; height: 21px; }
 }

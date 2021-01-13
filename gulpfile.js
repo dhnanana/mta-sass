@@ -27,7 +27,7 @@ function jsTask(){
 
 //fonts task
 function fontsTask(){
-	return src('src/css/font/**/*.{ eot,otf,ttf,woff,woff2 }')
+	return src('src/css/font/**/*.*')
 	.pipe(dest('dist/css/font'))
 }
 
@@ -35,6 +35,10 @@ function fontsTask(){
 function imagesTask(){
 	return src('src/images/**/*.{jpg,png}')
 	.pipe(dest('dist/images'))
+}
+
+function pluginTask(){
+	return src('src/plugins/**/*.{css,js}').pipe(dest('dist/plugins'))
 }
 
 //htmls
@@ -65,4 +69,4 @@ function watchTask(){
 
 //default task
 //exports.default = series( clean , parallel(sassTask , jsTask , browsersyncServe , watchTask) );
-exports.default = series( clean , parallel(sassTask , jsTask , imagesTask , fontsTask , htmlTask , browsersyncServe , watchTask) );
+exports.default = series( clean , parallel(sassTask , jsTask , imagesTask , fontsTask , pluginTask , htmlTask , browsersyncServe , watchTask) );

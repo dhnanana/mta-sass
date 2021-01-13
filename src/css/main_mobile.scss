@@ -392,7 +392,7 @@ button.btn.gray { background-color: $btn_color_gray; color: $btn_color_white; bo
 	tbody td { width: 75%; }
 	.write { 
 		select { width: 100%; }
-		input , textarea  { width: calc(100% - 30px); }
+		input[type=text] , input[type=password] , textarea  { width: calc(100% - 30px); }
 	}
 }
 

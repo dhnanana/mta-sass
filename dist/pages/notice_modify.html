@@ -1,0 +1,166 @@
+<section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
+<section class="subNav">
+	<nav><ul>
+			<li><a href="#">공지사항</a></li>
+			<li><a href="#">1:1문의</a></li>
+			<li><a href="/">FAQ</a></li>
+			<li class="on"><a href="#">FAQ 관리</a></li>
+		</ul>
+	</nav>
+</section>
+<section class="subContainer">
+	<div class="contents">
+		<h3 class="conTitle">자주 묻는 질문 관리</h3>
+		<h5 class="conSubTitle">고객센터 연락 전 자주 묻는 질문을 검색해 보세요.</h5>
+		<div class="util faq modi">
+			<p class="line">
+				<span class="label">게시판</span>
+				<span class="input">
+					<select>
+						<option>선택해 주세요.</option>
+					</select>
+				</span>
+			</p>
+			<p class="line">
+				<span class="label">일자</span>
+				<span class="input">
+					<select>
+						<option>선택해 주세요.</option>
+					</select>
+					<span class="calendarCon">
+						<input id="dateStart" type="text" class="calendar"/>
+						<span class="calendar_split">-</span>
+						<input id="dateEnd" type="text" class="calendar"/>
+					</span>
+					<span class="calendarBtns">
+						<button type="button" class="btn sm white calendar">1주</button>
+						<button type="button" class="btn sm white calendar">2주</button>
+						<button type="button" class="btn sm white calendar">1개월</button>
+						<button type="button" class="btn sm white calendar">3개월</button>
+					</span>
+
+					<script>
+						$('#dateStart').datepicker({ inline: true, setDate : 'today'  });
+						$('#dateEnd').datepicker({ inline: true, setDate : 'today' });
+					</script>
+				</span>
+			</p>
+			<p class="line">
+				<span class="label">답변상태</span>
+				<span class="input">
+					<select>
+						<option>선택해 주세요.</option>
+					</select>
+				</span>
+			</p>
+			<p class="line">
+				<span class="label">검색어</span>
+				<span class="input">
+					<select>
+						<option>선택해 주세요.</option>
+					</select>
+					<input type="text">
+					<button type="button">검색</button>
+				</span>
+			</p>
+		</div>
+		<div class="bbsCon faq">
+			<p class="numInfo">
+				<span class="num">검색<b>5</b></span>
+				<span class="split">/</span>
+				<span class="total">전체<b>10</b></span>
+			</p>
+			<table>
+				<colgroup>
+					<col style="width: 5%;"/>
+					<col style="width: 5%;"/>
+					<col style="width: 15%;"/>
+					<col />
+					<col style="width: 10%;"/>
+					<col style="width: 10%;"/>
+				</colgroup>
+				<thead>
+					<tr>
+						<th><input type="checkbox"></th>
+						<th>번호</th>
+						<th>카테고리</th>
+						<th>제목</th>
+						<th>작성일</th>
+						<th>수정/답변</th>
+					</tr>
+					</thead>
+				<tbody>
+					<tr class="on">
+						<td><input type="checkbox"></td>
+						<td>1</td>
+						<td>회원가입</td>
+						<td class="tx_l">회원가입은 어떻게 하나요?</td>
+						<td>2020-12-22</td>
+						<td><button type="button">수정</button></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>2</td>
+						<td>회원가입</td>
+						<td class="tx_l">회원가입은 어떻게 하나요?</td>
+						<td>2020-12-22</td>
+						<td><button type="button">수정</button></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>3</td>
+						<td>회원가입</td>
+						<td class="tx_l">회원가입은 어떻게 하나요?</td>
+						<td>2020-12-22</td>
+						<td><button type="button">수정</button></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>4</td>
+						<td>회원가입</td>
+						<td class="tx_l">회원가입은 어떻게 하나요?</td>
+						<td>2020-12-22</td>
+						<td><button type="button">수정</button></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" checked></td>
+						<td>5</td>
+						<td>회원가입</td>
+						<td class="tx_l">회원가입은 어떻게 하나요?</td>
+						<td>2020-12-22</td>
+						<td><button type="button">수정</button></td>
+					</tr>
+					<tr class="util">
+						<td><input type="checkbox" checked></td>
+						<td colspan="5">
+							<button type="button">삭제</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script>
+		const faqCon = $('#conFaq');
+		function bindEventFaq(){
+			faqCon.find('tbody tr').on('click' , function(){
+				if( $(this).hasClass('on') ) $(this).removeClass('on');
+				else $(this).addClass('on');
+			});
+		}
+
+		let cateButtons = $('div.cateBox button');
+		cateButtons.on('click' , function(){
+			cateButtons.removeClass('on');
+			$(this).addClass('on');
+		});
+
+		let subBtn = $('.subNav li');
+		subBtn.on('click' , function(e){
+			e.preventDefault();
+			let idx = $(this).index();
+			if( idx === 2 ) loadStateContent( { page : idx , url : './pages/faq.html' , history : 'faq' } );
+			if( idx === 3 ) loadStateContent( { page : idx , url : './pages/faq_modify.html' , history : 'faq_mod' } );
+		});
+	</script>
+</section>
