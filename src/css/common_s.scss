@@ -1,3 +1,29 @@
+$max-w : 1900px;
+$min_w : 1400px;
+$header_h : 105px;
+$dp_inBlcok : inline-blcok;
+
+$w100 : 100%;
+$color_black : #000;
+
+$col_bule : #1766ff;
+$col_green : #4ecb8f;
+$col_sBule : #2daae1;
+$col_pink : #ff1766;
+$col_gray : #cdcdcd;
+$col_purple : #6b54f0;
+
+$btn_color_white : #fff;
+$btn_color_blue : #023e7c;
+$btn_color_gray : #bbb;
+
+$text_color_1 : #303030;
+$text_color_2 : #666666;
+$text_color_3 : #b1b1b1;
+
+$table_color_1 : #eee;
+$table_color_2 : #cdcdcd;
+
 @mixin fontDefault( $s : 1em , $b : normal ) {
 	font : {
 		size : $s;
@@ -8,3 +34,8 @@
 	text-decoration: none;
 	color : #181c1f;
 }
+
+.mt-80 { margin-top: 80px; }
+.mb-20 { margin-bottom: 20px; }
+.pd-v-10 { padding: 10px 0; }
+.bd-top { border-top: 1px solid #ddd; padding-top: 29px; }

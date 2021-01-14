@@ -42,3 +42,78 @@ div.releaseNote { @include fontDefault(13px , 300); margin-top: 18px;  padding: 
 	}
 	p.list { background: url(../images/download/comment.png) no-repeat 12px 2px; padding: 0 10px; display: block;padding-left: 30px;height: 25px; }
 }
+
+
+div.member-join { 
+	div.process { display: block; width: 100%; margin: 60px 0;
+		div.inner { display: inline-block; text-align: center; width: 100%; position: relative;}
+		p.procNum { display: block; width: 20%; text-align: center; float: left; 
+			span.p-bg { display: inline-block; width: 63px; height:63px !important; line-height: 63px !important; 
+				text-align: center; vertical-align: middle; @include fontDefault(20px); border-radius: 50%; border: 15px solid #fff;
+				background: #f5f5f5; color: #aaa;
+			}
+			span.p-name { display: block; @include fontDefault(15px , 300); color: $text_color_2; margin-top: 12px; text-align: center; width: auto; }
+		}
+		p.procNum.on span.p-bg { background: $btn_color_blue; color: #fff; }
+		p.procNum:last-child { margin-right: 0; }
+		div.inner::before { content: " "; display: inline-block; width: 80%; border-top: 1px solid #ddd; top: 36%; left:10%; position: absolute; z-index: -1; }
+	}
+	div.process::after { clear: both; }
+
+	div.form { 
+		div.a-title-con { display: inline-block; width: 100%; padding-bottom: 20px; background : url(../images/download/join-s-1.png) no-repeat 25px 10px; padding: 20px 0 30px 85px;
+			h5.a-title { @include fontDefault(22px , 400); margin: 0 35px 0 15px; float: left; line-height: 31px; }
+			p.a-text { width: 80%; float:left; @include fontDefault(14px , 300); letter-spacing: 0; height: auto;}
+		}
+		div.a-title-con.policy { background-image: url(../images/download/join-s-2.png); }
+		div.a-title-con.join { background-image: url(../images/download/join-s-3.png); }
+		div.a-title-con.confirm { background-image: url(../images/download/join-s-4.png); }
+		div.a-title-con.complete { background-image: url(../images/download/join-s-5.png); }
+
+		div.a-form { border-top : 1px solid #ddd; border-bottom: 1px solid #ddd;
+			p.line{ padding: 13px 0;
+				span { line-height: 40px !important; }
+				span.label { display: inline-block; width: 15%; min-width: 120px; margin-left: 13px; @include fontDefault(14px , 300); float: left; }
+				span.input { display: inline-block; width: 83%;
+					input , button , select , > span { float: left; margin: 0 5px; }
+					input.input-comp { width: 60%; max-width: 455px !important; }
+					input.type1 , input.email { width: 50%; max-width: 440px !important; }
+					select.phone { width: 130px; }
+					input.phone { width: 102px; }
+					input.phone::before { content : "-"; display: inline-block; line-height: 40px; margin: 0 5px; }
+					input.auth-number { width: 123px; }
+					button { width: 200px; height: 40px; line-height: 20px; }
+					select { width: 189px; }
+					span.timer-limiter { color: #f04b45; margin: 0 37px; font-size: 13px; letter-spacing: 0; }
+					span.desc , b.notice { font-size: 13px; font-weight: 300; }
+					span.desc { color: #999; }
+					b.notice { content: "/f06a"; display: block; clear: both; color: #ff3333; line-height: 10px; padding-top: 15px; padding-left: 15px; }
+					span.email { margin:0; color: #0066ff; }
+				}
+				span.input::after { content: " "; clear: both; }
+			}
+			p.line:nth-child(n+2) { border-top: 1px solid #ddd; }
+		}
+		div.a-form:nth-child(n+3) { margin-top: 50px; }
+		div.a-form:last-child { margin-bottom: 50px;; }
+		
+		div.policyCon { width: calc(100% - 54px); height: 172px; overflow-y: auto; overflow-x: hidden; padding: 40px 26px; border: 1px solid #ddd; }
+		div.policyCon pre { white-space: pre-wrap; line-height: 25px; font-size: 14px; font-weight: 300; letter-spacing: -.3px; }
+		div.btnSet { text-align: right; }
+
+		div.formHeader { margin-bottom: 20px; position: relative;
+			h3 { @include fontDefault(17px , 400); margin-bottom: 10px; }
+			h5 { @include fontDefault(14px , 300); }
+			.btnSet { position: absolute; right: 0; bottom: -8px; }
+		}
+		.btnSet { text-align: right; margin-top: 25px; }
+
+		div.a-form.complete { padding: 107px 29px 110px 29px;
+			div.formHeader h5 { line-height: 25px; }
+		}
+	}
+	div.util { width: 100%; display: inline-block; text-align: center;
+		button:nth-child(n+2) { margin-left: 10px; }
+	}
+}
+
