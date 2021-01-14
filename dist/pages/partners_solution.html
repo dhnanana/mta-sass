@@ -1,0 +1,129 @@
+<section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
+<section class="subNav">
+	<nav><ul>
+		<li><a href="#">공지사항</a></li>
+		<li><a href="#">협력사 현황</a></li>
+		<li class="on"><a href="#">솔루션 다운로드</a></li>
+		<li><a href="#">파트너사 정보 수정</a></li>
+		<li><a href="#">Q&A</a></li>
+	</ul>
+</nav>
+</section>
+<section class="subContainer">
+	<div class="contents">
+		<h3 class="conTitle">솔루션 다운로드</h3>
+		<h5 class="conSubTitle">MTA 시스템 관리에 필요한 SW를 다운로드 받으실 수 있습니다. </h5>
+		
+		<div class="subCon">
+			<h5 class="title">솔루션 설치 메뉴얼</h5>
+			<div class="conBox full manual">
+				<p class="content">
+					<span class="conText">
+						MTA 시스템 관리에 필요한 SW를 다운로드 받아설치와 실행하는데 도움 받으실 수 있습니다.
+					</span>
+				</p>
+				<span class="btnSet">
+					<button class="download">Download</button>
+				</span>
+			</div>
+		</div>
+
+		<div class="subCon">
+			<h5 class="title">솔루션 패키지 다운로드</h5>
+			<div class="conBox full ">
+				<p class="content">
+					<span class="title">패키지 버전</span>
+					<span class="conText">
+						설치와 실행하는데 도움 받으실 수 있습니다.
+					</span>
+				</p>
+				<span class="btnSet">
+					<select name="" id="">
+						<option value="">version 선택</option>
+					</select>
+					<button class="download">Download</button>
+				</span>
+			</div>
+		</div>
+
+		<div class="subCon">
+			<div class="conBox ">
+				<p class="content"><span class="title">Applicaiotn(WAS)</span></p>
+				<span class="btnSet"><button class="download">Download</button></span>
+			</div>
+			<div class="conBox ">
+				<p class="content"><span class="title">Applicaiotn(WEB)</span></p>
+				<span class="btnSet"><button class="download">Download</button></span>
+			</div>
+			<div class="conBox ">
+				<p class="content"><span class="title">NodeJs</span></p>
+				<span class="btnSet"><button class="download">Download</button></span>
+			</div>
+			<div class="conBox ">
+				<p class="content">
+					<span class="title">DB
+						<span class="radioBox">
+							<input type="radio" name="dbSelction" id="dbOracle"><label for="dbOracle">Oracle</label>
+							<input type="radio" name="dbSelction" id="dbMaria"><label for="dbMaria">MariaDB</label>
+						</span>
+					</span>
+					</p>
+				<span class="btnSet"><button class="download">Download</button></span>
+			</div>
+			<div class="conBox ">
+				<p class="content"><span class="title">Agent Android</span></p>
+				<span class="btnSet"><button class="download">Download</button></span>
+			</div>
+			<div class="conBox ">
+				<p class="content"><span class="title">Agent iOS</span></p>
+				<span class="btnSet"><button class="download">Download</button></span>
+			</div>
+		</div>
+
+		<div class="releaseNote">
+			<p class="title">
+				<span class="t-name">릴리즈노트</span>
+				<span class="t-date">2021.01.04</span>
+			</p>
+			<p class="list">최신버전을 다운로드 박아 파일을 실행합니다.</p>
+			<p class="list">최신버전을 다운로드 박아 파일을 실행합니다.</p>
+		</div>
+
+		<div class="subCon">
+			<h5 class="title">솔루션 모듈별 다운로드</h5>	
+			<span class="t-util">
+				<select name="" id="">
+					<option value="">Appication</option>
+				</select>
+			</span>
+			<div class="conList">
+				<p class="list">
+					<span class="t-type">Application</span>
+					<span class="t-version">2.5.5</span>
+					<span class="t-content">2021.01.04 - 자동화 예약 수정</span>
+					<button type="button" class="download">Download</button>
+				</p>
+				<p class="list">
+					<span class="t-type">Application</span>
+					<span class="t-version">2.5.5</span>
+					<span class="t-content">2021.01.04 - 자동화 예약 수정</span>
+					<button type="button" class="download">Download</button>
+				</p>
+				<p class="list">
+					<span class="t-type">Application</span>
+					<span class="t-version">2.5.5</span>
+					<span class="t-content">2021.01.04 - 자동화 예약 수정</span>
+					<button type="button" class="download">Download</button>
+				</p>
+			</div>
+		</div>
+
+
+
+	</div>
+	<script>
+		$('.list tr').on('click' , function(e){ console.log( e );
+			loadStateContent( { page : 111 , url : './pages/partners_notice_detail.html' , history : 'q_detail' } );
+		});
+	</script>
+</section>

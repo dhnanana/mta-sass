@@ -6,6 +6,7 @@ input.invalid  { border: solid 1px #f33; }
 input + label { cursor: pointer; }
 
 textarea { width: calc(100% - 30px); resize: none; border: solid 1px #e6e6e6; color: #333; font-size: 15px; line-height: 25px; padding: 15px; outline: none; }
+button { cursor: pointer; }
 
 input[type=checkbox], input[type=checkbox]:checked /* , input[type=radio] , input[type=radio]:checked */  { appearance: none; -moz-appearance: none; -webkit-appearance: none; border:none; outline: none; }
 input[type=checkbox] { display: inline-block; height: 25px; line-height: 25px; padding-left: 25px; vertical-align: middle; cursor:pointer; font-size: 15px; }
@@ -14,9 +15,10 @@ input[type=checkbox]:checked { background: url(../images/download/box-ch-on.png)
 input[type=checkbox].circle { background: url(../images/download/circle-ch-off.png) no-repeat 0 0;  }
 input[type=checkbox].circle:checked { background: url(../images/download/circle-ch-on.png) no-repeat 0 0;  }
 
-input[type=radio] { display: inline-block; width: 21px; height: 21px; line-height: 21px; vertical-align: middle; margin: 0 7px; /* background: url(../images/download/circle-ch-off.png) no-repeat 0 0; */ }
+input[type=radio] { display: inline-block; width: 21px; height: 21px; line-height: 21px; vertical-align: middle; margin: 0 5px; /* background: url(../images/download/circle-ch-off.png) no-repeat 0 0; */ }
 input[type=radio]:checked { /* background: url(../images/download/circle-ch-on.png) no-repeat 0 0; */ }
-input[type=radio] + label { display: inline-block; font-size: 14px; height: 10px; line-height: 10px; vertical-align: middle;}
+input[type=radio] + label { display: inline-block; font-size: 14px; height: 10px; line-height: 6px !important; line-height: 10px !important; vertical-align: middle;}
+input[type=radio]{ margin-left: 16px; }
 
 select { 
     appearance: none; -moz-appearance: none; -webkit-appearance: none; color: #666; cursor: pointer;

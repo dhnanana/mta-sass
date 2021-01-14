@@ -21,6 +21,13 @@ div.bbsCon {
     top: -125px;
     right: 0; }
 
+div.bbsCon.type2 {
+  margin-top: 40px !important; }
+  div.bbsCon.type2 p.titleMenu {
+    position: absolute;
+    top: -95px;
+    right: 0; }
+
 div.util.faq {
   width: 100%;
   display: inline-block;
@@ -191,6 +198,28 @@ div.faq.modi {
 
 div.bbsCon tr.notice td:first-child {
   color: rgba(237, 33, 37, 0.8) !important; }
+
+div.bbsCon div.bbsHeader {
+  position: relative; }
+  div.bbsCon div.bbsHeader h5 {
+    display: inline-block;
+    width: auto;
+    font-size: 20px;
+    font-weight: 400;
+    font-vertical-align: middle;
+    height: 22px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #181c1f;
+    padding-bottom: 20px; }
+  div.bbsCon div.bbsHeader button {
+    float: right;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 15px; }
 
 div.bbsCon div.detail {
   width: 100%;
@@ -396,6 +425,13 @@ div.bbsCon div.sectionPrevNext p.next span::after {
 div.bbsCon div.sectionPrevNext p.con:hover a {
   text-decoration: underline; }
 
+div.bbsCon div.innerTd p.pagingCon {
+  margin: 0 !important;
+  display: inline-block;
+  vertical-align: middle; }
+  div.bbsCon div.innerTd p.pagingCon span.inner {
+    line-height: 42px; }
+
 .btn_bottom {
   display: inline-block;
   width: 100%;
@@ -420,12 +456,17 @@ div.bbsCon div.sectionPrevNext p.con:hover a {
   padding-bottom: 20px;
   border-bottom: 1px solid #666; }
 
+.innerForm h5.formHeader.line {
+  padding-bottom: 0px;
+  height: 2px; }
+
 .innerForm span.inputCon {
   width: 50%;
   float: left;
   display: inline-block;
   line-height: 64px;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  vertical-align: middle; }
   .innerForm span.inputCon label {
     display: inline-block;
     width: 170px;
@@ -437,9 +478,26 @@ div.bbsCon div.sectionPrevNext p.con:hover a {
     text-decoration: none;
     color: #181c1f;
     margin-left: 15px; }
+  .innerForm span.inputCon select {
+    margin: 0;
+    width: 150px; }
+  .innerForm span.inputCon textarea {
+    width: 80%; }
 
 .innerForm span.inputCon.full {
   width: 100%; }
+  .innerForm span.inputCon.full input[type=text] {
+    width: calc(80% - 10px); }
+  .innerForm span.inputCon.full textarea {
+    height: 80px;
+    display: inline-block;
+    float: left;
+    margin: 14px 0;
+    font-size: 14px;
+    line-height: 20px; }
+  .innerForm span.inputCon.full label {
+    float: left;
+    margin-top: 40px; }
 
 colgroup.col_notice col:nth-child(1) {
   width: 7%; }

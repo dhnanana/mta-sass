@@ -1,0 +1,44 @@
+@import "./common_s.scss";
+
+div.subCon{ margin-top: 70px; display: inline-block; width: 100%;
+	h5.title { display: inline-block; @include fontDefault( 19px , 400 ); margin-bottom: 25px; }
+	div.conBox { width: calc(50% - 38px); border: 1px solid #ddd; display: block; position:relative; float: left; padding: 45px 0px 45px 36px;
+		p.content { width: 30%; min-width: 270px; display: inline-block; line-height: 25px; vertical-align: middle;
+			span.title { display: block;  font-weight: 300; height: 25px; line-height: 27px; }
+			span.radioBox { margin-left: 10px }
+			span.conText { width: 100%; display: inline-block; @include fontDefault( 14px , 300 ); line-height: 20px; letter-spacing: -.3px; vertical-align: super; }
+		}
+		span.btnSet { display: inline-block; position: absolute; top: calc( 50% - 19px ); right: 28px; }
+	}
+	div.conBox.full { width: calc(100% - 36px); clear: both; }
+	div.conBox.manual { width: calc( 92% ); padding-left: 8%; border-left: none; border-right: none; background: url(../images/download/usermanua.png) no-repeat 36px center; }
+	div.conBox:not(.full):nth-child(even){ border-left: none; width: calc(50% - 37px); }
+	div.conBox:not(.full):nth-child(n+3) { border-top: none; }
+
+	select { width: 153px; margin:0; margin-right: 5px; }
+	button.download {
+		outline: none; background: #fff; border: 1px solid #ddd; padding: 13px 27px 13px 49px; @include fontDefault(14px , 400); height: 38px; line-height: 10px;
+		background: url(../images/download/download-icon.png) no-repeat 19px 13px;
+		&:hover { background-color: #f8f8f8; }
+	}
+
+	.t-util { margin-left: 20px; }
+	div.conList { display: inline-block; width: 100%; @include fontDefault( 14px , 300 );
+		p.list { display: block; width: calc(100% - 14px); padding: 27px 0 27px 14px; border-top: 1px solid #ddd;
+			span { text-align: center; display: inline-block;}
+			span.t-type { width: 10%; min-width: 80px; }
+			span.t-version { width: 7%; min-width: 70px; }
+			span.t-content { width: 60%; text-align: left; }
+			button { float: right; margin-top: -12px; }
+		}
+		p.list:last-child { border-bottom: 1px solid #ddd; }
+	}
+}
+div.subCon:last-child { margin-bottom: 100px; }
+
+div.releaseNote { @include fontDefault(13px , 300); margin-top: 18px;  padding: 10px; letter-spacing: 0; display: inline-block;
+	p.title { display: inline-block; background: url(../images/download/exclamationmark.png) no-repeat;padding-left: 30px; height: 25px; line-height: 25px; vertical-align: middle; margin-bottom: 10px;
+		span.t-date { margin-left: 10px; }
+	}
+	p.list { background: url(../images/download/comment.png) no-repeat 12px 2px; padding: 0 10px; display: block;padding-left: 30px;height: 25px; }
+}

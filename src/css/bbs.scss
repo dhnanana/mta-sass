@@ -19,6 +19,10 @@ div.bbsCon { position: relative;
 	}
 	p.titleMenu { position: absolute; top: -125px; right: 0; }
 }
+div.bbsCon.type2 {
+	margin-top: 40px !important;
+	p.titleMenu { position: absolute; top: -95px; right: 0; }
+}
 
 div.util.faq { width: 100%; display: inline-block; background: #f8f8f8; padding: 29px 0; margin-top: 70px;
 	div p.desc { margin-bottom: 13px; }
@@ -76,7 +80,11 @@ div.faq.modi { width: 100%; border-top: 1px solid #666; border-bottom: 1px solid
 div.bbsCon{
 
 	tr.notice td:first-child { color: rgba(237,33,37,.8) !important; }
-
+	div.bbsHeader { position: relative;
+		h5 { display: inline-block; width: auto; @include fontDefault( 20px , 400 ); padding-bottom: 20px; }
+		button { float: right; width: 180px; height: 40px; line-height: 40px; position: absolute; right: 0; bottom: 15px; }
+	}
+	
 	div.detail{
 		width: 100%; border-top: 1px solid #666; border-bottom: 1px solid #ccc; padding: 0; color: #333;
 		p.t_title { @include fontDefault( 18px , 400 ); height: 82px; line-height: 82px; padding: 0 20px; border-bottom: 1px solid #eee; padding: 0 20px; background: #f8f8f8; }
@@ -137,6 +145,10 @@ div.bbsCon{
 		p.next span::after { content: " "; background: url(../images/download/up-i.png) no-repeat center calc(50% - 3px); display: inline-block; width: 20px; height:56px; line-height: 56px; vertical-align: middle; font-size: 20px; margin-left:10px; }
 		p.con:hover a { text-decoration: underline; }
 	}
+
+	div.innerTd p.pagingCon { margin: 0 !important; display: inline-block; vertical-align: middle;
+		span.inner { line-height: 42px; }
+	}
 }
 
 .btn_bottom { display: inline-block; width: 100%; text-align: center; }
@@ -145,10 +157,26 @@ div.bbsCon{
 .innerForm {
 	div.formField { display: inline-block; width: 100%; margin-bottom: 53px; border-bottom: 1px solid #ccc; }
 	h5.formHeader { display: inline-block; width: 100%; @include fontDefault( 18px , 400 ); padding-bottom: 20px;  border-bottom: 1px solid #666; }
-	span.inputCon { width: 50%; float: left; display: inline-block; line-height: 64px; border-bottom: 1px solid #eee;
+	h5.formHeader.line { padding-bottom: 0px; height: 2px; }
+	span.inputCon { width: 50%; float: left; display: inline-block; line-height: 64px; border-bottom: 1px solid #eee; vertical-align: middle;
 		label { display: inline-block; width: 170px; @include fontDefault( 14px , 300 ); margin-left: 15px; }
+		select { margin: 0; width: 150px; }
+		textarea { width: 80%; }
 	}
-	span.inputCon.full { width: 100%; }
+	span.inputCon.full { width: 100%;;
+		input[type=text] { width: calc(80% - 10px) }
+		textarea { height: 80px; display: inline-block; float: left; margin: 14px 0; font-size: 14px; line-height: 20px; }
+		label { float: left; margin-top: 40px; }
+	}
+	span.inputCon.right {
+		//label { text-indent: 70px; }
+	}
+}
+
+form.read-only {
+	span.inputCon{
+		input[type=text] {  }
+	}
 }
 
 

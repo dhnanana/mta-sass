@@ -1,0 +1,10 @@
+@mixin fontDefault( $s : 1em , $b : normal ) {
+	font : {
+		size : $s;
+		weight : $b;
+    }
+    height: $s + 2px;
+	line-height: $s + 2px;
+	text-decoration: none;
+	color : #181c1f;
+}
