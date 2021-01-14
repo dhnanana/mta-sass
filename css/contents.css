@@ -1,0 +1,148 @@
+div.subCon {
+  margin-top: 70px;
+  display: inline-block;
+  width: 100%; }
+  div.subCon h5.title {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 400;
+    height: 21px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #181c1f;
+    margin-bottom: 25px; }
+  div.subCon div.conBox {
+    width: calc(50% - 38px);
+    border: 1px solid #ddd;
+    display: block;
+    position: relative;
+    float: left;
+    padding: 45px 0px 45px 36px; }
+    div.subCon div.conBox p.content {
+      width: 30%;
+      min-width: 270px;
+      display: inline-block;
+      line-height: 25px;
+      vertical-align: middle; }
+      div.subCon div.conBox p.content span.title {
+        display: block;
+        font-weight: 300;
+        height: 25px;
+        line-height: 27px; }
+      div.subCon div.conBox p.content span.radioBox {
+        margin-left: 10px; }
+      div.subCon div.conBox p.content span.conText {
+        width: 100%;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 300;
+        height: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        color: #181c1f;
+        line-height: 20px;
+        letter-spacing: -.3px;
+        vertical-align: super; }
+    div.subCon div.conBox span.btnSet {
+      display: inline-block;
+      position: absolute;
+      top: calc( 50% - 19px);
+      right: 28px; }
+  div.subCon div.conBox.full {
+    width: calc(100% - 36px);
+    clear: both; }
+  div.subCon div.conBox.manual {
+    width: calc( 92%);
+    padding-left: 8%;
+    border-left: none;
+    border-right: none;
+    background: url(../images/download/usermanua.png) no-repeat 36px center; }
+  div.subCon div.conBox:not(.full):nth-child(even) {
+    border-left: none;
+    width: calc(50% - 37px); }
+  div.subCon div.conBox:not(.full):nth-child(n+3) {
+    border-top: none; }
+  div.subCon select {
+    width: 153px;
+    margin: 0;
+    margin-right: 5px; }
+  div.subCon button.download {
+    outline: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 13px 27px 13px 49px;
+    font-size: 14px;
+    font-weight: 400;
+    height: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #181c1f;
+    height: 38px;
+    line-height: 10px;
+    background: url(../images/download/download-icon.png) no-repeat 19px 13px; }
+    div.subCon button.download:hover {
+      background-color: #f8f8f8; }
+  div.subCon .t-util {
+    margin-left: 20px; }
+  div.subCon div.conList {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    height: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #181c1f; }
+    div.subCon div.conList p.list {
+      display: block;
+      width: calc(100% - 14px);
+      padding: 27px 0 27px 14px;
+      border-top: 1px solid #ddd; }
+      div.subCon div.conList p.list span {
+        text-align: center;
+        display: inline-block; }
+      div.subCon div.conList p.list span.t-type {
+        width: 10%;
+        min-width: 80px; }
+      div.subCon div.conList p.list span.t-version {
+        width: 7%;
+        min-width: 70px; }
+      div.subCon div.conList p.list span.t-content {
+        width: 60%;
+        text-align: left; }
+      div.subCon div.conList p.list button {
+        float: right;
+        margin-top: -12px; }
+    div.subCon div.conList p.list:last-child {
+      border-bottom: 1px solid #ddd; }
+
+div.subCon:last-child {
+  margin-bottom: 100px; }
+
+div.releaseNote {
+  font-size: 13px;
+  font-weight: 300;
+  height: 15px;
+  line-height: 15px;
+  text-decoration: none;
+  color: #181c1f;
+  margin-top: 18px;
+  padding: 10px;
+  letter-spacing: 0;
+  display: inline-block; }
+  div.releaseNote p.title {
+    display: inline-block;
+    background: url(../images/download/exclamationmark.png) no-repeat;
+    padding-left: 30px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    margin-bottom: 10px; }
+    div.releaseNote p.title span.t-date {
+      margin-left: 10px; }
+  div.releaseNote p.list {
+    background: url(../images/download/comment.png) no-repeat 12px 2px;
+    padding: 0 10px;
+    display: block;
+    padding-left: 30px;
+    height: 25px; }

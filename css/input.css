@@ -29,6 +29,9 @@ textarea {
   padding: 15px;
   outline: none; }
 
+button {
+  cursor: pointer; }
+
 input[type=checkbox], input[type=checkbox]:checked {
   appearance: none;
   -moz-appearance: none;
@@ -63,7 +66,7 @@ input[type=radio] {
   height: 21px;
   line-height: 21px;
   vertical-align: middle;
-  margin: 0 7px;
+  margin: 0 5px;
   /* background: url(../images/download/circle-ch-off.png) no-repeat 0 0; */ }
 
 input[type=radio]:checked {
@@ -73,8 +76,12 @@ input[type=radio] + label {
   display: inline-block;
   font-size: 14px;
   height: 10px;
-  line-height: 10px;
+  line-height: 6px !important;
+  line-height: 10px !important;
   vertical-align: middle; }
+
+input[type=radio] {
+  margin-left: 16px; }
 
 select {
   appearance: none;
