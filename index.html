@@ -146,6 +146,15 @@
 					loadStateContent( { page : itemData.page , url : itemData.url , location : itemData.history } );
 				});
 
+				$('div.login li a').each(function(idx , target){ 
+					console.log( 'div.login li : ' , idx , target );
+					if( idx === 1 )  $(this).data( { page : 'login' + idx , url : './pages/members_join.html' , history : 'join members' } );
+				}).on('click' , function(e){
+					e.preventDefault();
+					let itemData = $(this).data()
+					loadStateContent( { page : itemData.page , url : itemData.url , location : itemData.history } );
+				});
+
 				$('button.gnb_hamburger').click(function(){
 					let target = $('#mainHeader');
 					if( target.hasClass('active') ) target.removeClass('active');

@@ -1,0 +1,89 @@
+<section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
+<section class="subNav">
+	<nav><ul>
+		<li><a href="#">로그인</a></li>
+		<li><a href="#">아이디 찾기</a></li>
+		<li><a href="#">비밀번호 찾기</a></li>
+		<li class="on"><a href="#">회원가입</a></li>
+	</ul>
+</nav>
+</section>
+<section class="subContainer">
+	<div class="contents">
+		<h3 class="conTitle">회원가입</h3>
+		<h5 class="conSubTitle">MTA 회원가입을 통해 각종 모바일 테스트 자동화 서비스와 정보혜택을 누려보세요.</h5>
+		<div class="member-join">
+			<div class="process">
+				<div class="inner">
+					<p class="procNum"><span class="p-bg">1</span><span class="p-name">본인인증</span></p>
+					<p class="procNum"><span class="p-bg">2</span><span class="p-name">약관동의</span></p>
+					<p class="procNum on"><span class="p-bg">3</span><span class="p-name">회원정보입력</span></p>
+					<p class="procNum"><span class="p-bg">4</span><span class="p-name">가입정보확인</span></p>
+					<p class="procNum"><span class="p-bg">5</span><span class="p-name">가입완료</span></p>
+				</div>
+			</div>
+
+			<div class="form">
+				<div class="a-title-con join mb-20">
+					<h5 class="a-title">회원정보 입력</h5>
+				</div>
+				
+				<div class="a-form">
+					<p class="line">
+						<span class="label">이름</span>
+						<span class="input">
+							<input type="text" id="" class="type1" class="auth-number"/>
+						</span>
+					</p>
+					<p class="line">
+						<span class="label">이메일</span>
+						<span class="input">
+							<input type="text" class="email" id="" placeholder="이메일 아이디를 입력해 주세요."/>
+							<span>@</span>
+							<select>
+								<option value="">선택</option>
+							</select>
+						</span>
+					</p>
+					<p class="line">
+						<span class="label">전화번호</span>
+						<span class="input">
+							<select name="" id="phone_2" class="phone">
+								<option value="">010</option>
+								<option value="">011</option>
+								<option value="">016</option>
+								<option value="">019</option>
+							</select>
+							<span>-</span><input type="text" id="phone_2" class="phone"/>
+							<span>-</span><input type="text" id="phone_3" class="phone"/>
+						</span>
+					</p>
+					<p class="line">
+						<span class="label">비밀번호</span>
+						<span class="input">
+							<input type="text" id="" class="auth-number"/>
+							<span class="desc">최소 8자리 이상, 영문+숫자+특수문자 모두 조합</span>
+							<b class="notice">전화번호를 3자리 이상 숫자로 입력해 주세요.</b>
+						</span>
+					</p>
+					<p class="line">
+						<span class="label">비밀번호 재확인</span>
+						<span class="input">
+							<input type="text" id="" class="auth-number"/>
+							<b class="notice">입력값이 같지 않습니다.</b>
+						</span>
+					</p>
+				</div>
+
+			<div class="util mt-80">
+				<button class="btn lg blue" id="joinNext">다음</button>
+			</div>
+
+		</div>
+	</div>
+	<script>
+		$('#joinNext').on('click' , function(){
+			loadStateContent( { page : 'join' + 3 , url : './pages/members_join_confirm.html' , location : 'join_confirm' } );
+		});
+	</script>
+</section>
