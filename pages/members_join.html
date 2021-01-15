@@ -13,66 +13,22 @@
 		<h3 class="conTitle">회원가입</h3>
 		<h5 class="conSubTitle">MTA 회원가입을 통해 각종 모바일 테스트 자동화 서비스와 정보혜택을 누려보세요.</h5>
 		<div class="member-join">
-			<div class="process">
-				<div class="inner">
-					<p class="procNum on"><span class="p-bg">1</span><span class="p-name">본인인증</span></p>
-					<p class="procNum"><span class="p-bg">2</span><span class="p-name">약관동의</span></p>
-					<p class="procNum"><span class="p-bg">3</span><span class="p-name">회원정보입력</span></p>
-					<p class="procNum"><span class="p-bg">4</span><span class="p-name">가입정보확인</span></p>
-					<p class="procNum"><span class="p-bg">5</span><span class="p-name">가입완료</span></p>
+			<div id="selectMemberTypeCon">
+				<div class="boxCon on">
+					<h3>HMG 임직원</h3>
+					<a href="#">HMG 임직원이면 누구나 간편 가입</a>
+				</div>
+				<div class="boxCon">
+					<h3>회원가입</h3>
+					<a href="#">MTA 사용을 원하는 누구나 간편 가입</a>
 				</div>
 			</div>
-
-			<div class="form">
-				<div class="a-title-con">
-					<h5 class="a-title">본인인증</h5>
-					<p class="a-text">
-						MTA 서비스는 계약된 회사 및 단체를 위한 서비스로 서비스 이용을 위해서는 앞서 계약이 되어 있으셔야 합니다.<br/>
-						현재 계약된 업체 및 단체의 사용자라면 회사 검색 및 이메일 인증 후 이용 하시기 바랍니다.
-					</p>
-				</div>
-				<div class="a-form pd-v-10">
-					<p class="line">
-						<span class="label">업체 및 단체명</span>
-						<span class="input">
-							<input type="text" id="" class="input-comp"/>
-							<button class="btn md gray">검색</button>
-							<button class="btn md">신규업체 신청</button>
-						</span>
-					</p>
-				</div>
-				<div class="a-form">
-					<p class="line">
-						<span class="label">이메일</span>
-						<span class="input">
-							<input type="text" class="email" id="" placeholder="이메일 아이디를 입력해 주세요."/>
-							<span>@</span>
-							<select>
-								<option value="">선택</option>
-							</select>
-							<button class="btn md gray">이메일 전송</button>
-						</span>
-					</p>
-					<p class="line">
-						<span class="label">인증번호</span>
-						<span class="input">
-							<input type="text" id="" class="auth-number"/>
-							<span class="timer-limiter">09:59</span>
-							<button class="btn md gray">인증</button>
-						</span>
-					</p>
-				</div>
-			</div>
-
-			<div class="util">
-				<button class="btn lg blue" id="joinNext">다음</button>
-			</div>
-
 		</div>
 	</div>
 	<script>
-		$('#joinNext').on('click' , function(){
-			loadStateContent( { page : 'join' + 1 , url : './pages/members_join_p_agree.html' , location : 'join_policy' } );
+		$('#selectMemberTypeCon div.boxCon').on('click' , function(e){
+			e.preventDefault();
+			loadStateContent( { page : 'join' + 1 , url : './pages/members_join_auth.html' , location : 'join_auth' } );
 		});
 	</script>
 </section>

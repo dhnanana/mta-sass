@@ -35,15 +35,17 @@ div.util.faq {
   padding: 29px 0;
   margin-top: 70px; }
   div.util.faq div p.desc {
-    margin-bottom: 13px; }
+    margin-bottom: 13px;
+    margin-left: 15px; }
   div.util.faq div.leftCon {
     float: left;
     margin-left: 29px;
     border-right: 1px solid #e8e8e8;
     padding-right: 29px;
-    width: 70%; }
+    width: 70%;
+    text-align: left; }
     div.util.faq div.leftCon input[type=text] {
-      width: 77.5%; }
+      width: 76.5%; }
     div.util.faq div.leftCon button {
       width: 139px;
       height: 38px;
@@ -146,7 +148,8 @@ div.faq.modi {
     height: 72px;
     line-height: 72px;
     width: 100%;
-    margin: 0; }
+    margin: 0;
+    text-align: left; }
   div.faq.modi p.line:not(:first-child) {
     border-top: 1px solid #e8e8e8; }
   div.faq.modi span.label, div.faq.modi span.input {
@@ -177,6 +180,7 @@ div.faq.modi {
     background: #bbb;
     color: #fff;
     height: 40px;
+    line-height: 38px;
     border: 1px solid #e8e8e8;
     outline: none;
     cursor: pointer; }
@@ -480,14 +484,21 @@ div.bbsCon div.innerTd p.pagingCon {
     margin-left: 15px; }
   .innerForm span.inputCon select {
     margin: 0;
-    width: 150px; }
+    width: 150px;
+    margin-top: 10px; }
   .innerForm span.inputCon textarea {
     width: 80%; }
+  .innerForm span.inputCon input {
+    max-width: calc(100% - 235px); }
+  .innerForm span.inputCon label {
+    float: left;
+    height: 64px;
+    line-height: 64px; }
 
 .innerForm span.inputCon.full {
   width: 100%; }
   .innerForm span.inputCon.full input[type=text] {
-    width: calc(80% - 10px); }
+    width: calc(30% - 15px); }
   .innerForm span.inputCon.full textarea {
     height: 80px;
     display: inline-block;
@@ -495,9 +506,20 @@ div.bbsCon div.innerTd p.pagingCon {
     margin: 14px 0;
     font-size: 14px;
     line-height: 20px; }
-  .innerForm span.inputCon.full label {
-    float: left;
-    margin-top: 40px; }
+
+.innerForm span.inputCon.right label {
+  text-indent: 50px; }
+
+.innerForm span.inputCon.type2 {
+  width: 100%; }
+  .innerForm span.inputCon.type2 label, .innerForm span.inputCon.type2 select {
+    float: left; }
+  .innerForm span.inputCon.type2 label:not(:first-child) {
+    width: 85px;
+    text-indent: 15px; }
+
+.innerForm span.inputCon:last-child {
+  border-bottom: none; }
 
 colgroup.col_notice col:nth-child(1) {
   width: 7%; }

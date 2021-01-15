@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sass Test</title>
 	<link rel="stylesheet" href="./css/common.css">
-	<link rel="stylesheet" href="./css/main_pc.css" type="text/css" media="screen and (min-width:1400px)">
-	<link rel="stylesheet" href="./css/main_mobile.css" type="text/css" media="screen and (min-width:0px) and (max-width: 1399px)">
+	<link rel="stylesheet" href="./css/main_pc.css" type="text/css"/>
+	<!-- <link rel="stylesheet" href="./css/main_pc.css" type="text/css" media="screen and (min-width:1400px)"> -->
+	<!-- <link rel="stylesheet" href="./css/main_mobile.css" type="text/css" media="screen and (min-width:0px) and (max-width: 1399px)"> -->
 	<script src="./js/commonJs.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/96ef2855d9.js" crossorigin="anonymous"></script>
@@ -148,7 +149,9 @@
 
 				$('div.login li a').each(function(idx , target){ 
 					console.log( 'div.login li : ' , idx , target );
-					if( idx === 1 )  $(this).data( { page : 'login' + idx , url : './pages/members_join.html' , history : 'join members' } );
+					if( idx === 0 )  $(this).data( { page : 'login' + idx , url : './pages/members_login.html' , history : 'join login' } );
+					if( idx === 1 )  $(this).data( { page : 'jpin' + idx , url : './pages/members_join.html' , history : 'join members' } );
+					if( idx === 2 )  $(this).data( { page : 'jpin' + idx , url : './pages/question_write.html' , history : 'q_detail' } );
 				}).on('click' , function(e){
 					e.preventDefault();
 					let itemData = $(this).data()

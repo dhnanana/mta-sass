@@ -19,8 +19,6 @@ div.subCon {
     display: inline-block;
     font-size: 19px;
     font-weight: 400;
-    height: 21px;
-    line-height: 21px;
     text-decoration: none;
     color: #181c1f;
     margin-bottom: 25px; }
@@ -49,8 +47,6 @@ div.subCon {
         display: inline-block;
         font-size: 14px;
         font-weight: 300;
-        height: 16px;
-        line-height: 16px;
         text-decoration: none;
         color: #181c1f;
         line-height: 20px;
@@ -86,8 +82,6 @@ div.subCon {
     padding: 13px 27px 13px 49px;
     font-size: 14px;
     font-weight: 400;
-    height: 16px;
-    line-height: 16px;
     text-decoration: none;
     color: #181c1f;
     height: 38px;
@@ -102,8 +96,6 @@ div.subCon {
     width: 100%;
     font-size: 14px;
     font-weight: 300;
-    height: 16px;
-    line-height: 16px;
     text-decoration: none;
     color: #181c1f; }
     div.subCon div.conList p.list {
@@ -135,8 +127,6 @@ div.subCon:last-child {
 div.releaseNote {
   font-size: 13px;
   font-weight: 300;
-  height: 15px;
-  line-height: 15px;
   text-decoration: none;
   color: #181c1f;
   margin-top: 18px;
@@ -183,8 +173,6 @@ div.member-join div.process {
       vertical-align: middle;
       font-size: 20px;
       font-weight: normal;
-      height: 22px;
-      line-height: 22px;
       text-decoration: none;
       color: #181c1f;
       border-radius: 50%;
@@ -195,8 +183,6 @@ div.member-join div.process {
       display: block;
       font-size: 15px;
       font-weight: 300;
-      height: 17px;
-      line-height: 17px;
       text-decoration: none;
       color: #181c1f;
       color: #666666;
@@ -230,8 +216,6 @@ div.member-join div.form div.a-title-con {
   div.member-join div.form div.a-title-con h5.a-title {
     font-size: 22px;
     font-weight: 400;
-    height: 24px;
-    line-height: 24px;
     text-decoration: none;
     color: #181c1f;
     margin: 0 35px 0 15px;
@@ -242,8 +226,6 @@ div.member-join div.form div.a-title-con {
     float: left;
     font-size: 14px;
     font-weight: 300;
-    height: 16px;
-    line-height: 16px;
     text-decoration: none;
     color: #181c1f;
     letter-spacing: 0;
@@ -275,8 +257,6 @@ div.member-join div.form div.a-form {
       margin-left: 13px;
       font-size: 14px;
       font-weight: 300;
-      height: 16px;
-      line-height: 16px;
       text-decoration: none;
       color: #181c1f;
       float: left; }
@@ -366,16 +346,12 @@ div.member-join div.form div.formHeader {
   div.member-join div.form div.formHeader h3 {
     font-size: 17px;
     font-weight: 400;
-    height: 19px;
-    line-height: 19px;
     text-decoration: none;
     color: #181c1f;
     margin-bottom: 10px; }
   div.member-join div.form div.formHeader h5 {
     font-size: 14px;
     font-weight: 300;
-    height: 16px;
-    line-height: 16px;
     text-decoration: none;
     color: #181c1f; }
   div.member-join div.form div.formHeader .btnSet {
@@ -392,9 +368,214 @@ div.member-join div.form div.a-form.complete {
   div.member-join div.form div.a-form.complete div.formHeader h5 {
     line-height: 25px; }
 
-div.member-join div.util {
+div.util {
   width: 100%;
   display: inline-block;
   text-align: center; }
-  div.member-join div.util button:nth-child(n+2) {
+  div.util button:nth-child(n+2) {
     margin-left: 10px; }
+
+div#selectMemberTypeCon {
+  margin-top: 70px; }
+  div#selectMemberTypeCon div.boxCon {
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    width: calc(50% - 2px);
+    text-align: center;
+    padding: 71px 0 63px 0;
+    float: left;
+    cursor: pointer; }
+    div#selectMemberTypeCon div.boxCon h3 {
+      font-size: 22px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #181c1f; }
+    div#selectMemberTypeCon div.boxCon a {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #181c1f;
+      margin-top: 175px; }
+  div#selectMemberTypeCon div.boxCon:nth-child(1) {
+    background: url(../images/download/hmg-id.png) no-repeat 50% 50%; }
+  div#selectMemberTypeCon div.boxCon:nth-child(2) {
+    background: url(../images/download/generalmember.png) no-repeat center center; }
+  div#selectMemberTypeCon div.boxCon:hover {
+    border-color: #0070d9; }
+
+div.contents.login {
+  width: 900px !important; }
+  div.contents.login h3.conTitle, div.contents.login h5.conSubTitle {
+    text-align: center; }
+  div.contents.login div.loginCon {
+    border-top: none;
+    margin-top: 67px; }
+    div.contents.login div.loginCon div#switchMember {
+      display: inline-block;
+      width: 100%; }
+      div.contents.login div.loginCon div#switchMember button {
+        border: 1px solid #e6e6e6;
+        background: #fff;
+        width: calc(50%);
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        outline: none; }
+      div.contents.login div.loginCon div#switchMember button.on {
+        border-color: #0070d9;
+        background-color: #0070d9;
+        color: #fff; }
+  div.contents.login div.formCon {
+    border: 1px solid #e6e6e6;
+    width: calc(100% - 2px);
+    display: inline-block;
+    text-align: center;
+    border-top: none;
+    margin-top: -2px; }
+  div.contents.login div.formCon form {
+    display: inline-block;
+    width: 610px;
+    margin: 56px 0 107px 0; }
+    div.contents.login div.formCon form h3 {
+      font-size: 20px;
+      font-weight: normal;
+      text-decoration: none;
+      color: #181c1f;
+      background: url(../images/download/peopleicon.png) no-repeat 0 3px;
+      line-height: 20px;
+      padding-left: 25px;
+      display: inline-block;
+      margin-bottom: 38px; }
+    div.contents.login div.formCon form select, div.contents.login div.formCon form input[type=submit] {
+      width: 608px; }
+    div.contents.login div.formCon form select {
+      margin: 0; }
+    div.contents.login div.formCon form input[type=text], div.contents.login div.formCon form input[type=password] {
+      width: 580px; }
+    div.contents.login div.formCon form input[type=submit] {
+      outline: none;
+      background: #023e7c;
+      border: none;
+      color: #fff !important;
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+      font-weight: normal;
+      text-decoration: none;
+      color: #181c1f; }
+    div.contents.login div.formCon form input {
+      margin-top: 10px; }
+  div.contents.login div.formCon.type2 {
+    border-left: none;
+    border-right: none; }
+    div.contents.login div.formCon.type2 form {
+      width: 792px;
+      margin-bottom: 48px; }
+    div.contents.login div.formCon.type2 h3, div.contents.login div.formCon.type2 h5 {
+      display: block;
+      text-align: left; }
+    div.contents.login div.formCon.type2 h3 {
+      font-size: 24px;
+      font-weight: normal;
+      text-decoration: none;
+      color: #181c1f;
+      margin-bottom: 15px; }
+    div.contents.login div.formCon.type2 h5 {
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #181c1f; }
+    div.contents.login div.formCon.type2 span.desc {
+      display: block;
+      font-size: 13px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #181c1f;
+      margin-top: 20px;
+      text-align: left;
+      letter-spacing: -.3px; }
+    div.contents.login div.formCon.type2 div.chkType {
+      background: #f9f9f9;
+      width: 100%;
+      display: inline-block;
+      padding: 22px 0;
+      margin-top: 48px; }
+      div.contents.login div.formCon.type2 div.chkType input[type=checkbox] {
+        margin-top: 0; }
+      div.contents.login div.formCon.type2 div.chkType label {
+        font-weight: 300; }
+        div.contents.login div.formCon.type2 div.chkType label .chk-value {
+          color: #0070d9; }
+    div.contents.login div.formCon.type2 div.centerBox {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      margin: 59px 0 50px 0; }
+      div.contents.login div.formCon.type2 div.centerBox input[type=text] {
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #181c1f;
+        letter-spacing: 0; }
+      div.contents.login div.formCon.type2 div.centerBox input#authNumber {
+        text-align: center;
+        color: #333;
+        width: 490px; }
+      div.contents.login div.formCon.type2 div.centerBox input.chgPassInput {
+        text-align: left;
+        width: 490px; }
+      div.contents.login div.formCon.type2 div.centerBox input.chgPassInput:nth-child(n+2) {
+        margin-top: 40px; }
+      div.contents.login div.formCon.type2 div.centerBox span.noticeCon {
+        color: #ff3333;
+        display: inline-block;
+        width: 100%;
+        margin-top: 15px;
+        font-size: 13px;
+        text-align: left; }
+      div.contents.login div.formCon.type2 div.centerBox input.chgPassInput + span.noticeCon {
+        width: 490px;
+        padding-left: 25px; }
+      div.contents.login div.formCon.type2 div.centerBox span#authTime {
+        text-align: center; }
+        div.contents.login div.formCon.type2 div.centerBox span#authTime b {
+          margin-left: 5px;
+          letter-spacing: 0;
+          font-weight: 300; }
+  div.contents.login div.helpText {
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #181c1f;
+    line-height: 22px;
+    min-height: 65px;
+    padding-left: 81px;
+    background: url(../images/download/noti.png) no-repeat;
+    margin: 47px 0 63px 0; }
+  div.contents.login div.formField {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #eee; }
+    div.contents.login div.formField span.inputCon * {
+      float: left; }
+    div.contents.login div.formField span.inputCon span.split {
+      margin: 0 10px; }
+    div.contents.login div.formField span.inputCon label {
+      text-align: left;
+      background: #fafafa;
+      margin: 0 15px 0 0;
+      text-indent: 35px; }
+    div.contents.login div.formField span.inputCon input[type=text] {
+      margin-top: 12px; }
+    div.contents.login div.formField span.inputCon select {
+      margin-top: 12px; }
+    div.contents.login div.formField span.email input[type=text] {
+      width: 122px; }
+    div.contents.login div.formField span.email select {
+      width: 185px;
+      margin-left: 10px; }
+    div.contents.login div.formField span.phone select {
+      width: 95px; }
+    div.contents.login div.formField span.phone input[type=text] {
+      width: 66px;
+      text-align: center; }
