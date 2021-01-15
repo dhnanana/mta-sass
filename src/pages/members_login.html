@@ -1,0 +1,74 @@
+<section class="subVisual"><h3>서브컨텐트 타이틀 영역 입니다.</h3></section>
+<section class="subNav">
+	<nav><ul>
+		<li class="on"><a href="#">로그인</a></li>
+		<li><a href="#">아이디 찾기</a></li>
+		<li><a href="#">비밀번호 찾기</a></li>
+		<li><a href="#">회원가입</a></li>
+	</ul>
+</nav>
+</section>
+<section class="subContainer">
+	<div class="contents login">
+		<h3 class="conTitle">회원가입</h3>
+		<h5 class="conSubTitle">모바일 테스트의 새로운 경험을 시작하시려면 로그인 해 주세요.</h5>
+		<div class="loginCon">
+			<div id="switchMember">
+				<button>HMG 임직원</button>
+				<button>일반사용자</button>
+			</div>
+
+			<!-- 로그인 -->
+			<div id="hmgForm" class="switchCon">
+				<div class="formCon">
+					<form>
+						<h3>MTA 사용자 로그인</h3>
+						<select name="" id="">
+							<option value="">회사선택</option>
+						</select>
+						<input name="" id="" type="text" placeholder="사번을 입력하세요">
+						<input name="" id="" type="password" >
+						<input type="submit" value="로그인">
+					</form>
+				</div>
+			</div>
+
+			<div class="switchCon">
+				<div class="formCon">
+					<form>
+						<h3>일반사용자 로그인</h3>
+						<input name="" id="" type="text" placeholder="아이디를 입력하세요">
+						<input name="" id="" type="password" >
+						<input type="submit" value="로그인">
+					</form>
+				</div>	
+			</div>
+			
+		</div><!-- loginCon -->
+	</div><!-- content Login -->
+	<script>
+		var subNavCon = null;
+		if( subNavCon === null ) {
+			subNavCon = $('section.subNav nav li');
+			subNavCon.on('click' , function(e){
+				e.stopImmediatePropagation();
+				e.preventDefault();
+				let idx = $(this).index();
+				if( idx === 1 ) loadStateContent( { page : 'login pass' + 1 , url : './pages/members_login_id.html' , history : 'pass find' } );
+				if( idx === 2 ) loadStateContent( { page : 'login pass' + 1 , url : './pages/members_login_pass.html' , history : 'pass find' } );
+			});
+
+			var swtichBtns = $('#switchMember button');
+			swtichBtns.on('click' , function(){
+				swtichBtns.removeClass('on');
+				$(this).addClass('on');
+				switchLoginForm( $(this).index() );
+			});
+			const forms = $('div.contents.login div.switchCon');
+			function switchLoginForm(idx){ console.log( idx );
+				forms.hide().eq(idx).show();
+			}
+		}
+		swtichBtns.eq(0).trigger('click');
+	</script>
+</section>

@@ -1,6 +1,9 @@
 @import "./common_s.scss";
 
+$over-color : #0070d9;
+
 div.subCon{ margin-top: 70px; display: inline-block; width: 100%;
+
 	h5.title { display: inline-block; @include fontDefault( 19px , 400 ); margin-bottom: 25px; }
 	div.conBox { width: calc(50% - 38px); border: 1px solid #ddd; display: block; position:relative; float: left; padding: 45px 0px 45px 36px;
 		p.content { width: 30%; min-width: 270px; display: inline-block; line-height: 25px; vertical-align: middle;
@@ -112,8 +115,86 @@ div.member-join {
 			div.formHeader h5 { line-height: 25px; }
 		}
 	}
-	div.util { width: 100%; display: inline-block; text-align: center;
-		button:nth-child(n+2) { margin-left: 10px; }
+}
+
+div.util { width: 100%; display: inline-block; text-align: center;
+	button:nth-child(n+2) { margin-left: 10px; }
+}
+
+div#selectMemberTypeCon { margin-top: 70px;
+	div.boxCon { display: inline-block; border: 1px solid #e6e6e6; width: calc(50% - 2px); text-align: center; padding: 71px 0 63px 0; float:left; cursor:pointer;
+		h3 { @include fontDefault( 22px , 400 ); }
+		a { display: inline-block; @include fontDefault( 16px , 300 ); margin-top: 175px;  }
+	}
+	div.boxCon:nth-child(1) { background: url(../images/download/hmg-id.png) no-repeat 50% 50%; }
+	div.boxCon:nth-child(2) { background: url(../images/download/generalmember.png) no-repeat center center; }
+	div.boxCon:hover {
+		border-color: $over-color;
 	}
 }
+
+div.contents.login{ width: 900px !important;
+	h3.conTitle , h5.conSubTitle { text-align: center; }
+	div.loginCon { border-top: none; margin-top:67px;
+		div#switchMember { display: inline-block; width: 100%;
+			button { border: 1px solid #e6e6e6;  background: #fff; width: calc(50%); float:left; height:50px; line-height: 50px; outline: none; }
+			button.on { border-color: $over-color; background-color: $over-color; color:#fff; }
+		}
+	}
+	div.formCon { border: 1px solid #e6e6e6; width: calc(100% - 2px); display: inline-block; text-align: center; border-top: none; margin-top: -2px; }
+	div.formCon form { display: inline-block; width: 610px; margin: 56px 0 107px 0; 
+		h3 { @include fontDefault(20px); background: url(../images/download/peopleicon.png) no-repeat 0 3px; line-height: 20px; padding-left: 25px; display: inline-block; margin-bottom:38px; }
+		select , input[type=submit] { width: 608px; }
+		select { margin:0; }
+		input[type=text] , input[type=password] { width: 580px;}
+		input[type=submit] { outline: none; background: $btn_color_blue; border:none; color:#fff !important; height: 50px; line-height: 50px; @include fontDefault(16px); }
+		input { margin-top: 10px; }
+	}
+	div.formCon.type2 { border-left: none; border-right: none;
+		form { width: 792px; margin-bottom: 48px; }
+		h3 , h5 { display: block; text-align: left; }
+		h3 { @include fontDefault(24px); margin-bottom: 15px; }
+		h5 { @include fontDefault(16px , 300); }
+		span.desc { display: block; @include fontDefault(13px , 300); margin-top:20px; text-align: left; letter-spacing: -.3px;}
+		div.chkType { background: #f9f9f9; width: 100%; display: inline-block; padding: 22px 0; margin-top: 48px;
+			input[type=checkbox] { margin-top:0; }
+			label { font-weight: 300; 
+				.chk-value { color: $over-color; }
+			}
+		}
+		div.centerBox { width: 100%; display: inline-block; text-align: center; margin: 59px 0 50px 0;
+			input[type=text] {  @include fontDefault(18px , 400); letter-spacing: 0; }
+			input#authNumber { text-align: center; color: #333; width: 490px; }
+			input.chgPassInput { text-align: left; width: 490px; }
+			input.chgPassInput:nth-child(n+2) { margin-top: 40px; }
+			span.noticeCon { color: #ff3333; display: inline-block; width:100%; margin-top: 15px; font-size: 13px; text-align: left;}
+			input.chgPassInput + span.noticeCon { width: 490px; padding-left: 25px; }
+
+			span#authTime { text-align: center;
+				b { margin-left: 5px; letter-spacing: 0; font-weight: 300; }
+			}
+		}
+	}
+	div.helpText { @include fontDefault(12px , 300); line-height: 22px; min-height: 65px; padding-left: 81px; background: url(../images/download/noti.png) no-repeat; margin: 47px 0 63px 0; }
+	div.formField { border-top: 1px solid #ccc;  border-bottom: 1px solid #eee;
+		span.inputCon {
+			* { float: left; }
+			span.split { margin: 0 10px; }
+			label { text-align: left; background: #fafafa; margin: 0 15px 0 0; text-indent: 35px; }
+			input[type=text] { margin-top: 12px; }
+			select {  margin-top: 12px; }
+		}
+		span.email {
+			input[type=text] { width: 122px; }
+			select { width: 185px; margin-left: 10px; }
+		}
+		span.phone {
+			select { width: 95px; }
+			input[type=text] { width: 66px; text-align: center; }
+		}
+	}
+	
+}
+
+
 

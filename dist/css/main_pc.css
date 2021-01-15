@@ -55,9 +55,6 @@ html, body {
       width: 125px;
       font-size: 17px;
       font-weight: 400;
-      font-vertical-align: middle;
-      font-height: 19px;
-      font-line-height: 19px;
       text-decoration: none;
       color: #181c1f;
       border-bottom: 5px solid #fff;
@@ -80,9 +77,6 @@ html, body {
         #mainHeader nav.nav li.mainMenu ul.subMenu li {
           font-size: 13px;
           font-weight: 400;
-          font-vertical-align: middle;
-          font-height: 15px;
-          font-line-height: 15px;
           text-decoration: none;
           color: #181c1f;
           text-align: center;
@@ -133,9 +127,6 @@ html, body {
         #mainHeader div.buttonSet div.login li a {
           font-size: 13px;
           font-weight: 400;
-          font-vertical-align: middle;
-          font-height: 15px;
-          font-line-height: 15px;
           text-decoration: none;
           color: #181c1f;
           color: #999; }
@@ -154,9 +145,6 @@ html, body {
         #mainHeader div.buttonSet p.language button.language {
           font-size: 14px;
           font-weight: 400;
-          font-vertical-align: middle;
-          font-height: 16px;
-          font-line-height: 16px;
           text-decoration: none;
           color: #181c1f;
           color: #d3d3d3; }
@@ -311,9 +299,6 @@ html, body {
       margin-top: 74px;
       font-size: 20px;
       font-weight: 300;
-      font-vertical-align: middle;
-      font-height: 22px;
-      font-line-height: 22px;
       text-decoration: none;
       color: #181c1f;
       color: #fff;
@@ -339,9 +324,6 @@ html, body {
           text-decoration: none;
           font-size: 15px;
           font-weight: normal;
-          font-vertical-align: middle;
-          font-height: 17px;
-          font-line-height: 17px;
           text-decoration: none;
           color: #181c1f;
           color: #b1b1b1; }
@@ -359,9 +341,6 @@ html, body {
       #mainContainer section.subContainer div.contents h3.conTitle {
         font-size: 34px;
         font-weight: 600;
-        font-vertical-align: middle;
-        font-height: 36px;
-        font-line-height: 36px;
         text-decoration: none;
         color: #181c1f;
         color: #303030;
@@ -371,9 +350,6 @@ html, body {
       #mainContainer section.subContainer div.contents h5.conSubTitle {
         font-size: 16px;
         font-weight: 400;
-        font-vertical-align: middle;
-        font-height: 18px;
-        font-line-height: 18px;
         text-decoration: none;
         color: #181c1f;
         color: #666666;
@@ -409,9 +385,6 @@ html, body {
           text-align: center;
           font-size: 15px;
           font-weight: 300;
-          font-vertical-align: middle;
-          font-height: 17px;
-          font-line-height: 17px;
           text-decoration: none;
           color: #181c1f;
           letter-spacing: 0; }
@@ -501,15 +474,13 @@ html, body {
           float: left;
           background: #333;
           width: 139px;
-          height: 38px; }
+          height: 38px;
+          line-height: 38px; }
 
 #mainFooter {
   background: #313131;
   font-size: 13px;
   font-weight: normal;
-  font-vertical-align: middle;
-  font-height: 15px;
-  font-line-height: 15px;
   text-decoration: none;
   color: #181c1f;
   color: #777;
@@ -589,9 +560,6 @@ html, body {
   #mainFooter h3 a {
     font-size: 17px;
     font-weight: bold;
-    font-vertical-align: middle;
-    font-height: 19px;
-    font-line-height: 19px;
     text-decoration: none;
     color: #181c1f;
     color: #6a6a6a; }
@@ -625,9 +593,6 @@ button.btn.lg {
   line-height: 62px;
   font-size: 17px;
   font-weight: normal;
-  font-vertical-align: middle;
-  font-height: 19px;
-  font-line-height: 19px;
   text-decoration: none;
   color: #181c1f; }
 

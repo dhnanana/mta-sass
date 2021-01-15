@@ -25,9 +25,9 @@ div.bbsCon.type2 {
 }
 
 div.util.faq { width: 100%; display: inline-block; background: #f8f8f8; padding: 29px 0; margin-top: 70px;
-	div p.desc { margin-bottom: 13px; }
-	div.leftCon { float:left; margin-left: 29px; border-right: 1px solid #e8e8e8; padding-right:29px; width: 70%; 
-		input[type=text] { width: 77.5%; }
+	div p.desc { margin-bottom: 13px; margin-left: 15px; }
+	div.leftCon { float:left; margin-left: 29px; border-right: 1px solid #e8e8e8; padding-right:29px; width: 70%; text-align: left;
+		input[type=text] { width: 76.5%; }
 		button { width: 139px; height: 38px; border: none; background: #999; color: #fff; }
 	}
 	div.rightCon { float:left; margin-left: 29px;
@@ -62,14 +62,14 @@ div.faq { margin-top: 39px !important;
 }
 
 div.faq.modi { width: 100%; border-top: 1px solid #666; border-bottom: 1px solid #ccc; padding: 0;
-	p.line { display: block; height:  72px; line-height: 72px; width: 100%; margin: 0; }
+	p.line { display: block; height:  72px; line-height: 72px; width: 100%; margin: 0; text-align: left; }
 	p.line:not(:first-child) { border-top: 1px solid #e8e8e8; }
 	span.label , span.input { height:  72px; line-height: 72px; float: left; }
 	span.label { @include fontDefault( 16px , 500 ); height:  72px; line-height: 72px; width: 18%; padding-left: 38px; }
 	span.input { background: #fff; width: calc(82% - 38px); }
 	span.input select { width: 254px; }
 	span.input input[type=text] { width: 40%; }
-	span.input button { width: 15%; background: #bbb; color: #fff; height: 40px; border: 1px solid #e8e8e8; outline: none; cursor: pointer; }
+	span.input button { width: 15%; background: #bbb; color: #fff; height: 40px; line-height: 38px; border: 1px solid #e8e8e8; outline: none; cursor: pointer; }
 	span.input button.white { background: #fff; color: #333; }
 	span.input button.white.calendar { width: 59px; float:left; }
 	span.input button.white.calendar.on , span.input button.white.calendar:hover { background: #004181; color: #fff; border-color: #004181; }
@@ -160,17 +160,23 @@ div.bbsCon{
 	h5.formHeader.line { padding-bottom: 0px; height: 2px; }
 	span.inputCon { width: 50%; float: left; display: inline-block; line-height: 64px; border-bottom: 1px solid #eee; vertical-align: middle;
 		label { display: inline-block; width: 170px; @include fontDefault( 14px , 300 ); margin-left: 15px; }
-		select { margin: 0; width: 150px; }
+		select { margin: 0; width: 150px; margin-top: 10px; }
 		textarea { width: 80%; }
+		input { max-width: calc(100% - 235px); }
+		label { float: left; height: 64px; line-height: 64px; }
 	}
 	span.inputCon.full { width: 100%;;
-		input[type=text] { width: calc(80% - 10px) }
+		input[type=text] { width: calc(30% - 15px) }
 		textarea { height: 80px; display: inline-block; float: left; margin: 14px 0; font-size: 14px; line-height: 20px; }
-		label { float: left; margin-top: 40px; }
 	}
 	span.inputCon.right {
-		//label { text-indent: 70px; }
+		label { text-indent: 50px; }
 	}
+	span.inputCon.type2 { width: 100%;
+		label , select { float: left; }
+		label:not(:first-child) { width: 85px; text-indent: 15px; }
+	}
+	span.inputCon:last-child { border-bottom: none; }
 }
 
 form.read-only {

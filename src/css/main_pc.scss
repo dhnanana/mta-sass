@@ -40,9 +40,6 @@ $circle_sizes : 20px , 25px , 30px , 35px , 15px;
 	font : {
 		size : $s;
 		weight : $b;
-		vertical-align: middle;
-		height: $s + 2px;
-		line-height: $s + 2px;
 	}
 	text-decoration: none;
 	color : #181c1f;
@@ -306,7 +303,7 @@ html , body {
 				span.inner { display: inline-block; margin-top: 13px; }
 				input[type=text] { width:333px; height: 36px; line-height: 38px; padding: 0 15px; float:left; margin: 0 10px; }
 				select { float:left; width: 139px; margin-right: 0; height: 38px; }
-				button { float:left; background: #333; width: 139px; height: 38px; }
+				button { float:left; background: #333; width: 139px; height: 38px; line-height: 38px; }
 			}
 		}
 	}
