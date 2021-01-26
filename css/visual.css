@@ -1,0 +1,308 @@
+#supportDevices p.serchCon {
+  text-align: left !important; }
+
+#supportDevices p.serchCon label {
+  float: left;
+  line-height: 40px;
+  margin-right: 90px;
+  margin-left: 31px;
+  font-size: .85em; }
+
+#supportDevices div.filterCon div.btnSet {
+  background: #eaeaea;
+  display: inline-block;
+  width: 100%; }
+  #supportDevices div.filterCon div.btnSet button {
+    width: 50%;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    float: left;
+    padding: 13px 0;
+    background: #fff; }
+    #supportDevices div.filterCon div.btnSet button span.name {
+      line-height: 30px;
+      height: 30px;
+      padding-left: 39px;
+      display: inline-block; }
+  #supportDevices div.filterCon div.btnSet button.android span.name {
+    background: url(../images/download/android-icon-1.png) no-repeat; }
+  #supportDevices div.filterCon div.btnSet button.ios span.name {
+    background: url(../images/download/apple-icon-1.png) no-repeat; }
+  #supportDevices div.filterCon div.btnSet button:not(:first-child) {
+    border-left: none; }
+  #supportDevices div.filterCon div.btnSet button.on {
+    border-color: #666;
+    border-left: 1px solid #666; }
+
+#supportDevices div.filterCon div.filters {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: 35px; }
+  #supportDevices div.filterCon div.filters table {
+    border: none !important; }
+  #supportDevices div.filterCon div.filters tr.line {
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%; }
+  #supportDevices div.filterCon div.filters tr.line:last-child {
+    border-bottom: none; }
+  #supportDevices div.filterCon div.filters td.label {
+    width: 130px;
+    padding: 0 0 0 30px;
+    background-color: #f9f9f9;
+    height: 40px;
+    line-height: 40px;
+    text-align: left !important;
+    font-weight: 400; }
+  #supportDevices div.filterCon div.filters td.box {
+    width: calc(100% - 130px);
+    padding: 10px 0 0 15px;
+    line-height: 14px; }
+    #supportDevices div.filterCon div.filters td.box div.innerBox {
+      width: 100%;
+      display: inline-block;
+      width: 100%;
+      min-height: 45px; }
+      #supportDevices div.filterCon div.filters td.box div.innerBox li {
+        display: inline-block;
+        min-width: 100px;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 10px 0;
+        text-align: center;
+        border: 1px solid #f5f5f5;
+        background-color: #f5f5f5;
+        color: #666;
+        cursor: pointer; }
+      #supportDevices div.filterCon div.filters td.box div.innerBox li.on {
+        border-color: #666;
+        background-color: #fff;
+        color: #666; }
+      #supportDevices div.filterCon div.filters td.box div.innerBox li:hover {
+        border: 1px solid #666;
+        background: #fff; }
+
+#supportDevices div.filterCon div.filterList.filterList {
+  border-top: none;
+  border-bottom: 1px sold #f5f5f5; }
+  #supportDevices div.filterCon div.filterList.filterList td.label button.reset {
+    text-align: left;
+    width: auto;
+    min-width: 90px;
+    padding-left: 0px;
+    background: transparent;
+    border: none;
+    outline: none;
+    background: url(../images/download/mobile-initialize.png) no-repeat calc(100% - 15px) 50%; }
+  #supportDevices div.filterCon div.filterList.filterList td.box {
+    padding: 0;
+    background: #f9f9f9; }
+    #supportDevices div.filterCon div.filterList.filterList td.box div.innerBox {
+      margin-top: 10px;
+      margin-left: 15px; }
+      #supportDevices div.filterCon div.filterList.filterList td.box div.innerBox li {
+        text-align: left;
+        padding: 12px 0 10px 15px;
+        min-width: 114px;
+        border: none;
+        background: url(../images/download/mobile-close.png) no-repeat calc(100% - 12px) 50% #fff;
+        cursor: pointer; }
+
+#supportDevices div.filterCon div.toggle_btnCon {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 21px 0; }
+  #supportDevices div.filterCon div.toggle_btnCon button.toggle_filters {
+    width: 41px;
+    height: 41px;
+    background: url(../images/download/filtericon.png) no-repeat;
+    border: none;
+    outline: none; }
+  #supportDevices div.filterCon div.toggle_btnCon button.toggle_filters.close {
+    background-image: url(../images/download/filtericon-close.png); }
+
+#supportDevices div.filterCon td.label {
+  font-size: .85em !important; }
+
+#supportDevices div.deviceList {
+  margin-top: 35px;
+  display: inline-block; }
+  #supportDevices div.deviceList li.deviceInfo {
+    padding: 30px 29px 62px 29px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    width: calc(264px - 58px);
+    display: inline-block;
+    float: left;
+    margin: 0 12px 12px 0; }
+    #supportDevices div.deviceList li.deviceInfo p {
+      display: block;
+      font-size: .95em;
+      font-weight: 400;
+      margin-bottom: 47px; }
+    #supportDevices div.deviceList li.deviceInfo span.img {
+      float: left;
+      margin-right: 30px; }
+    #supportDevices div.deviceList li.deviceInfo span.info {
+      line-height: 1.1em;
+      height: 1.1em;
+      font-size: .8em;
+      font-weight: 300;
+      float: left;
+      width: 96px;
+      margin-top: .6em;
+      color: #666;
+      max-width: 96px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    #supportDevices div.deviceList li.deviceInfo span.info:first-child {
+      margin-top: 30px; }
+    #supportDevices div.deviceList li.deviceInfo span.info::before {
+      content: "\00B7";
+      margin-right: 5px;
+      font-weight: 400; }
+  #supportDevices div.deviceList li.deviceInfo:nth-child(4n) {
+    margin-right: 0; }
+
+div#paymentInfoCon {
+  margin-top: 60px; }
+  div#paymentInfoCon h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 40px;
+    margin-bottom: 48px;
+    color: #222; }
+  div#paymentInfoCon h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 35px;
+    color: #222; }
+  div#paymentInfoCon div.floatListContainer {
+    display: inline-block;
+    width: 100%; }
+    div#paymentInfoCon div.floatListContainer li {
+      float: left; }
+  div#paymentInfoCon div.floatListContainer.service li {
+    width: 156px;
+    padding-top: 171px;
+    background: url(../images/download/point-icon-001.png) no-repeat;
+    margin-right: 32px;
+    text-align: center;
+    color: #333;
+    font-weight: 300; }
+  div#paymentInfoCon div.floatListContainer.service li:nth-child(2) {
+    background-image: url(../images/download/point-icon-002.png); }
+  div#paymentInfoCon div.floatListContainer.service li:nth-child(3) {
+    background-image: url(../images/download/point-icon-003.png); }
+  div#paymentInfoCon div.floatListContainer.service li:nth-child(4) {
+    background-image: url(../images/download/point-icon-004.png); }
+  div#paymentInfoCon div.floatListContainer.service li:nth-child(5) {
+    background-image: url(../images/download/point-icon-005.png); }
+  div#paymentInfoCon div.floatListContainer.service li:nth-child(6) {
+    background-image: url(../images/download/point-icon-006.png);
+    margin-right: 0; }
+  div#paymentInfoCon div.btnSet {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 68px 0; }
+  div#paymentInfoCon div.noticePointpolicy {
+    margin-top: 50px; }
+    div#paymentInfoCon div.noticePointpolicy h3 {
+      margin-bottom: 13px; }
+    div#paymentInfoCon div.noticePointpolicy p.notice {
+      font-weight: 300;
+      font-size: 16px;
+      color: #0070d9;
+      text-align: center;
+      margin-bottom: 45px; }
+    div#paymentInfoCon div.noticePointpolicy li {
+      width: 352px;
+      height: 148px;
+      background: url(../images/download/point-icon-007.png) no-repeat 100% 50%;
+      border: 1px solid #e6e6e6;
+      margin-right: 19px; }
+      div#paymentInfoCon div.noticePointpolicy li p {
+        margin-left: 36px; }
+      div#paymentInfoCon div.noticePointpolicy li p.prodNm {
+        margin-top: 54px;
+        color: #333; }
+      div#paymentInfoCon div.noticePointpolicy li p.prodPolicy {
+        margin-top: 13px;
+        color: #666;
+        font-weight: 300;
+        font-size: 13px; }
+        div#paymentInfoCon div.noticePointpolicy li p.prodPolicy span {
+          color: #0070d9; }
+    div#paymentInfoCon div.noticePointpolicy li:nth-child(2) {
+      background-image: url(../images/download/point-icon-008.png); }
+    div#paymentInfoCon div.noticePointpolicy li:nth-child(3) {
+      background-image: url(../images/download/point-icon-009.png);
+      margin-right: 0; }
+  div#paymentInfoCon div.infoTableCon {
+    margin-top: 18px; }
+    div#paymentInfoCon div.infoTableCon div.tableCon {
+      display: inline-block;
+      width: 100%; }
+    div#paymentInfoCon div.infoTableCon small.notice {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 300;
+      margin: 10px 0; }
+    div#paymentInfoCon div.infoTableCon small.notice::before {
+      content: "\203B";
+      margin-right: 5px; }
+    div#paymentInfoCon div.infoTableCon small.notice.right {
+      float: right; }
+    div#paymentInfoCon div.infoTableCon small.notice.left {
+      float: left;
+      color: #999; }
+    div#paymentInfoCon div.infoTableCon table {
+      width: 100%;
+      border-bottom: 1px solid #aaa;
+      border-top: 1px solid #aaa;
+      font-size: 15px;
+      font-weight: 300;
+      color: #333; }
+      div#paymentInfoCon div.infoTableCon table thead {
+        background: #fafafa;
+        border-bottom: 1px solid #eee; }
+        div#paymentInfoCon div.infoTableCon table thead th {
+          padding: 19px 0;
+          text-align: center; }
+      div#paymentInfoCon div.infoTableCon table tbody tr {
+        border-bottom: 1px solid #eee; }
+        div#paymentInfoCon div.infoTableCon table tbody tr td {
+          padding: 19px 0;
+          text-align: center;
+          letter-spacing: 0;
+          vertical-align: middle; }
+          div#paymentInfoCon div.infoTableCon table tbody tr td p {
+            line-height: 22px; }
+          div#paymentInfoCon div.infoTableCon table tbody tr td p.left {
+            width: 95%;
+            display: inline-block;
+            text-align: left; }
+          div#paymentInfoCon div.infoTableCon table tbody tr td p span {
+            display: inline-block;
+            text-align: left; }
+          div#paymentInfoCon div.infoTableCon table tbody tr td p span:first-child {
+            width: 120px;
+            margin-right: 35px; }
+          div#paymentInfoCon div.infoTableCon table tbody tr td p span:last-child {
+            text-align: left; }
+        div#paymentInfoCon div.infoTableCon table tbody tr td.multiLine p {
+          margin: 7px 0; }
+      div#paymentInfoCon div.infoTableCon table th:not(:first-child), div#paymentInfoCon div.infoTableCon table td:not(:first-child) {
+        border-left: 1px solid #aaa; }
+      div#paymentInfoCon div.infoTableCon table th, div#paymentInfoCon div.infoTableCon table td * {
+        letter-spacing: 0; }
+      div#paymentInfoCon div.infoTableCon table col:nth-child(1) {
+        width: 270px; }
+      div#paymentInfoCon div.infoTableCon table col:nth-child(2) {
+        width: 413px; }
