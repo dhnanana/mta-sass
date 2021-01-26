@@ -2,6 +2,7 @@
 @import url(./input.css);
 @import url(./bbs.css);
 @import url(./contents.css);
+@import url(./visual.css);
 @import url(./font/SpoqaHanSansNeo.css);
 @import url(../plugins/jquery-ui/jquery-ui.min.css);
 @import url(../plugins/jquery-ui/custom-ui-calendar.css);

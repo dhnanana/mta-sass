@@ -1,0 +1,95 @@
+<div class="pop">
+	<h3 class="title">신규업체 등록</h3>
+	<div class="formCon">
+		<table>
+			<tbody>
+				<tr>
+					<th>업체 및 단체명</th>
+					<td><input type="text" name="" id=""></td>
+				</tr>
+				<tr>
+					<th>사업자 등록번호</th>
+					<td>
+						<div class="compNum">
+							<input type="text" name="" id=""><Span class="split">-</Span>
+							<input type="text" name="" id=""><Span class="split">-</Span>
+							<input type="text" name="" id="">
+							<button class="gray">확인</button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td>
+						<div class="address">
+							<input type="text" name="" id="" class="half"><Span class="split">-</Span>
+							<input type="text" name="" id="" class="half">
+							<button class="gray">확인</button>
+							<input type="text" name="" id="">
+							<input type="text" name="" id="">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>회사대표번호</th>
+					<td>
+						<div class="phone">
+							<input type="text" name="" id=""><Span class="split">-</Span>
+							<input type="text" name="" id=""><Span class="split">-</Span>
+							<input type="text" name="" id="">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>담당자 성함</th>
+					<td><input type="text" name="" id=""></td>
+				</tr>
+				<tr>
+					<th>전화번호</th>
+					<td>
+						<div class="phone">
+							<input type="text" name="" id=""><Span class="split">-</Span>
+							<input type="text" name="" id=""><Span class="split">-</Span>
+							<input type="text" name="" id="">
+						</div>
+					</td>
+				</tr>
+				<th>이메일</th>
+					<td>
+						<div class="email">
+							<input type="text" name="" id=""><Span class="split">@</Span>
+							<select name="" id="">
+								<option value="">이메일 선택</option>
+							</select>
+							<button class="gray">이메일 전송</button>
+						</div>
+					</td>
+				<tr>
+					<th>인증번호</th>
+					<td>
+						<div class="authNum">
+							<input type="text" name="" id="">
+							<span class="limitTime split">09:59</span>
+							<button class="gray">인증</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="btnSet">
+			<button class="confirm" id="saveForm">저장</button>
+			<button class="cancel" id="cancelForm">닫기</button>
+		</div>
+	</div>
+
+	<script>
+		$('#saveForm').unbind.bind('click' , function(){
+			console.log( 'saveForm!' );
+		});
+
+		$('#cancelForm').unbind.bind('click' , function(){
+			console.log( 'cancel form' );
+			popup_layer.close();
+		});
+	</script>
+</div>

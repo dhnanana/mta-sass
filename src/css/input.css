@@ -1,6 +1,6 @@
 
 input[type=text] , input[type=password] { height: calc(20px - 2px); border:1px solid #e6e6e6; padding: 10px 13px; color: #bfbfbf; }
-input[type=text] , input[type=password] { width: 100%; }
+input[type=text] , input[type=password] { width: calc(100% - 13px); }
 input[type=text]:focus , input[type=password]:focus { border: solid 1px #333; color: #333333; outline: none; }
 input.invalid  { border: solid 1px #f33; }
 input + label { cursor: pointer; }

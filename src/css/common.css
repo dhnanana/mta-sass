@@ -2,6 +2,7 @@
 @import "./input.css";
 @import "./bbs.css";
 @import "./contents.css";
+@import "./visual.css";
 @import "./font/SpoqaHanSansNeo.css";
 @import "../plugins/jquery-ui/jquery-ui.min.css";
 @import "../plugins/jquery-ui/custom-ui-calendar.css";

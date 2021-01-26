@@ -1,0 +1,124 @@
+
+$bg-color : #f9f9f9;
+$bg-color-on : #fff;
+
+$line-color : #e6e6e6;
+$line-color2 : #f5f5f5;
+$line-color-on : #666;
+$line-color-table-1 : #aaa;
+$line-color-table-2 : #eee;
+$txt-color : #666;
+
+$col-blue : #0070d9;
+
+#supportDevices{
+	p.serchCon { text-align: left !important; }
+	p.serchCon label { float:left; line-height: 40px; margin-right: 90px; margin-left: 31px; font-size: .85em;  }
+	div.filterCon {
+		div.btnSet { background: #eaeaea; display: inline-block; width: 100%;
+			button { width: 50%; outline: none; border: 1px solid $line-color; float: left; padding: 13px 0; background: #fff;
+				span.name { line-height: 30px; height: 30px; padding-left: 39px; display: inline-block; }
+			}
+			button.android span.name { background: url(../images/download/android-icon-1.png) no-repeat; }
+			button.ios span.name { background: url(../images/download/apple-icon-1.png) no-repeat; }
+			button:not(:first-child) { border-left: none; }
+			button.on { border-color: $line-color-on; border-left: 1px solid $line-color-on; }
+		}
+		div.filters { border-top: 1px solid $line-color; border-bottom: 1px solid $line-color; margin-top: 35px;
+			table { border: none !important; }
+			tr.line { border-bottom: 1px solid $line-color; width: 100%; }
+			tr.line:last-child { border-bottom: none; }
+			td.label { width: 130px; padding: 0 0 0 30px; background-color: $bg-color; height:40px; line-height: 40px; text-align: left !important; font-weight: 400; }
+			td.box { width: calc(100% - 130px); padding: 10px 0 0 15px; line-height: 14px;
+				div.innerBox { width: 100%; display: inline-block; width: 100%; min-height: 45px;
+					li { display: inline-block; min-width: 100px; float: left; margin-right: 10px; margin-bottom: 10px; padding: 10px 0; text-align: center; border: 1px solid $line-color2; background-color: $line-color2; color: $txt-color;  cursor: pointer; }
+					li.on { border-color: $line-color-on; background-color: $bg-color-on; color: $line-color-on; }
+					li:hover { border: 1px solid $line-color-on; background: $bg-color-on; }
+				}
+			}
+		}
+		div.filterList.filterList { border-top: none; border-bottom: 1px sold $line-color2; 
+			td.label button.reset { text-align: left; width: auto; min-width: 90px; padding-left: 0px; background: transparent; border: none; outline: none; background: url(../images/download/mobile-initialize.png) no-repeat calc(100% - 15px) 50%; }
+			td.box { padding:0; background: $bg-color;
+				div.innerBox { margin-top: 10px; margin-left: 15px;
+					li { text-align: left; padding: 12px 0 10px 15px; min-width: 114px; border:none; background :url(../images/download/mobile-close.png) no-repeat calc(100% - 12px) 50% #fff; cursor: pointer; }
+				}
+			}
+		}
+		div.toggle_btnCon { display: inline-block; text-align: center; width: 100%; padding: 21px 0;
+			button.toggle_filters { width: 41px; height: 41px; background: url(../images/download/filtericon.png) no-repeat; border: none; outline: none;}
+			button.toggle_filters.close { background-image: url(../images/download/filtericon-close.png); }
+		}
+		td.label { font-size: .85em !important; }
+	}
+	div.deviceList { margin-top: 35px; display: inline-block;
+		li.deviceInfo { padding: 30px 29px 62px 29px; border: 1px solid $line-color; background: $bg-color-on; width: calc(264px - 58px); display: inline-block; float: left; margin: 0 12px 12px 0;
+			p { display: block; font-size: .95em; font-weight: 400; margin-bottom: 47px; }
+			span.img { float: left; margin-right: 30px; }
+			span.info { line-height: 1.1em; height: 1.1em; font-size: .8em; font-weight: 300; float: left; width: 96px; margin-top: .6em; color: $txt-color;
+			max-width: 96px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+			}
+			span.info:first-child { margin-top: 30px; }
+			span.info::before { content: "\00B7"; margin-right: 5px; font-weight: 400; }
+		}
+		li.deviceInfo:nth-child(4n) { margin-right: 0; }
+	}
+}
+div#paymentInfoCon { margin-top: 60px;
+	h1 { text-align: center; font-size: 40px; font-weight: 200; line-height: 40px; margin-bottom: 48px; color:#222; }
+	h3 { text-align: center; font-size: 30px; font-weight: 200; line-height: 30px; margin-bottom: 35px; color:#222; }
+	div.floatListContainer{ display: inline-block; width: 100%;
+		li { float: left; }
+	}
+	div.floatListContainer.service{
+		li { width: 156px; padding-top: 171px; background: url(../images/download/point-icon-001.png) no-repeat; margin-right:32px; text-align: center; color:#333; font-weight: 300; }
+		li:nth-child(2) { background-image: url(../images/download/point-icon-002.png); }
+		li:nth-child(3) { background-image: url(../images/download/point-icon-003.png); }
+		li:nth-child(4) { background-image: url(../images/download/point-icon-004.png); }
+		li:nth-child(5) { background-image: url(../images/download/point-icon-005.png); }
+		li:nth-child(6) { background-image: url(../images/download/point-icon-006.png); margin-right: 0; }
+	}
+	div.btnSet { display: inline-block; width: 100%; text-align: center; margin: 68px 0; }
+	div.noticePointpolicy { margin-top: 50px;
+		h3 { margin-bottom: 13px; }
+		p.notice { font-weight: 300; font-size: 16px; color: $col-blue; text-align: center; margin-bottom: 45px; }
+		li { width: 352px; height: 148px; background: url(../images/download/point-icon-007.png) no-repeat 100% 50%; border: 1px solid $line-color; margin-right: 19px;
+			p { margin-left: 36px; }
+			p.prodNm { margin-top: 54px; color: #333; }
+			p.prodPolicy { margin-top: 13px; color: $line-color-on; font-weight: 300; font-size: 13px;
+				span { color: $col-blue }
+			}
+		}
+		li:nth-child(2) { background-image: url(../images/download/point-icon-008.png); }
+		li:nth-child(3) { background-image: url(../images/download/point-icon-009.png); margin-right: 0; }
+	}
+	div.infoTableCon { margin-top: 18px;
+		div.tableCon { display: inline-block; width: 100%; }
+		small.notice { display: inline-block; font-size: 13px; font-weight: 300; margin: 10px 0; }
+		small.notice::before { content : "\203B"; margin-right: 5px; }
+		small.notice.right { float:right; }
+		small.notice.left { float:left; color: #999; }
+		table { width: 100%; border-bottom: 1px solid $line-color-table-1; border-top: 1px solid $line-color-table-1; font-size:15px; font-weight: 300; color: #333;
+			thead { background: #fafafa; border-bottom: 1px solid $line-color-table-2;
+				th { padding: 19px 0; text-align: center; }
+			}
+			tbody {
+				tr { border-bottom: 1px solid $line-color-table-2;
+					td { padding: 19px 0; text-align: center; letter-spacing: 0; vertical-align: middle;
+						p { line-height: 22px; }
+						p.left { width: 95%; display: inline-block; text-align: left; }
+						p span { display: inline-block; text-align: left; }
+						p span:first-child { width: 120px; margin-right: 35px; }
+						p span:last-child { text-align: left; }
+					}
+					td.multiLine p {  margin: 7px 0; }
+				}
+			}
+			th:not(:first-child) , td:not(:first-child) { border-left: 1px solid $line-color-table-1; }
+			th , td * { letter-spacing: 0; }
+			col:nth-child(1) { width:270px; }
+			col:nth-child(2) { width:413px; }
+			col:nth-child(3) {  }
+		} 
+	}
+}

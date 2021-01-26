@@ -37,7 +37,7 @@
 						<span class="input">
 							<input type="text" id="" class="input-comp"/>
 							<button class="btn md gray">검색</button>
-							<button class="btn md">신규업체 신청</button>
+							<button class="btn md" id="addNewCompany">신규업체 신청</button>
 						</span>
 					</p>
 				</div>
@@ -73,6 +73,9 @@
 	<script>
 		$('#joinNext').on('click' , function(){
 			loadStateContent( { page : 'join' + 1 , url : './pages/members_join_p_agree.html' , location : 'join_policy' } );
+		});
+		$('#addNewCompany').on('click' , function(){
+			addNewCompanyPopup();
 		});
 	</script>
 </section>

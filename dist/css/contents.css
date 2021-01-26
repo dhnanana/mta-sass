@@ -579,3 +579,168 @@ div.contents.login {
     div.contents.login div.formField span.phone input[type=text] {
       width: 66px;
       text-align: center; }
+
+#popupLayer {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 800;
+  text-align: center; }
+  #popupLayer div.popupCon {
+    min-width: 300px;
+    max-height: 70%;
+    overflow-y: auto;
+    display: inline-block;
+    padding: 50px 39px 40px 39px;
+    background: #fff;
+    margin-top: 7%;
+    position: relative; }
+    #popupLayer div.popupCon button {
+      background: none;
+      border: none;
+      outline: none;
+      border: 1px solid #c3c4c6;
+      background: #fff;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      min-width: 100px; }
+    #popupLayer div.popupCon button.confirm {
+      background: #023e7c;
+      color: #fff;
+      margin-right: 15px; }
+    #popupLayer div.popupCon header {
+      display: block;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
+      #popupLayer div.popupCon header button.closeBtn {
+        border: none;
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        line-height: 50px;
+        float: right;
+        text-indent: -9999px;
+        background: url(../images/download/mobile-close@2x.png) no-repeat 50% 50%; }
+    #popupLayer div.popupCon div.container {
+      display: inline-block;
+      width: 100%; }
+      #popupLayer div.popupCon div.container h3.title {
+        font-size: 17px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #181c1f;
+        line-height: 20px;
+        margin-bottom: 15px;
+        text-align: left; }
+      #popupLayer div.popupCon div.container div.alertCon {
+        font-size: 13px;
+        font-weight: 300;
+        text-decoration: none;
+        color: #181c1f;
+        text-align: center;
+        padding: 30px 0; }
+    #popupLayer div.popupCon div.btnSet {
+      margin-top: 20px; }
+
+div.pop h3 {
+  margin-bottom: 5px; }
+
+div.pop div.formCon {
+  width: 500px; }
+  div.pop div.formCon tr {
+    display: inline-block;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea; }
+    div.pop div.formCon tr th {
+      width: 140px;
+      font-size: 13px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #181c1f;
+      text-align: left;
+      vertical-align: middle;
+      color: #333; }
+    div.pop div.formCon tr td {
+      width: 360px;
+      text-align: left; }
+      div.pop div.formCon tr td input, div.pop div.formCon tr td span, div.pop div.formCon tr td select, div.pop div.formCon tr td button {
+        float: left; }
+      div.pop div.formCon tr td button {
+        width: 130px;
+        margin-left: 10px;
+        border: none !important;
+        background: #bbb !important;
+        color: #fff; }
+      div.pop div.formCon tr td input[type=text] {
+        max-width: 92%; }
+      div.pop div.formCon tr td span.split {
+        margin: 0 3px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle; }
+      div.pop div.formCon tr td div {
+        display: inline-block;
+        width: 100%; }
+      div.pop div.formCon tr td div.compNum input[type=text] {
+        width: 63px;
+        padding: 10px 0;
+        text-align: center; }
+      div.pop div.formCon tr td div.address input[type=text].half {
+        width: 101px;
+        text-align: center;
+        padding: 10px 0; }
+      div.pop div.formCon tr td div.address input[type=text]:not(.half) {
+        margin-top: 8px; }
+      div.pop div.formCon tr td div.phone input[type=text] {
+        width: 95px;
+        text-align: center;
+        padding: 10px 0; }
+      div.pop div.formCon tr td div.email input[type=text] {
+        width: 112px;
+        text-align: center;
+        padding: 10px 0; }
+      div.pop div.formCon tr td div.email select {
+        width: 115px;
+        margin: 0; }
+      div.pop div.formCon tr td div.email button {
+        width: 100px; }
+      div.pop div.formCon tr td div.authNum input[type=text] {
+        width: 147px;
+        text-align: center;
+        padding: 10px 0; }
+      div.pop div.formCon tr td div.authNum span.limitTime {
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: none;
+        color: #181c1f;
+        color: #f04b45;
+        width: 65px;
+        text-align: center;
+        letter-spacing: 0; }
+  div.pop div.formCon tr:first-child {
+    border-top: 1px solid #bbb; }
+
+div.pop div.searchCon {
+  width: 395px; }
+  div.pop div.searchCon div.searchBox {
+    height: 40px;
+    padding: 10px 0;
+    line-height: 40px; }
+    div.pop div.searchCon div.searchBox input[type=text], div.pop div.searchCon div.searchBox button.searchBtn {
+      float: left; }
+    div.pop div.searchCon div.searchBox input[type=text] {
+      height: 19px;
+      line-height: 19px; }
+    div.pop div.searchCon div.searchBox button.searchBtn {
+      width: 54px;
+      height: 38px;
+      background: url(../images/download/searc-blackicon.png) no-repeat;
+      border: none; }

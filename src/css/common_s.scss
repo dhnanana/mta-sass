@@ -20,9 +20,15 @@ $btn_color_gray : #bbb;
 $text_color_1 : #303030;
 $text_color_2 : #666666;
 $text_color_3 : #b1b1b1;
+$text_color_4 : #f04b45;
 
 $table_color_1 : #eee;
 $table_color_2 : #cdcdcd;
+
+$btn_color_white : #fff;
+$btn_color_blue : #023e7c;
+$btn_color_gray : #bbb;
+
 
 @mixin fontDefault( $s : 1em , $b : normal ) {
 	font : {
