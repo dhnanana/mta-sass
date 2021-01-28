@@ -270,10 +270,11 @@ aside#utilBtnBox { position: fixed; bottom: 276px; right: 20px; cursor: pointer;
 	li.btnMenu:nth-child(3) { background-image: url(../images/download/quick-i-03.png); }
 	li.btnMenu:nth-child(4) { background-image: url(../images/download/quick-i-04.png); }
 	li.btnMenu:nth-child(5) { background-image: url(../images/download/quick-i-05.png); }
-	li.toggle { z-index: 1000; position: relative; background: url(../images/download/quick-top.png) no-repeat; width: 71px; height: 71px; }
+	li.toggle { z-index: 1000; position: relative; background: url(../images/download/quick-top.png) no-repeat; width: 71px; height: 71px; transition: transform .3s; }
 }
 
 aside#utilBtnBox.active {
+	li.toggle { transform: rotate(180deg); }
 	li.btnMenu { opacity : 1; 
 		a { display: inline-block; border-radius: 25px; min-width: 135px; width: auto; text-align: center; background: #fff;
 			border: 1px solid #eaeaea; margin-left: -130px; padding: 13px 0; text-decoration: none; color: #0070d9; margin-top: 17px; font-size: 15px; transition: all .5s; opacity: 0;}

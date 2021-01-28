@@ -680,7 +680,11 @@ aside#utilBtnBox {
     position: relative;
     background: url(../images/download/quick-top.png) no-repeat;
     width: 71px;
-    height: 71px; }
+    height: 71px;
+    transition: transform .3s; }
+
+aside#utilBtnBox.active li.toggle {
+  transform: rotate(180deg); }
 
 aside#utilBtnBox.active li.btnMenu {
   opacity: 1; }
