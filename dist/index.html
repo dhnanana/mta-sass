@@ -399,89 +399,103 @@
 			</div>
 		</section>
 
-		<script>
-			$(document).ready(function(){
-				
-				var document = $(window);
-				var mainContainers = $('section.sectionCon');
-				var conOffsets = [];
-				var saveVal = 0; var curIdx = 0;
-				mainContainers.each(function(){
-					conOffsets.push( parseInt($(this).offset().top) - 105 );
-				});
-				
-				function switchContainer( t_scroll ){
-					var t_idx = 0;
-					for( let i=0; i<conOffsets.length; i++ ){
-						console.log( conOffsets[i] , t_scroll , ' |  result : ' , t_scroll - conOffsets[i] < 0 );
-						if( t_scroll - conOffsets[i] < 0 ){
-							t_idx = i;
-							break;
-						}
-					}
-					console.log( t_idx );
-					
-					if( t_scroll > saveVal ){
-						console.log( 'down!' );
-						//if( t_idx == curIdx && t_idx < conOffsets.length ) t_idx += 1;
-					}else{
-						console.log( 'up' );
-					};
-
-					/* document.animate({
-						scrollTop : conOffsets[t_idx] - 105
-					},300); */
-					//document.scrollTop( conOffsets[t_idx] - 105 );
-					mainContainers.removeClass('on').eq(t_idx).addClass('on');
-					saveVal = t_scroll; curIdx = t_idx;
-				}
-
-
-
-				function switchContainerDir(direction){
-					var t_idx = 0;
-					var t_scroll = document[0].scrollY;
-					/* for( let i=0; i<conOffsets.length; i++ ){
-						if( t_scroll - conOffsets[i] < 0 ){
-							t_idx = i;
-							break;
-						}
-					} */
-
-					if( direction === 'up' ){
-						t_idx  = curIdx - 1;
-						if( t_idx < 0 ) t_idx = 0;
-					}else{
-						t_idx = curIdx + 1;;
-						if( t_idx >= conOffsets.length -1 ) t_idx = conOffsets.length -1;
-					}
-
-					console.log('direction : ' , direction , ' ' , t_idx , '  conOffsets[t_idx] : ' , conOffsets[t_idx]);
-					mainContainers.removeClass('on').eq(t_idx).addClass('on');
-					saveVal = t_scroll; curIdx = t_idx;
-					setTimeout(function(){
-						document.scrollTop( conOffsets[t_idx] );
-					} , 300);
-				}
-
-				let timer = null; // 스크롤 이벤트 150ms 
-				/* $(window).scroll(function(e){
-					clearTimeout( timer ); 
-					timer = setTimeout( function(){
-						switchContainer(e.currentTarget.scrollY);
-					}, 150 );
-				}); */
-
-				$(window).on('wheel' , function(e){  //console.log( e.originalEvent.deltaY , e.originalEvent.clientY , e.originalEvent.pageY );
-					clearTimeout( timer ); 
-					timer = setTimeout( function(){
-						switchContainerDir( e.originalEvent.deltaY < 0 ? 'up' : 'down' );
-					}, 100 );
-				});
-			});
-		</script>
-
 	</div>
+
+	<aside id="utilBtnBox">
+		<ul>
+			<li class="btnMenu"><a href="#">테스트시작</a></li>
+			<li class="btnMenu"><a href="#">지원단말기</a></li>
+			<li class="btnMenu"><a href="#">포인트충전</a></li>
+			<li class="btnMenu"><a href="#">사용방법</a></li>
+			<li class="btnMenu"><a href="#">1:1문의</a></li>
+			<li class="toggle"></li>
+		</ul>
+	</aside>
+
+
+	<script>
+		$(document).ready(function(){
+			
+			var document = $(window);
+			var mainContainers = $('section.sectionCon');
+			var conOffsets = [];
+			var saveVal = 0; var curIdx = 0;
+			mainContainers.each(function(){
+				conOffsets.push( parseInt($(this).offset().top) - 105 );
+			});
+
+			let utilBox 	= $('#utilBtnBox'),
+				utilBtns 	= utilBox.find('li.btnMenu'),
+				utilToggle 	= utilBox.find('li.toggle');
+				utilToggle.on('click' , function(){ console.log( 'toggle!' , utilBtnBox );
+					var target = $('#utilBtnBox');
+					if( target.hasClass('active') ) target.removeClass('active');
+					else target.addClass('active');
+				});
+			
+			function switchContainer( t_scroll ){
+				var t_idx = 0;
+				for( let i=0; i<conOffsets.length; i++ ){ //console.log( conOffsets[i] , t_scroll , ' |  result : ' , t_scroll - conOffsets[i] < 0 );
+					if( t_scroll - conOffsets[i] < 0 ){
+						t_idx = i;
+						break;
+					}
+				}
+				mainContainers.removeClass('on').eq(t_idx).addClass('on');
+				saveVal = t_scroll; curIdx = t_idx;
+				//scrollToAni( conOffsets[t_idx] );
+			}
+
+			function switchContainerDir(direction){
+				var t_idx = 0;
+				var t_scroll = document[0].scrollY;
+				
+				if( direction === 'up' ){
+					t_idx  = curIdx - 1;
+					if( t_idx < 0 ) t_idx = 0;
+				}else{
+					t_idx = curIdx + 1;;
+					if( t_idx >= conOffsets.length -1 ) t_idx = conOffsets.length -1;
+				}
+
+				console.log('direction : ' , direction , ' ' , t_idx , '  conOffsets[t_idx] : ' , conOffsets[t_idx]);
+				mainContainers.removeClass('on').eq(t_idx).addClass('on');
+				saveVal = t_scroll; curIdx = t_idx;
+
+				console.log( utilBox );
+				if( t_idx > 0 ) utilBox.fadeIn();
+				else utilBox.fadeOut();
+
+				/* setTimeout(function(){
+					scrollToAni( conOffsets[t_idx] );
+				} , 300); */
+			}
+
+			function scrollToAni( t_scroll ){
+				$('html , body').animate({
+					scrollTop : t_scroll
+				},300);
+				//document.scrollTop( conOffsets[t_idx] - 105 );
+			}
+
+			let timer = null; // 스크롤 이벤트 150ms 
+			/* $(window).scroll(function(e){
+				clearTimeout( timer ); 
+				timer = setTimeout( function(){
+					switchContainer(e.currentTarget.scrollY);
+				}, 150 );
+			}); */
+
+			$(window).on('wheel' , function(e){  //console.log( e.originalEvent.deltaY , e.originalEvent.clientY , e.originalEvent.pageY );
+				clearTimeout( timer ); 
+				timer = setTimeout( function(){
+					//switchContainer( e.originalEvent.pageY );
+					switchContainerDir( e.originalEvent.deltaY < 0 ? 'up' : 'down' );
+				}, 100 );
+			});
+		});
+	</script>
+
 
 	<footer id="mainFooter" class="container">
 		<div class="inner">

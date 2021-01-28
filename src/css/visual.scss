@@ -257,3 +257,31 @@ section.sectionCon.on {
 		}
 	}
 }
+
+aside#utilBtnBox { position: fixed; bottom: 276px; right: 20px; cursor: pointer;
+	li.btnMenu { position: absolute; bottom: 0; background: url(../images/download/quick-i-01.png) no-repeat; width: 71px; height: 71px; opacity: 0;
+		transition-property: bottom, opacity;
+		transition-duration: .5s, .3s;
+		transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+		// transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+		a { display: none; }
+	}
+	li.btnMenu:nth-child(2) { background-image: url(../images/download/quick-i-02.png); }
+	li.btnMenu:nth-child(3) { background-image: url(../images/download/quick-i-03.png); }
+	li.btnMenu:nth-child(4) { background-image: url(../images/download/quick-i-04.png); }
+	li.btnMenu:nth-child(5) { background-image: url(../images/download/quick-i-05.png); }
+	li.toggle { z-index: 1000; position: relative; background: url(../images/download/quick-top.png) no-repeat; width: 71px; height: 71px; }
+}
+
+aside#utilBtnBox.active {
+	li.btnMenu { opacity : 1; 
+		a { display: inline-block; border-radius: 25px; min-width: 135px; width: auto; text-align: center; background: #fff;
+			border: 1px solid #eaeaea; margin-left: -130px; padding: 13px 0; text-decoration: none; color: #0070d9; margin-top: 17px; font-size: 15px; transition: all .5s; opacity: 0;}
+	}
+	li.btnMenu:nth-child(5) { bottom: 405px; }
+	li.btnMenu:nth-child(4) { bottom: 324px; }
+	li.btnMenu:nth-child(3) { bottom: 243px; }
+	li.btnMenu:nth-child(2) { bottom: 162px; }
+	li.btnMenu:nth-child(1) { bottom: 81px; }
+	li.btnMenu:hover a{ margin-left: -150px; opacity: 1; }
+}
