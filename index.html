@@ -433,49 +433,44 @@
 					else target.addClass('active');
 				});
 			
-			function switchContainer( t_scroll ){
+			function switchContainerDir(direction){
 				var t_idx = 0;
-				for( let i=0; i<conOffsets.length; i++ ){ //console.log( conOffsets[i] , t_scroll , ' |  result : ' , t_scroll - conOffsets[i] < 0 );
+				var t_scroll = document[0].scrollY;
+				var maxLength = conOffsets.length -1;
+
+				for( let i=0; i<conOffsets.length; i++ ){ 
 					if( t_scroll - conOffsets[i] < 0 ){
 						t_idx = i;
 						break;
 					}
 				}
-				mainContainers.removeClass('on').eq(t_idx).addClass('on');
-				saveVal = t_scroll; curIdx = t_idx;
-				//scrollToAni( conOffsets[t_idx] );
-			}
-
-			function switchContainerDir(direction){
-				var t_idx = 0;
-				var t_scroll = document[0].scrollY;
 				
-				if( direction === 'up' ){
-					t_idx  = curIdx - 1;
-					if( t_idx < 0 ) t_idx = 0;
-				}else{
-					t_idx = curIdx + 1;;
-					if( t_idx >= conOffsets.length -1 ) t_idx = conOffsets.length -1;
-				}
-
+				if( t_idx === curIdx ){
+					if( direction === 'up' ) t_idx -= 1;
+					else t_idx += 1;
+				} 
+				console.log( 't_idx : ' , t_idx );
+				if( t_idx < 0 ) t_idx = 0;
+				if( t_idx >= maxLength ) t_idx = maxLength;
+				
 				console.log('direction : ' , direction , ' ' , t_idx , '  conOffsets[t_idx] : ' , conOffsets[t_idx]);
 				mainContainers.removeClass('on').eq(t_idx).addClass('on');
-				saveVal = t_scroll; curIdx = t_idx;
+				saveVal = t_scroll; 
+				curIdx = t_idx;
 
-				console.log( utilBox );
 				if( t_idx > 0 ) utilBox.fadeIn();
 				else utilBox.fadeOut();
 
-				/* setTimeout(function(){
-					scrollToAni( conOffsets[t_idx] );
-				} , 300); */
+				scrollToAni( conOffsets[t_idx] );
 			}
 
-			function scrollToAni( t_scroll ){
-				$('html , body').animate({
-					scrollTop : t_scroll
-				},300);
-				//document.scrollTop( conOffsets[t_idx] - 105 );
+			function scrollToAni( t_scroll ){ console.log( 't_scroll : ' , t_scroll );
+				$('html , body').stop().animate({scrollTop : t_scroll} , 300 , 'swing' , function(){
+					console.log( 'move ended!' );
+				});
+				/* setTimeout( function(){
+					
+				}, 10 ); */
 			}
 
 			let timer = null; // 스크롤 이벤트 150ms 
@@ -489,7 +484,6 @@
 			$(window).on('wheel' , function(e){  //console.log( e.originalEvent.deltaY , e.originalEvent.clientY , e.originalEvent.pageY );
 				clearTimeout( timer ); 
 				timer = setTimeout( function(){
-					//switchContainer( e.originalEvent.pageY );
 					switchContainerDir( e.originalEvent.deltaY < 0 ? 'up' : 'down' );
 				}, 100 );
 			});
