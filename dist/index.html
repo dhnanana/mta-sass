@@ -424,14 +424,14 @@
 				conOffsets.push( parseInt($(this).offset().top) - 105 );
 			});
 
-			let utilBox 	= $('#utilBtnBox'),
+			let utilBox 	= $('#utilBtnBox').addClass('active'),
 				utilBtns 	= utilBox.find('li.btnMenu'),
 				utilToggle 	= utilBox.find('li.toggle');
-				utilToggle.on('click' , function(){ console.log( 'toggle!' , utilBtnBox );
+				/* utilToggle.on('click' , function(){ console.log( 'toggle!' , utilBtnBox );
 					var target = $('#utilBtnBox');
 					if( target.hasClass('active') ) target.removeClass('active');
 					else target.addClass('active');
-				});
+				}); */
 			
 			function switchContainerDir(direction){
 				var t_idx = 0;
@@ -445,23 +445,23 @@
 					}
 				}
 				
-				if( t_idx === curIdx ){
+				/* if( t_idx === curIdx ){
 					if( direction === 'up' ) t_idx -= 1;
 					else t_idx += 1;
 				} 
 				console.log( 't_idx : ' , t_idx );
 				if( t_idx < 0 ) t_idx = 0;
-				if( t_idx >= maxLength ) t_idx = maxLength;
+				if( t_idx >= maxLength ) t_idx = maxLength; */
 				
 				console.log('direction : ' , direction , ' ' , t_idx , '  conOffsets[t_idx] : ' , conOffsets[t_idx]);
 				mainContainers.removeClass('on').eq(t_idx).addClass('on');
 				saveVal = t_scroll; 
 				curIdx = t_idx;
 
-				if( t_idx > 0 ) utilBox.fadeIn();
-				else utilBox.fadeOut();
+				// if( t_idx > 0 ) utilBox.fadeIn();
+				// else utilBox.fadeOut();
 
-				scrollToAni( conOffsets[t_idx] );
+				//scrollToAni( conOffsets[t_idx] );
 			}
 
 			function scrollToAni( t_scroll ){ console.log( 't_scroll : ' , t_scroll );
