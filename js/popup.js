@@ -99,6 +99,16 @@ function addNewCompanyPopup(){
 	})
 }
 
+function paymentPopup(){
+	popup_layer.open('page' , {
+		url : './pages/popup/popup_payment.html',
+		params : '',
+		callBack : function(){
+			console.log( 'load complete!' );
+		}
+	})
+}
+
 function testPopup(){
 	popup_layer.open('page' , {
 		url : './pages/popup/popup_search_company.html',

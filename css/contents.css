@@ -649,6 +649,68 @@ div.contents.login {
         padding: 30px 0; }
     #popupLayer div.popupCon div.btnSet {
       margin-top: 20px; }
+    #popupLayer div.popupCon h3.title2 {
+      text-align: left;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #666;
+      margin-bottom: 5px; }
+    #popupLayer div.popupCon div.formCon div.noticeCon {
+      background: #fdfbe7;
+      border: 1px solid #f3f1d9;
+      padding: 13px 0;
+      margin-bottom: 5px; }
+      #popupLayer div.popupCon div.formCon div.noticeCon p {
+        background: url(../images/download/exclamationmark-1.png) no-repeat;
+        padding-left: 25px;
+        font-weight: 300;
+        font-size: 13px;
+        text-align: left;
+        height: 18px;
+        line-height: 18px;
+        margin-left: 10px; }
+    #popupLayer div.popupCon div.formCon label {
+      display: inline-block;
+      line-height: 19px;
+      cursor: pointer; }
+    #popupLayer div.popupCon div.formCon label#payCd_3 {
+      margin-left: 80px; }
+    #popupLayer div.popupCon div.formCon td {
+      font-size: .85em;
+      font-weight: 300;
+      letter-spacing: 0;
+      line-height: 38px; }
+    #popupLayer div.popupCon div.formCon table.payment tr:first-child {
+      border-top: none; }
+    #popupLayer div.popupCon div.formCon table.payment th {
+      width: 110px; }
+    #popupLayer div.popupCon div.formCon table.payment td .amount, #popupLayer div.popupCon div.formCon table.payment td .unitNum {
+      color: red;
+      font-size: 14px;
+      font-weight: 400; }
+    #popupLayer div.popupCon div.formCon table.payment td.payment select {
+      margin: 0;
+      width: 159px;
+      margin-right: 10px; }
+    #popupLayer div.popupCon div.formCon table.payment td.payment input[type=text] {
+      width: 159px; }
+    #popupLayer div.popupCon div.formCon button.confirm {
+      width: 151px; }
+    #popupLayer div.popupCon div.formCon div.noticeBox {
+      margin-top: 32px;
+      font-weight: 300;
+      text-align: left; }
+      #popupLayer div.popupCon div.formCon div.noticeBox p.notice {
+        color: red;
+        font-size: 13px;
+        padding: 8px 0;
+        border-bottom: 1px solid #eaeaea;
+        margin-bottom: 15px; }
+      #popupLayer div.popupCon div.formCon div.noticeBox p.notice::before {
+        content: "\203B";
+        margin-right: 5px; }
+      #popupLayer div.popupCon div.formCon div.noticeBox p.description {
+        font-size: 12px;
+        line-height: 15px; }
 
 div.pop h3 {
   margin-bottom: 5px; }
