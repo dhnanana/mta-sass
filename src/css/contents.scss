@@ -210,6 +210,30 @@ div.contents.login{ width: 900px !important;
 			div.alertCon { @include fontDefault(13px , 300); text-align: center;  padding: 30px 0; }
 		}
 		div.btnSet { margin-top: 20px; }
+		h3.title2 { text-align: left; padding-bottom: 25px; border-bottom: 1px solid #666; margin-bottom:5px; }
+		div.formCon{
+			div.noticeCon { background: #fdfbe7; border: 1px solid #f3f1d9; padding: 13px 0; margin-bottom: 5px;
+				p { background: url(../images/download/exclamationmark-1.png) no-repeat; padding-left: 25px; font-weight: 300; font-size: 13px; text-align: left; height: 18px; line-height: 18px; margin-left: 10px; }
+			}
+			label { display: inline-block; line-height: 19px; cursor: pointer; }
+			label#payCd_3 { margin-left: 80px; }
+			td { font-size: .85em; font-weight: 300; letter-spacing: 0; line-height: 38px; }
+			table.payment { 
+				tr:first-child { border-top: none; }
+				th { width: 110px; }
+				td .amount, td .unitNum { color: red; font-size: 14px; font-weight: 400; }
+				td.payment { 
+					select { margin: 0; width: 159px; margin-right: 10px; }
+					input[type=text] { width: 159px; }
+				}
+			}
+			button.confirm { width: 151px; }
+			div.noticeBox { margin-top: 32px; font-weight: 300; text-align: left;
+				p.notice { color: red; font-size: 13px; padding: 8px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 15px; }
+				p.notice::before { content : "\203B"; margin-right: 5px; }
+				p.description { font-size: 12px; line-height: 15px; }
+			}
+		}
 	}
 }
 

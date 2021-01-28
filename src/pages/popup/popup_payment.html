@@ -1,0 +1,80 @@
+<div class="pop">
+	<h3 class="title2">MTA 서비스 충전</h3>
+	<div class="formCon">
+		<div class="noticeCon">
+			<p>구매포인트는 이월되지 않습니다.</p>
+		</div>
+		<table class="payment">
+			<tbody>
+				<tr>
+					<th>결제상품</th>
+					<td>
+						<label id="payCd_1">
+							<input type="radio" name="payType" id="payCd_1">
+							일반형
+						</label>
+						<label id="payCd_2">
+							<input type="radio" name="payType" id="payCd_2">
+							패키지형
+						</label>
+						<label id="payCd_3">
+							<input type="radio" name="payType" id="payCd_3">
+							정기결제
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th>결제선택</th>
+					<td class="payment">
+						<select name="" id="">
+							<option value="">1,000 포인트</option>
+						</select>
+						<input type="text" name="" id="" placeholder="직접입력">
+					</td>
+				</tr>
+				<tr>
+					<th>결제금액</th>
+					<td>
+						<span class="amount">200,000</span>
+						<span class="numUnit">원</span>
+						<span class="notice">(vat 별도)</span>
+					</td>
+				</tr>
+				<tr>
+					<th>결제옵션</th>
+					<td>
+						매월 청구 - 10,000 원 / 월
+					</td>
+				</tr>
+				<tr>
+					<th>사용기간</th>
+					<td>2021.00.00 ~ 2022.00.00 (00 개월)</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="btnSet">
+			<button class="cancel" id="cancelForm">취소</button>
+			<button class="confirm" id="saveForm">결제하기</button>
+		</div>
+		<div class="noticeBox">
+			<p class="notice">구매포인트는 이월되지 않습니다.</p>
+			<p class="description">
+				보안 결제. 회원님의 편의를 위해 향후 주문에 이용할 수 있도록 결제 정보를 암호화하여 보관합니다. 
+			</p>
+			<p class="description">
+				계정 세부 정보에서 결제 정보를 관리하실 수 있습니다.
+			</p>
+		</div>
+	</div>
+
+	<script>
+		$('#saveForm').unbind.bind('click' , function(){
+			console.log( 'saveForm!' );
+		});
+
+		$('#cancelForm').unbind.bind('click' , function(){
+			console.log( 'cancel form' );
+			popup_layer.close();
+		});
+	</script>
+</div>

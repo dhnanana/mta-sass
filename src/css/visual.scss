@@ -122,3 +122,138 @@ div#paymentInfoCon { margin-top: 60px;
 		} 
 	}
 }
+
+
+section#mainVisual-1 { background: url(../images/download/line-topbg.png) no-repeat #fff; background-position: 0 -500px; background-size: cover; text-align: left;
+	div.bgObj-1 { width: 55%; position: absolute; right: 12%; bottom: 12%; max-width: 986px;
+		img { width: 100%; height: auto; }
+	}
+	div.textContainer { top: 30% !important; position: relative; width: 50%;
+		a#testGoButton { width:256px !important; height: 58px !important; background: url(../images/download/testin-button.png) no-repeat; background-size: contain; color: #fff; 
+						display: inline-block; text-align: center; line-height: 58px; text-decoration: none; margin-top: 300px; position: relative;
+			span.hoverCon { position: absolute; top:0; left: 0; right: 0; bottom: 0; background: #fff; opacity: 0; transition: .3s all ease-out; }
+		}
+		a#testGoButton:hover span.hoverCon { bottom: 50%; opacity: .1; }
+		div.innerCon { position: absolute; display: inline-block; width: auto; top:0; left:0;
+			h3 { font-size: 3em; line-height: 1.3em; letter-spacing: -3px; }
+			h5 { font-size: 1.3em; font-weight: 300; line-height: 1.5em; letter-spacing: -.5px; }
+		}
+		div.textAnimation {
+			div.innerCon * 		{ opacity: 0; transition: 1s all; }
+			div.innerCon h3 { margin-left: 100px; }
+			div.innerCon h5 { margin-left: 200px; }
+			div.innerCon.on * 	{ opacity: 1; margin-left: 0; }
+			div.simbolCounter { position: absolute; bottom: -70px;
+				span.counterCon { display: block; float: left; margin-left: 20px; width:11px; height:12px; border-radius: 50%; background: $line-color; transition: 1s all; cursor: pointer; }
+				span.counterCon:first-child { margin-left: 0; }
+				span.counterCon.on { width: 38px; background: #023f7d; border-radius: 20px; }
+			}
+		}
+	}
+}
+
+section#mainVisual-2 { background: #f9f9f9 !important;
+	div.prodCon { margin-top: 6.5%; display: inline-block;
+		div.product { width: calc(409px - 88px); padding: 42px 44px; text-align: center; float:left; background: #fff; margin-left: 31px;
+			h5{ padding-top: 70%; background: url(../images/download/serviceintro-icon-1.png) no-repeat 50% 8%; font-size:28px; font-weight: 500; margin-bottom: 25px; }
+			p { font-size: 14px; line-height: 28px; height: 68px; margin-bottom: 62px; color: #666; }
+			button { width: 153px; height:51px; border: 1px solid #ddd; background: #fff; }
+			button.serviceGo { background: #023f7d; color: #fff; margin-right: 10px; }
+		}
+		div.product:nth-child(2) h5 { background-image: url(../images/download/serviceintro-icon-2.png); }
+		div.product:nth-child(3) h5 { background-image: url(../images/download/serviceintro-icon-3.png); }
+		div.product:first-child { margin-left: 0; }
+	}
+}
+
+section#mainVisual-3 { background: #fff !important;
+	div.prodCon { margin-top: 5%; display: inline-block;
+		div.product { width: calc(428px - 52px); padding-left: 48px; text-align: left; float:left; background: #fff; background: url(../images/download/pricing-i-01.png) no-repeat top 59px right 60px; border: 1px solid #ddd;
+			h5{ margin-top:58px; font-size:24px; font-weight: 400; }
+			p { margin-top:12px; font-size: 13px;font-weight: 300; height: 68px; color: #666; }
+		}
+		div.product:nth-child(2) { background-image: url(../images/download/pricing-i-02.png); border-left: none; width: calc(428px - 50px); }
+		div.product:nth-child(3) { background-image: url(../images/download/pricing-i-03.png); border-left: none; width: calc(428px - 50px); }
+		div.product:nth-child(4) { background-image: url(../images/download/pricing-i-04.png); }
+		div.product.full { width: calc(1280px - 50px); margin-top: 22px; padding-bottom: 29px;
+			div.innerProduct {
+				div.policy { width: 383px; background: #f9f9f9; float: left; margin-left: 16px; padding: 39px 0;
+					p { margin-left: 40px; height: 20px; margin-top: 0;
+						span.pricePerUnit { float: right; margin-right: 40px; color: #0070d9; }
+					}
+				}
+				div.policy:first-child { margin-left: 0; }
+			}
+		}
+	}
+}
+
+section#mainVisual-4 { background: #f9f9f9 !important;
+	div.visual-container { height: inherit;
+		div.relativeContainer { position: relative; width: 100%; height: 100%; }
+		div.visual-title { display: inline-block; position: absolute; left: 0;  top: 22%; 
+			h2 { text-align: left; margin-bottom: 0; }
+			h3 { text-align: left; font-size: 22px; line-height: 22px; margin-top: 26px; }
+			p { text-align: left; font-size: 14px; line-height: normal; font-weight: 300; margin-top: 51px; }
+			a#butotnGoPhoneSearch { display: inline-block; width: 341px; height: 74px; line-height: 74px; text-align: center; color: #fff; background: #023f7d; text-decoration: none; margin-top: 75px; }
+		}
+	}
+	div.animationContainer{
+		* { position: absolute; transform: rotate(45deg); transition: .5s all ease; }
+		div.tablet { background: url(../images/download/i-pad-22.png) no-repeat; width: 637px; height: 866px; top: -110%; left: 0; transition-duration: 1s;}
+		div.phone1 { background: url(../images/download/mobile-20.png) no-repeat; width: 252px; height: 477px; top: 100%; left: 30%; transition-delay: .3s; }
+		div.phone2 { background: url(../images/download/mobile-022.png) no-repeat; width: 221px; height: 396px; top: -100%; left: 130%; }
+	}
+	div#supportDevices { position: absolute; right: 0;  top: 28%; width: 834px; height: 320px; overflow: hidden; /* overflow-x: auto; */ 
+		div.deviceList { width: max-content;
+			li.deviceInfo { margin-right: 20px !important; }
+		}
+	}
+}
+section#mainVisual-4.on {
+	div.animationContainer {
+		div.tablet { top: -50%; left: -22%; }
+		div.phone1 { top: 77%; left: 45%; }
+		div.phone2 { top: -10%; left: 94%; }
+	}
+}
+
+
+section#mainVisual-5 { height: auto !important; padding: 160px 0; min-height: 400px !important;
+	div.visual-title { margin-top: 0; }
+	h2 { font-size: 36px; text-align: left; margin-bottom: 108px; color: #333;}
+	div.partnersList { display: inline-block; width: 100%;
+		div.partner { float: left; display: inline-block; width: 297px; height: 130px; border: 1px solid #e6e6e6; text-indent: -9999px; background: url(../images/download/hyunda-logo.png) no-repeat 50% 50%; margin-left: 31px; }
+		div.partner:first-child { margin-left:0; }
+		div.partner:nth-child(2) { background-image: url(../images/download/caselogo-002.png); }
+		div.partner:nth-child(3) { background-image: url(../images/download/caselogo-003.png); }
+		div.partner:nth-child(4) { background-image: url(../images/download/caselogo-001.png); }
+	}
+}
+
+
+section.sectionCon { min-height: 880px;
+	div.visual-container { display: block; width: 1300px; margin: 0 auto; 
+		div.visual-title { margin-top: 5%;
+			h2 { font-size: 60px; margin-bottom: 30px;  color: #023f7d; text-align: center; font-weight: 800; }
+			h3 { font-size: 24px; font-weight: 300; text-align: center; color: #333; }
+			h2 { opacity:0; transition: all .5s; }
+			h3 { margin-bottom: 20px; opacity:0; transition: all 1s; }
+		}
+		div.content {
+			display: inline-block;
+		}
+		div.btnSet { width: 100%; display: inline-block; text-align: center; margin-top: 4%;
+			button.big.blue { width: 341px; height: 74px; font-size: 24px; }
+		}
+	}
+}
+
+section.sectionCon.on {
+	div.visual-container{
+		div.visual-title{
+			h2 , h3 { opacity:1; }
+			h3 { margin-bottom: 0px;  }
+		}
+	}
+}

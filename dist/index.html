@@ -174,37 +174,313 @@
 	</header>
 	<div id="mainContainer" class="main">
 		
-		<section class="sectionCon">
-			<div class="textContainer">
-				<h3>Mobile Test<br/>Automation</h3>
-				<h5>현대오토에버 MTA가 모바일 서비스의 품질관리와<br/>비용 절감 문제를 해결합니다.</h5>
-				<a id="mainStartButton" href="/Test">테스트 시작</a>
-			</div>
-			<div class="aniCon">
-				<div class="innerCon">
-					<div class="circleBG1"></div>
-					<div class="circleBG2"></div>
-					<div class="phoneCon">
-						<div class="phone">
-							<div class="innerBegel"></div>
-							<!-- <video width="302px" height="650px" autoplay loop>
-								<source src="video/air-wave.mp4" type="video/mp4">
-								Test Video
-							</video> -->
-							<div class="noch"></div>
+		<section class="sectionCon" id="mainVisual-1">
+			<div class="visual-container">
+				<div class="textContainer">
+					<div class="textAnimation">
+						<div class="innerCon">
+							<h3>클라우드 기반 실 단말기<br/>테스트 서비스</h3>
+							<h5>실제 iOS 및 Android 기기에서<br/>수동 테스트 및 자동테스트를 실행 합니다.</h5>
 						</div>
+						<div class="innerCon">
+							<h3>자동/수동<br/>테스트 범위 확장</h3>
+							<h5>여러대의 단말기를 동시에 사용하여,<br/>효율성 높은 테스트를 지원 합니다.</h5>
+						</div>
+						<div class="innerCon">
+							<h3>뛰어난 모바일 테스트 경험</h3>
+							<h5>App 개발자 도구 통합 지원 및 내장된<br/>결함관리 서비스를 지원 합니다.</h5>
+						</div>
+						<div class="innerCon">
+							<h3>지속적인 모바일 앱<br/>품질 달성</h3>
+							<h5>테스트관리 시스템을 기반으로 한 예약 수행으로<br/>동일한 품질의 앱테스트를 지원 합니다.</h5>
+						</div>
+						<div class="simbolCounter"></div>
 					</div>
-					<span class="circle green"><i class="fas fa-bug 3x"></i></span>
-					<span class="circle purple"><i class="fas fa-mail"></i></span>
-					<span class="circle sblue"><i class="fas fa-cloud"></i></span>
-					<span class="circle purple"><i class="fas fa-shield-alt"></i></span>
-					<span class="circle green"><i class="fas fa-bug 3x"></i></span>
-					<span class="circle purple"><i class="fas fa-mail"></i></span>
-					<span class="circle sblue"><i class="fas fa-cloud"></i></span>
-					<span class="circle purple"><i class="fas fa-blog"></i></span>
+					<a id="testGoButton" href="/Test"><span class="hoverCon"></span>테스트 시작</a>
+					<script>
+						$(document).ready(function(){
+							var curInd = 0;
+							var animationContainer = $('#mainVisual-1');
+							var aniTarget = animationContainer.find('div.textAnimation .innerCon');
+							var counterContainer = animationContainer.find('div.simbolCounter');
+							function createAnimation(){
+								var counterObj = $('<span class="counterCon">&nbsp;</span>');
+								aniTarget.each(function(idx , obj){
+									var clonsCounter = counterObj.clone();
+									counterContainer.append( clonsCounter );
+									clonsCounter.on('click' , function(){ console.log( 'counter! : ' , idx );
+										nextAnimation( idx );
+									});
+								});
+								counterContainer = counterContainer.find('span.counterCon');
+								nextAnimation( curInd );
+
+								setInterval(function(){
+									curInd += 1;
+									if( curInd >= aniTarget.length ) curInd = 0;
+									nextAnimation( curInd );
+								} , 5000);
+							}
+							
+							function nextAnimation(idx){
+								curInd = idx;
+								aniTarget.removeClass('on').eq(curInd).addClass('on');
+								counterContainer.removeClass('on').eq(curInd).addClass('on');
+							}
+
+							createAnimation();
+						});
+					</script>
+				</div>
+				<div class="bgObj-1">
+					<img src="./images/download/topvision-device.png" alt="main visual">
 				</div>
 			</div>
 		</section>
+
+		<section class="sectionCon" id="mainVisual-2">
+			<div class="visual-container">
+				<div class="visual-title">
+					<h2>SERVICE</h2>
+					<h3>가장 빠른 최신 단말기 사용 환경 제공개발자 디버깅과 품질팀을 위한 모니터링 환경 제공</h3>
+				</div>
+				<div class="prodCon contents">
+					<div class="product">
+						<h5>Real Time Test</h5>
+						<p>원격 센터의 단말기 팜 접속 실시간으로 다수 단말기를 선택하여 동시 제어 테스트를 수행합니다.</p>
+						<button class="serviceGo">시작하기</button>
+						<button class="serviceDetail">자세히보기</button>
+					</div>
+					<div class="product">
+						<h5>Cloud Debugging</h5>
+						<p>개발자 본인 PC와 원격 센터에 있는 필요한 단말기를 선택 연결하여 디버깅(Debugging) 환경을 구성 지원 합니다.</p>
+						<button class="serviceGo">시작하기</button>
+						<button class="serviceDetail">자세히보기</button>
+					</div>
+					<div class="product">
+						<h5>Monitoring</h5>
+						<p>검증 시나리오를 예약한 시간에 자동 실행하여 오류 확인 및 정상 여부 체크 결과 알림을 받을 수 있습니다.</p>
+						<button class="serviceGo">시작하기</button>
+						<button class="serviceDetail">자세히보기</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sectionCon" id="mainVisual-3">
+			<div class="visual-container">
+				<div class="visual-title">
+					<h2>PRICING</h2>
+					<h3>포인트 구매형과 서비스 구독형 요금제를 제공하고 있습니다.</h3>
+				</div>
+				<div class="prodCon contents">
+					<div class="product">
+						<h5>포인트 일반 구매</h5>
+						<p>단기 사용 시 유리</p>
+					</div>
+					<div class="product">
+						<h5>포인트 패키지 구매</h5>
+						<p>포인트 구매 할인 상품</p>
+					</div>
+					<div class="product">
+						<h5>정기구독</h5>
+						<p>월 정기 서비스 구독 상품</p>
+					</div>
+					<div class="product full">
+						<h5>서비스 별 포인트 사용 안내</h5>
+						<p>MTA 서비스 사용 포인트는 1 포인트(현금 200원/분)를 기준으로 합니다.</p>
+						<div class="innerProduct">
+							<div class="policy"><p>Real Time<span class="pricePerUnit">60포인트/1시간</span></p></div>
+							<div class="policy"><p>Cloud Debugging<span class="pricePerUnit">72포인트/1시간</span></p></div>
+							<div class="policy"><p>Monitoring<span class="pricePerUnit">90포인트/1시간</span></p></div>
+						</div>
+					</div>
+				</div>
+				<div class="btnSet">
+					<button class="btn big blue">요금제 상세보기</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="sectionCon" id="mainVisual-4">
+			<div class="animationContainer">
+				<div class="tablet"></div>
+				<div class="phone1"></div>
+				<div class="phone2"></div>
+			</div>
+			<div class="visual-container">
+				<div class="relativeContainer">
+					<div class="visual-title">
+						<h2>REAL DEVICE</h2>
+						<h3>더 이상 단말기로 고민하지 마세요.</h3>
+						<p>원하는 단말기로 필요할 때 테스트 하세요.<br/>
+							최신 단말기에서 모바일 애플리케이션을 테스트하여<br/>
+							가장 정확한 결과를 얻으실 수 있습니다.<br/>
+						</p>
+						<a href="/" id="butotnGoPhoneSearch">단말기 검색</a>
+					</div>
+
+					<div id="supportDevices" draggable="true">
+						<div class="deviceList">
+							<ul class="listDevice">
+								<li class="deviceInfo">
+									<p>단말기 이름</p>
+									<span class="img">
+										<img src="../images/download/phone.png" width="65" height="124"/>
+									</span>
+									<span class="info">Model 번호asdsadasdadsad</span>
+									<span class="info">버전</span>
+									<span class="info">SDK</span>
+									<span class="info">해상도</span>
+									<span class="info">제조사</span>
+								</li>
+								<li class="deviceInfo">
+									<p>단말기 이름</p>
+									<span class="img">
+										<img src="../images/download/phone.png" width="65" height="124"/>
+									</span>
+									<span class="info">Model 번호asdsadasdadsad</span>
+									<span class="info">버전</span>
+									<span class="info">SDK</span>
+									<span class="info">해상도</span>
+									<span class="info">제조사</span>
+								</li>
+								<li class="deviceInfo">
+									<p>단말기 이름</p>
+									<span class="img">
+										<img src="../images/download/phone.png" width="65" height="124"/>
+									</span>
+									<span class="info">Model 번호asdsadasdadsad</span>
+									<span class="info">버전</span>
+									<span class="info">SDK</span>
+									<span class="info">해상도</span>
+									<span class="info">제조사</span>
+								</li>
+								<li class="deviceInfo">
+									<p>단말기 이름</p>
+									<span class="img">
+										<img src="../images/download/phone.png" width="65" height="124"/>
+									</span>
+									<span class="info">Model 번호asdsadasdadsad</span>
+									<span class="info">버전</span>
+									<span class="info">SDK</span>
+									<span class="info">해상도</span>
+									<span class="info">제조사</span>
+								</li>
+								<li class="deviceInfo">
+									<p>단말기 이름</p>
+									<span class="img">
+										<img src="../images/download/phone.png" width="65" height="124"/>
+									</span>
+									<span class="info">Model 번호asdsadasdadsad</span>
+									<span class="info">버전</span>
+									<span class="info">SDK</span>
+									<span class="info">해상도</span>
+									<span class="info">제조사</span>
+								</li>
+							</ul>
+						</div>
+					</div><!-- supportDevices -->
+				</div><!-- relativeContainer -->
+			</div><!-- visual-container -->
+		</section>
+
+		<section class="sectionCon" id="mainVisual-5">
+			<div class="visual-container">
+				<div class="visual-title">
+					<h2>함께하는 고객사</h2>
+				</div>
+				<div class="partnersList">
+					<div class="partner">현대그룹</div>
+					<div class="partner">SK 하이닉스</div>
+					<div class="partner">광주은행</div>
+					<div class="partner">현대자동차</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			$(document).ready(function(){
+				
+				var document = $(window);
+				var mainContainers = $('section.sectionCon');
+				var conOffsets = [];
+				var saveVal = 0; var curIdx = 0;
+				mainContainers.each(function(){
+					conOffsets.push( parseInt($(this).offset().top) - 105 );
+				});
+				
+				function switchContainer( t_scroll ){
+					var t_idx = 0;
+					for( let i=0; i<conOffsets.length; i++ ){
+						console.log( conOffsets[i] , t_scroll , ' |  result : ' , t_scroll - conOffsets[i] < 0 );
+						if( t_scroll - conOffsets[i] < 0 ){
+							t_idx = i;
+							break;
+						}
+					}
+					console.log( t_idx );
+					
+					if( t_scroll > saveVal ){
+						console.log( 'down!' );
+						//if( t_idx == curIdx && t_idx < conOffsets.length ) t_idx += 1;
+					}else{
+						console.log( 'up' );
+					};
+
+					/* document.animate({
+						scrollTop : conOffsets[t_idx] - 105
+					},300); */
+					//document.scrollTop( conOffsets[t_idx] - 105 );
+					mainContainers.removeClass('on').eq(t_idx).addClass('on');
+					saveVal = t_scroll; curIdx = t_idx;
+				}
+
+
+
+				function switchContainerDir(direction){
+					var t_idx = 0;
+					var t_scroll = document[0].scrollY;
+					/* for( let i=0; i<conOffsets.length; i++ ){
+						if( t_scroll - conOffsets[i] < 0 ){
+							t_idx = i;
+							break;
+						}
+					} */
+
+					if( direction === 'up' ){
+						t_idx  = curIdx - 1;
+						if( t_idx < 0 ) t_idx = 0;
+					}else{
+						t_idx = curIdx + 1;;
+						if( t_idx >= conOffsets.length -1 ) t_idx = conOffsets.length -1;
+					}
+
+					console.log('direction : ' , direction , ' ' , t_idx , '  conOffsets[t_idx] : ' , conOffsets[t_idx]);
+					mainContainers.removeClass('on').eq(t_idx).addClass('on');
+					saveVal = t_scroll; curIdx = t_idx;
+					setTimeout(function(){
+						document.scrollTop( conOffsets[t_idx] );
+					} , 300);
+				}
+
+				let timer = null; // 스크롤 이벤트 150ms 
+				/* $(window).scroll(function(e){
+					clearTimeout( timer ); 
+					timer = setTimeout( function(){
+						switchContainer(e.currentTarget.scrollY);
+					}, 150 );
+				}); */
+
+				$(window).on('wheel' , function(e){  //console.log( e.originalEvent.deltaY , e.originalEvent.clientY , e.originalEvent.pageY );
+					clearTimeout( timer ); 
+					timer = setTimeout( function(){
+						switchContainerDir( e.originalEvent.deltaY < 0 ? 'up' : 'down' );
+					}, 100 );
+				});
+			});
+		</script>
+
 	</div>
 
 	<footer id="mainFooter" class="container">
